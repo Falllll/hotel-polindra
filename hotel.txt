@@ -1,0 +1,17 @@
+Booking Hotel
+- User memesan kamar dengan mengisi form
+- jika Stok kamar habis tombol booking tidak bisa ditekan dan menampilkan pesan stok kamar habis
+- jika stok kamar tersedia 
+
+- User mengecek ketersediaan kamar
+- Jika stok kamar habis akan muncul pesan "stok kamar yang di pilih habis"
+- Jika stok kamar tersedia maka akan tampil form untuk data diri user >> pesan "Room di pesan"
+
+- admin menerima data pemesanan room hotel
+- admin mengirim konfirmasi pemesanan melalui email/no hp
+
+
+
+
+
+
