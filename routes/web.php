@@ -23,4 +23,6 @@ Route::get('/room', 'App\Http\Controllers\PengunjungController@room');
 Route::get('/service', 'App\Http\Controllers\PengunjungController@service');
 Route::get('/news', 'App\Http\Controllers\PengunjungController@news');
 Route::get('/contact', 'App\Http\Controllers\PengunjungController@contact');
-Route::get('/login', 'App\Http\Controllers\AdminController@login');
+Route::get('/login', 'App\Http\Controllers\AdminController@login')->name('postlogin');
+Route::post('/postlogin', 'App\Http\Controllers\AdminController@postlogin')->name('postlogin');
+Route::post('/admin', 'App\Http\Controllers\AdminController@admin')->name('postlogin');
