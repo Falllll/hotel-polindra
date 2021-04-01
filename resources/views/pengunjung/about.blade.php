@@ -109,7 +109,7 @@
 <!-- Gallery Section End -->
 
 <!-- Staff Section End -->
-<section class="staff-section spad">
+<!-- <section class="staff-section spad">
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
@@ -157,7 +157,7 @@
             </div>
         </div>
     </div>
-</section>
+</section> -->
 <!-- Staff Section End -->
 
 @endsection

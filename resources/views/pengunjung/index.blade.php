@@ -213,9 +213,12 @@
                     <div class="col-lg-6 p-0 ">
                         <div class="facilities-text-warp">
                             <div class="facilities-text">
-                                <h2>Wellness Center</h2>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipis-cing elit. Mauris tincidunt consectetur
-                                    turpis, eget consequat.</p>
+                                <h2>Grand Hall</h2>
+                                <p>Tempat untuk merencakan pertemuan :
+                                    perlengkapan sesuai standar,
+                                    pedoman konferensi, dsb.
+                                    tim kami siap untuk memastikan
+                                    keberhasilan pada pertemuan bisnis anda.</p>
                                 <a href="#" class="primary-btn fac-btn">Visit Center <i class="lnr lnr-arrow-right"></i></a>
                             </div>
                         </div>
@@ -223,9 +226,12 @@
                     <div class="col-lg-6 p-0 order-lg-1 order-2">
                         <div class="facilities-text-warp">
                             <div class="facilities-text">
-                                <h2>Wellness Center</h2>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipis-cing elit. Mauris tincidunt consectetur
-                                    turpis, eget consequat.</p>
+                                <h2>Erhinco Resto</h2>
+                                <p>Tempat menemukan Hidangan
+                                    yang kaya akan rasa.
+                                    Hidangan kami yang lezat
+                                    dan menyehatkankan akan
+                                    terpadukan citra rasa yang sesasional.</p>
                                 <a href="#" class="primary-btn fac-btn">Visit Center <i class="lnr lnr-arrow-right"></i></a>
                             </div>
                         </div>
@@ -240,7 +246,7 @@
     </div>
     <!-- Facilities Section End -->
 
-    <div class="testimonial-section spad">
+    <!-- <div class="testimonial-section spad">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
@@ -344,7 +350,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
 
     <!-- Follow Instagram Section Begin -->
     <section class="follow-instagram">

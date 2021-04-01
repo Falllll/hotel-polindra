@@ -24,3 +24,4 @@ Route::get('/service', 'App\Http\Controllers\PengunjungController@service');
 Route::get('/news', 'App\Http\Controllers\PengunjungController@news');
 Route::get('/contact', 'App\Http\Controllers\PengunjungController@contact');
 Route::get('/login', 'App\Http\Controllers\AdminController@login');
+Route::get('/dashboard', 'App\Http\Controllers\AdminController@dashboard');
