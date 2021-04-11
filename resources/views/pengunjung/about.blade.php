@@ -31,7 +31,7 @@
         </div>
         <div class="about-para">
             <div class="row">
-                <div class="col-lg-6">
+                <!-- <div class="col-lg-6">
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus libero mauris,
                         bibendum eget sapien ac, ultrices rhoncus ipsum. Donec nec sapien in urna fermentum
                         ornare. Morbi vel ultrices leo. Sed eu turpis eu arcu vehicula fringilla ut vitae
@@ -42,7 +42,7 @@
                         Donec tempor felis at nibh eleifend malesuada. Nullam suscipit lobortis aliquam.
                         Phasellus lobortis ante lorem, vitae scelerisque lacus tempus sed. Phasellus rutrum
                         magna </p>
-                </div>
+                </div> -->
             </div>
         </div>
     </div>
@@ -72,10 +72,10 @@
         <div class="row">
             <div class="col-lg-6">
                 <div class="gallery-text">
-                    <h2>Hotel Gallery</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus libero mauris, bibendum eget
-                        sapien ac, ultrices rhoncus ipsum. Donec nec sapien in urna fermentum ornare. Morbi vel
-                        ultrices leo. Sed eu turpis eu arcu vehicula fringilla ut vitae orci.</p>
+                    <h2>Hotel Trisula</h2>
+                    <p>Hotel Grand Trisula Indramayu merupakan sebuah resort city hotel, yang terletak di lokasi strategis di jantung kota Indramayu – Jawa Barat,
+                        Hotel Grand Trisula menawarkan 50 kamar dengan sentuhan interior alami nyaman dengan masing-masing kamar mempunyai pemandangan taman yang asri, dan dilengkapi dengan wireless internet access (hotspot). Hotel Grand Trisula Indramayu juga merupakan sebuah tempat alternatif yang cocok untuk tujuan bisnis maupun waktu senggang.
+                    </p>
                     <a href="#" class="primary-btn">View Gallery <i class="lnr lnr-arrow-right"></i></a>
                 </div>
             </div>

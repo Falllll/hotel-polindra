@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-	<title>Login V1</title>
+	<title>Login Admin</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<!--===============================================================================================-->
@@ -32,14 +32,14 @@
 					<img src="img/icon-hotel.png" alt="IMG">
 				</div>
 
-				<form action="{{route('postlogin')}}"class="login100-form validate-form" method="POST">
-				{{ csrf_field()}}
+				<form action="{{route('postlogin')}}" class="login100-form validate-form" method="POST">
+					{{ csrf_field()}}
 					<span class="login100-form-title">
 						Admin Login
 					</span>
 
 					<div class="wrap-input100 validate-input" data-validate="Valid email is required: ex@abc.xyz">
-						<input class="input100" type="text" name="email" placeholder="Username">
+						<input class="input100" type="email" name="email" placeholder="Username" required>
 						<span class="focus-input100"></span>
 						<span class="symbol-input100">
 							<i class="fa fa-envelope" aria-hidden="true"></i>
@@ -47,7 +47,7 @@
 					</div>
 
 					<div class="wrap-input100 validate-input" data-validate="Password is required">
-						<input class="input100" type="password" name="password" placeholder="Password">
+						<input class="input100" type="password" name="password" placeholder="Password" required>
 						<span class="focus-input100"></span>
 						<span class="symbol-input100">
 							<i class="fa fa-lock" aria-hidden="true"></i>
@@ -55,9 +55,9 @@
 					</div>
 
 					<div class="container-login100-form-btn">
-						<a href="{{ url('/dashboard') }}" class="login100-form-btn">
+						<button class="login100-form-btn">
 							Login
-						</a>
+						</button>
 					</div>
 
 					<div class="text-center p-t-12">

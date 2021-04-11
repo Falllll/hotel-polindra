@@ -123,84 +123,84 @@
                 <div class="single-features-item">
                     <i class="flaticon-043-room-service"></i>
                     <h4>Room Service</h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p> -->
                 </div>
             </div>
             <div class="col-lg-3 col-sm-6">
                 <div class="single-features-item">
                     <i class="flaticon-007-swimming-pool"></i>
                     <h4>Pool</h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p> -->
                 </div>
             </div>
             <div class="col-lg-3 col-sm-6">
                 <div class="single-features-item">
                     <i class="flaticon-013-safety-box"></i>
                     <h4>Safty Box</h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p> -->
                 </div>
             </div>
             <div class="col-lg-3 col-sm-6">
                 <div class="single-features-item">
                     <i class="flaticon-033-dinner"></i>
                     <h4>Restaurant</h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p> -->
                 </div>
             </div>
             <div class="col-lg-3 col-sm-6">
                 <div class="single-features-item">
                     <i class="flaticon-029-wifi"></i>
                     <h4>Wi-fi</h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p> -->
                 </div>
             </div>
             <div class="col-lg-3 col-sm-6">
                 <div class="single-features-item">
                     <i class="flaticon-003-air-conditioner"></i>
                     <h4>Air Conditioner</h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p> -->
                 </div>
             </div>
             <div class="col-lg-3 col-sm-6">
                 <div class="single-features-item">
                     <i class="flaticon-033-dinner"></i>
                     <h4>Restaurant</h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p> -->
                 </div>
             </div>
             <div class="col-lg-3 col-sm-6">
                 <div class="single-features-item">
                     <i class="flaticon-020-telephone"></i>
                     <h4>Phone</h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p> -->
                 </div>
             </div>
             <div class="col-lg-3 col-sm-6">
                 <div class="single-features-item">
                     <i class="flaticon-019-television"></i>
                     <h4>Smart TV</h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p> -->
                 </div>
             </div>
             <div class="col-lg-3 col-sm-6">
                 <div class="single-features-item">
                     <i class="flaticon-040-key-card"></i>
                     <h4>Smart Key</h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p> -->
                 </div>
             </div>
             <div class="col-lg-3 col-sm-6">
                 <div class="single-features-item">
                     <i class="flaticon-009-cctv"></i>
                     <h4>24/7 Security</h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p> -->
                 </div>
             </div>
             <div class="col-lg-3 col-sm-6">
                 <div class="single-features-item">
                     <i class="flaticon-036-parking"></i>
                     <h4>Free Parking</h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p> -->
                 </div>
             </div>
         </div>

@@ -12,21 +12,28 @@ class AdminController extends Controller
         return view('admin.index');
     }
 
-    public function dashboard()
-    {
-        return view('admin.dashboard');
-    }
-
     public function postlogin(Request $request)
     {
         if (Auth::attempt($request->only('email', 'password'))) {
-            return redirect('admin.admin');
+            return redirect('/admin');
         }
-        return redirect('/');
+
+        return redirect('/login');
     }
 
     public function admin()
     {
-        return view('admin.admin');
+        return view('admin.dashboard');
+    }
+
+    public function logout(Request $request)
+    {
+        Auth::logout();
+        return redirect('/login');
+    }
+
+    public function newpost()
+    {
+        return view('admin.newPost');
     }
 }
