@@ -18,7 +18,7 @@ class UserSeeder extends Seeder
         User::truncate();
         User::create([
             'name' => 'Admin Aplikasi',
-            'level' =>'admin',
+            'level' => 'admin',
             'email' => 'admin@admin.com',
             'password' => bcrypt('admin'),
             'remember_token' => Str::random(60),
