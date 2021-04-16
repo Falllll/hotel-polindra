@@ -2,7 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
-
+use App\Http\Controllers\AdminController;
+use App\Http\Controllers\PengunjungController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -18,16 +19,16 @@ use Illuminate\Support\Facades\Auth;
 //     return view('welcome');
 // });
 
-Route::get('/', 'App\Http\Controllers\PengunjungController@home');
-Route::get('/about', 'App\Http\Controllers\PengunjungController@about');
-Route::get('/room', 'App\Http\Controllers\PengunjungController@room');
-Route::get('/service', 'App\Http\Controllers\PengunjungController@service');
-Route::get('/news', 'App\Http\Controllers\PengunjungController@news');
-Route::get('/contact', 'App\Http\Controllers\PengunjungController@contact');
-Route::get('/admin', 'App\Http\Controllers\AdminController@admin')->name('admin');
-Route::get('/login', 'App\Http\Controllers\AdminController@login')->name('login');
-Route::post('/postlogin', 'App\Http\Controllers\AdminController@postlogin')->name('postlogin');
-Route::get('/logout', 'App\Http\Controllers\AdminController@logout')->name('logout');
-Route::get('/newpost', 'App\Http\Controllers\AdminController@newpost');
-Route::get('/post', 'App\Http\Controllers\AdminController@post');
-Route::get('/kategori', 'App\Http\Controllers\AdminController@kategori');
+Route::get('/', [PengunjungController::class, 'home']);
+Route::get('/about', [PengunjungController::class, 'about']);
+Route::get('/room', [PengunjungController::class, 'room']);
+Route::get('/service', [PengunjungController::class, 'service']);
+Route::get('/news', [PengunjungController::class, 'news']);
+Route::get('/contact', [PengunjungController::class, 'contact']);
+Route::get('/admin',[AdminController::class, 'admin'])->name('admin');
+Route::get('/login', [AdminController::class, 'login'])->name('login');
+Route::post('/postlogin', [AdminController::class, 'postlogin'])->name('postlogin');
+Route::get('/logout', [AdminController::class, 'logout'])->name('logout');
+Route::get('/newpost', [AdminController::class, 'newpost']);
+Route::get('/post', [AdminController::class, 'post']);
+Route::get('/kategori', [AdminController::class, 'kategori']);
