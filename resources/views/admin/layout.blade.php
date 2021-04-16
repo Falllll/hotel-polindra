@@ -117,16 +117,16 @@
                     <ul class="sidebar-menu">
                         <li class="menu-header">Dashboard</li>
                         <li class="active">
-                            <a href="{{ url('/newpost') }}"><i class="ion ion-speedometer"></i><span>Dashboard</span></a>
+                            <a href="{{ url('/admin') }}"><i class="ion ion-speedometer"></i><span>Dashboard</span></a>
                         </li>
 
                         <li class="menu-header">Menu</li>
                         <li>
                             <a href="#" class="has-dropdown"><i class="ion ion-android-create"></i><span>Post</span></a>
                             <ul class="menu-dropdown">
-                                <li><a href="#"><i class="ion ion-ios-circle-outline"></i>Add New</a></li>
-                                <li><a href="#"><i class="ion ion-ios-circle-outline"></i>Post</a></li>
-                                <li><a href="#"><i class="ion ion-ios-circle-outline"></i>Categories</a></li>
+                                <li><a href="{{ url('/newpost') }}"><i class="ion ion-ios-circle-outline"></i>Add New</a></li>
+                                <li><a href="{{ url('/post') }}"><i class="ion ion-ios-circle-outline"></i>Post</a></li>
+                                <li><a href="{{ url('/kategori') }}"><i class=" ion ion-ios-circle-outline"></i>Categories</a></li>
 
                             </ul>
                         </li>
@@ -175,12 +175,12 @@
             @yield('container')
 
             <!-- footer -->
-            <footer class="main-footer">
+            <!-- <footer class="main-footer">
                 <div class="footer-left">
                     Copyright &copy; 2018 <div class="bullet"></div> Design By <a href="https://multinity.com/">Multinity</a>
                 </div>
                 <div class="footer-right"></div>
-            </footer>
+            </footer> -->
 
 
             <script src="dist/modules/jquery.min.js"></script>
@@ -273,6 +273,18 @@
             <script src="dist/js/scripts.js"></script>
             <script src="dist/js/custom.js"></script>
             <script src="dist/js/demo.js"></script>
+            <script src="js/dropify.min.js"></script>
+            <script src="js/ckeditor/ckeditor.js">
+            </script>
+            <script>
+                var konten = document.getElementById("konten");
+                CKEDITOR.replace(konten, {
+                    language: 'en-gb'
+                });
+                CKEDITOR.config.allowedContent = true;
+            </script>
+
+
 
             <!-- <script src="js/core/jquery.min.js"></script>
             <script src="js/core/popper.min.js"></script>

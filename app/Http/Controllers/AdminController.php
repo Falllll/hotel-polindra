@@ -36,4 +36,14 @@ class AdminController extends Controller
     {
         return view('admin.newPost');
     }
+
+    public function post()
+    {
+        return view('admin.post');
+    }
+
+    public function kategori()
+    {
+        return view('admin.kategori');
+    }
 }

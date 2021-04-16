@@ -29,3 +29,5 @@ Route::get('/login', 'App\Http\Controllers\AdminController@login')->name('login'
 Route::post('/postlogin', 'App\Http\Controllers\AdminController@postlogin')->name('postlogin');
 Route::get('/logout', 'App\Http\Controllers\AdminController@logout')->name('logout');
 Route::get('/newpost', 'App\Http\Controllers\AdminController@newpost');
+Route::get('/post', 'App\Http\Controllers\AdminController@post');
+Route::get('/kategori', 'App\Http\Controllers\AdminController@kategori');
