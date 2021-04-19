@@ -4,15 +4,11 @@ namespace App\Http\Controllers;
 
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
+use App\Models\User;
+use illuminate\Support\Str;
 
 class AdminController extends Controller
 {
-
-    public function register(){
-        return view('admin.register');
-    }
-
-
 
     public function login()
     {
@@ -53,4 +49,22 @@ class AdminController extends Controller
     {
         return view('admin.kategori');
     }
+
+    public function register(){
+        return view('admin.register');
+    }
+
+    public function simpanregister(Request $request){
+        
+        User::create([
+            'name' => $request->name,
+            'level' => 'customer', 
+            'email' => $request->email,
+            'password' => bcrypt($request->password),
+            'remember_token' => Str::random(60),
+        ]);
+
+        return view('pengunjung.index');
+    }
+
 }
