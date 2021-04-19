@@ -3,6 +3,7 @@
 @section('title' , 'Dashboard | Admin')
 
 @section('container')
+
 <div class="main-content">
   <section class="section">
     <h1 class="section-header">
@@ -158,6 +159,7 @@
 
 
     </div>
+    
     <!-- END ROW -->
 
   </section>
