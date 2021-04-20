@@ -274,7 +274,7 @@ ol {
 
 .header-section {
     background: #353535;
-    padding: 38px 0;
+    padding: 35px 0;
     position: absolute;
     left: 0;
     width: 100%;
@@ -289,11 +289,14 @@ ol {
 }
 
 .header-section.other-page .inner-header .main-menu ul li {
-    margin-right: 38px;
+    margin-right: 30px;
+    margin-top: 10px;
 }
 
 .header-section.other-page .inner-header .top-widget {
     float: right;
+    margin-top: 10px;
+    margin-right: 25px;
 }
 
 .header-section.other-page .inner-header .top-widget .top-info {

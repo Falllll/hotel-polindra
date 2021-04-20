@@ -29,8 +29,8 @@ Route::get('/contact', [PengunjungController::class, 'contact']);
 Route::get('/login', [AdminController::class, 'login'])->name('login');
 Route::post('/postlogin', [AdminController::class, 'postlogin'])->name('postlogin');
 Route::get('/logout', [AdminController::class, 'logout'])->name('logout');
-Route::group(['middleware' => ['auth']], function(){
-    Route::get('/admin',[AdminController::class, 'admin'])->name('admin');
+Route::group(['middleware' => ['auth']], function () {
+    Route::get('/admin', [AdminController::class, 'admin'])->name('admin');
 });
 
 Route::get('/newpost', [AdminController::class, 'newpost']);
