@@ -26,13 +26,14 @@ Route::get('/service', [PengunjungController::class, 'service']);
 Route::get('/news', [PengunjungController::class, 'news']);
 Route::get('/contact', [PengunjungController::class, 'contact']);
 
+Route::get('/register', [AdminController::class, 'register'])->name('register');
+Route::post('/simpanregister', [AdminController::class, 'simpanregister'])->name('simpanregister');
 Route::get('/login', [AdminController::class, 'login'])->name('login');
 Route::post('/postlogin', [AdminController::class, 'postlogin'])->name('postlogin');
 Route::get('/logout', [AdminController::class, 'logout'])->name('logout');
 Route::group(['middleware' => ['auth']], function () {
     Route::get('/admin', [AdminController::class, 'admin'])->name('admin');
 });
-
 Route::get('/newpost', [AdminController::class, 'newpost']);
 Route::get('/post', [AdminController::class, 'post']);
 Route::get('/kategori', [AdminController::class, 'kategori']);

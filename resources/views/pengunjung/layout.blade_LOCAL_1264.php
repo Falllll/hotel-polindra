@@ -24,7 +24,6 @@
     <link rel="stylesheet" href="{{ asset('/css/magnific-popup.css')}}" type="text/css">
     <link rel="stylesheet" href="{{ asset('/css/slicknav.min.css') }}" type="text/css">
     <link rel="stylesheet" href="{{ asset('/css/style.css') }}" type="text/css">
-
 </head>
 
 <body>
@@ -40,19 +39,24 @@
                 <div class="logo">
                     <a href="./index.html"><img src="{{ asset('/img/trisula/logo-trisula.png') }}" alt="" style="width: 120px;"></a>
                 </div>
+                <div class="top-widget">
+                    <!-- <div class="top-info address">
+                        <img src="img/placeholder.png" alt="">
+                        <span>Jl.Di.Pandjaitan No.77
+                            <br />Indramayu </span>
+                    </div> -->
+                    <div class="top-info address ">
 
-
-                <div class="top-widget d-inline">
-                    <div class="">
-                        <a href="{{url ('/register')}}">
-                            <span>Sign up</span>
-                        </a>
-                        |
-                        <a href="{{url ('/login')}}">
-                            <span>Log in</span>
-                        </a>
+                        <a href="" style="color:white;">Sign In</a>
                     </div>
+                    <div class="top-info phone-num ">
 
+                        <a href="" style="color:white;">Sign Up</a>
+                    </div>
+                    <!-- <div class="top-info phone-num">
+                        <img src="img/phone.png" alt="">
+                        <span style="margin-right: 25px;">(0234) 272 022</span>
+                    </div> -->
                 </div>
 
                 <div class="container">

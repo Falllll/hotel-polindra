@@ -38,34 +38,30 @@
         <div class="container-fluid">
             <div class="inner-header">
                 <div class="logo">
-                    <a href="./index.html"><img src="{{ asset('/img/trisula/logo-trisula.png') }}" alt="" style="width: 120px;"></a>
+                    <a href="./index.html"><img src="{{ asset('/img/logo.png') }}" alt=""></a>
                 </div>
-
-
                 <div class="top-widget d-inline">
                     <div class="">
-                        <a href="{{url ('/register')}}">
-                            <span>Sign up</span>
-                        </a>
-                        |
-                        <a href="{{url ('/login')}}">
-                            <span>Log in</span>
-                        </a>
+                            <a href="{{url ('/register')}}">     
+                                <span>Sign up</span>
+                            </a>
+                                | 
+                            <a href="{{url ('/login')}}">
+                                <span>Log in</span>
+                            </a>
                     </div>
-
                 </div>
 
                 <div class="container">
                     <div class="row">
                         <div class="col-xl-12">
                             <nav class="main-menu mobile-menu">
-                                <ul style="font-size: 20px;">
+                                <ul>
                                     <li><a href="{{ url('/') }}">Home</a></li>
                                     <li><a href="{{ url('/about') }}">About</a></li>
                                     <li><a href="{{ url('/service') }}">Services</a></li>
-                                    <li><a href="{{ url('/room') }}">Rooms & Suite</a></li>
-                                    <li><a href="{{ url('/news') }}">Restaurants</a></li>
-                                    <li><a href="{{ url('/news') }}">Reservation</a></li>
+                                    <li><a href="{{ url('/room') }}">Rooms</a></li>
+                                    <li><a href="{{ url('/news') }}">News</a></li>
                                     <li><a href="{{ url('/contact') }}">Contact</a></li>
                                 </ul>
                             </nav>
@@ -83,7 +79,7 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="footer-logo">
-                        <a href="#"><img src="{{ asset('/img/trisula/logo-trisula.png') }}" alt="" style="width: 120px;"></a>
+                        <a href="#"><img src="{{ asset('/img/logo.png')}}" alt=""></a>
                     </div>
                 </div>
             </div>
