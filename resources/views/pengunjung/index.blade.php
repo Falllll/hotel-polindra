@@ -357,7 +357,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <h2>Follow us on Instagram @grandtrisula</h2>
+                    <h2 class="text-black-50">Follow us on Instagram <a href="https://www.instagram.com/grandtrisulahotel/" class="text-muted">@grandtrisulahotel</a></h2>
                 </div>
             </div>
         </div>

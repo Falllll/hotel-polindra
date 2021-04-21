@@ -38,12 +38,12 @@
         <div class="container-fluid">
             <div class="inner-header">
                 <div class="logo">
-                    <a href="./index.html"><img src="{{ asset('/img/trisula/logo-trisula.png') }}" alt="" style="width: 120px;"></a>
+                    <a href="{{('/')}}"><img src="{{ asset('/img/trisula/logo-trisula.png') }}" alt="" style="width: 120px;"></a>
                 </div>
 
 
-                <div class="top-widget d-inline">
-                    <div class="">
+                <div class="top-widget mobile-menu">
+                    <div class="font-size: 20px; text-white">
                         <a href="{{url ('/register')}}">
                             <span>Sign up</span>
                         </a>
@@ -73,6 +73,9 @@
                         <div id="mobile-menu-wrap"></div>
                     </div>
                 </div>
+
+                
+
     </header>
 
     @yield('container')

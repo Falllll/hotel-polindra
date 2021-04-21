@@ -39,12 +39,10 @@
                     </div>
                     <div class="social-links">
                         <h2>Follow us on:</h2>
-                        <a href="#"><i class="fa fa-facebook"></i></a>
-                        <a href="#"><i class="fa fa-instagram"></i></a>
-                        <a href="#"><i class="fa fa-linkedin"></i></a>
-                        <a href="#"><i class="fa fa-pinterest"></i></a>
-                        <a href="#"><i class="fa fa-twitter"></i></a>
-                        <a href="#"><i class="fa fa-youtube-play"></i></a>
+                        <a href="https://web.facebook.com/grandtrisula"><i class="fa fa-facebook"></i></a>
+                        <a href="https://www.instagram.com/grandtrisulahotel/"><i class="fa fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/company/grand-trisula-hotel-indramayu"><i class="fa fa-linkedin"></i></a>
+                        <a href="https://twitter.com/grandtrisula"><i class="fa fa-twitter"></i></a>
                     </div>
                 </div>
             </div>
