@@ -37,3 +37,12 @@ Route::group(['middleware' => ['auth']], function () {
 Route::get('/newpost', [AdminController::class, 'newpost']);
 Route::get('/post', [AdminController::class, 'post']);
 Route::get('/kategori', [AdminController::class, 'kategori']);
+Route::get('/slider', [AdminController::class, 'slider']);
+Route::get('/room', [AdminController::class, 'room']);
+Route::get('/user', [AdminController::class, 'user']);
+Route::get('/event', [AdminController::class, 'event']);
+Route::get('/inbox', [AdminController::class, 'inbox']);
+Route::get('/fasilitas', [AdminController::class, 'fasilitas']);
+Route::get('/jadwal', [AdminController::class, 'jadwal']);
+Route::get('/menu', [AdminController::class, 'menu']);
+Route::get('/reservasi', [AdminController::class, 'reservasi']);

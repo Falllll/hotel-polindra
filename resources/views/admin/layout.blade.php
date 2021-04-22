@@ -131,41 +131,41 @@
                             </ul>
                         </li>
                         <li>
-                            <a href="#"><i class="ion ion-image"></i><span>Image Slider</span></a>
+                            <a href="{{ url('/slider') }}"><i class="ion ion-image"></i><span>Image Slider</span></a>
 
                         </li>
                         <li>
-                            <a href="#"><i class="fa fa-building"></i><span>Room</span></a>
+                            <a href="{{ url('/room') }}"><i class="fa fa-building"></i><span>Room</span></a>
                         </li>
                         <li>
-                            <a href="#" class="has-dropdown"><i class="ion ion-android-clipboard "></i><span>Reservation</span></a>
-                            <ul class="menu-dropdown">
-                                <li><a href="#"><i class="ion ion-ios-circle-outline"></i>Check in</a></li>
-                                <li><a href="#"><i class="ion ion-ios-circle-outline"></i>Check Out</a></li>
-                            </ul>
+                            <a href="{{ url('/reservasi') }}"><i class="ion ion-android-clipboard "></i><span>Reservation</span></a>
+                            <!-- <ul class="menu-dropdown">
+                                <li><a href="{{ url('/checkin') }}"><i class="ion ion-ios-circle-outline"></i>Check in</a></li>
+                                <li><a href="{{ url('/checkout') }}"><i class="ion ion-ios-circle-outline"></i>Check Out</a></li>
+                            </ul> -->
                         </li>
                         <li>
-                            <a href="#"><i class="ion-ribbon-b"></i><span>Facilities</span></a>
+                            <a href="{{ url('/fasilitas') }}"><i class="ion-ribbon-b"></i><span>Facilities</span></a>
                         </li>
                         <li>
                             <a href="#" class="has-dropdown"><i class="ion ion-coffee"></i><span>Restaurant</span></a>
                             <ul class="menu-dropdown">
-                                <li><a href="#"><i class="ion ion-ios-circle-outline"></i>Schedule</a></li>
-                                <li><a href="#"><i class="ion ion-ios-circle-outline"></i>Menu</a></li>
+                                <li><a href="{{ url('/jadwal') }}"><i class="ion ion-ios-circle-outline"></i>Schedule</a></li>
+                                <li><a href="{{ url('/menu') }}"><i class="ion ion-ios-circle-outline"></i>Menu</a></li>
                             </ul>
                         </li>
 
                         <li>
-                            <a href="#"><i class="ion ion-ios-calendar-outline"></i><span>Event</span></a>
+                            <a href="{{ url('/event') }}"><i class="ion ion-ios-calendar-outline"></i><span>Event</span></a>
                         </li>
                         <li>
-                            <a href="#"><i class="ion ion-android-mail"></i><span>Inbox</span></a>
+                            <a href="{{ url('/inbox') }}"><i class="ion ion-android-mail"></i><span>Inbox</span></a>
                         </li>
-                        <li>
+                        <!-- <li>
                             <a href="#"><i class="ion ion-ios-telephone"></i><span>Info Contact</span></a>
-                        </li>
+                        </li> -->
                         <li>
-                            <a href="#"><i class="ion ion-ios-person"></i><span>User</span></a>
+                            <a href="{{ url('/user') }}"><i class="ion ion-ios-person"></i><span>User</span></a>
                         </li>
 
 

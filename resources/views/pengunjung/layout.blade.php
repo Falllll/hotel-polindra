@@ -63,9 +63,9 @@
                                     <li><a href="{{ url('/') }}">Home</a></li>
                                     <li><a href="{{ url('/about') }}">About</a></li>
                                     <li><a href="{{ url('/service') }}">Services</a></li>
-                                    <li><a href="{{ url('/room') }}">Rooms & Suite</a></li>
+                                    <li><a href="{{ url('/room') }}">Rooms</a></li>
                                     <li><a href="{{ url('/news') }}">Restaurants</a></li>
-                                    <li><a href="{{ url('/news') }}">Reservation</a></li>
+                                    <li><a href="{{ url('/news') }}">News</a></li>
                                     <li><a href="{{ url('/contact') }}">Contact</a></li>
                                 </ul>
                             </nav>
