@@ -40,4 +40,8 @@ class PengunjungController extends Controller
     {
         return view('pengunjung.contact');
     }
+
+    public function booking(){
+        return view('pengunjung.booking');
+    }
 }

@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    	<title>Pesan Kamar Hotel</title>
+    
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+        <link rel="stylesheet" href="/booking/css/bootstrap.min.css">
+        <link rel="stylesheet" href="/booking/css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="/booking/css/fontAwesome.css">
+        <link rel="stylesheet" href="/booking/css/hero-slider.css">
+        <link rel="stylesheet" href="/booking/css/owl-carousel.css">
+        <link rel="stylesheet" href="/booking/css/datepicker.css">
+        <link rel="stylesheet" href="/booking/css/tooplate-style.css">
+
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
+        <style>
+            .logo {
+                margin: auto;
+            }
+
+            .copyright{
+                color: white;
+            }
+        </style>
+
+        <script src="/booking/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+    </head>
+
+<body>
+
+    
+    <section class="banner" id="top">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-5">
+                    <div class="left-side">
+                        <div class="logo">
+                            <img src="{{ asset('/img/trisula/logo-trisula.png') }}" class="logo" alt="Trisula">
+                        </div>
+                        <div class="tabs-content">
+                            <h4>Social Media:</h4>
+                            <ul class="social-links">
+                                <li><a href="https://web.facebook.com/grandtrisula">Find us on <em>Facebook</em><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="http://youtube.com">Our <em>YouTube</em> Channel<i class="fa fa-youtube"></i></a></li>
+                                <li><a href="https://www.instagram.com/grandtrisulahotel/">Follow our <em>instagram</em><i class="fa fa-instagram"></i></a></li>
+                                <li><a href="https://www.linkedin.com/company/grand-trisula-hotel-indramayu">Find us on <em>LinkedIn</em><i class="fa fa-linkedin"></i></a></li>
+                            </ul>
+                        </div>
+                        <div class="page-direction-button">
+                            <a href="contact.html"><i class="fa fa-phone"></i>Contact Us Now</a>
+                        </div>
+                        <br>
+                    </div>
+                </div>
+                <div class="col-md-5 col-md-offset-1">
+                    <section id="first-tab-group" class="tabgroup">
+                        <div id="tab1">
+                            <div class="submit-form">
+                                <h4>Cek kamar <em>hotel</em>:</h4>
+                                <form id="form-submit" action="" method="get">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <fieldset>
+                                                <label for="from">From:</label>
+                                                <select required name='from' onchange='this.form.()'>
+                                                    <option value="">Select Day:</option>
+                                                    <option value="Senin">Senin</option>
+                                                    <option value="Selasa">Selasa</option>
+                                                    <option value="Rabu">Rabu</option>
+                                                    <option value="Kamis">Kamis</option>
+                                                    <option value="Jumat">Jumat</option>
+                                                    <option value="Sabtu">Sabtu</option>
+                                                    <option value="Minggu">Minggu</option>
+                                                </select>
+                                            </fieldset>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <fieldset>
+                                                <label for="to">To:</label>
+                                                <select required name='to' onchange='this.form.()'>
+                                                    <option value="">Sampai Hari:</option>
+                                                    <option value="Senin">Senin</option>
+                                                    <option value="Selasa">Selasa</option>
+                                                    <option value="Rabu">Rabu</option>
+                                                    <option value="Kamis">Kamis</option>
+                                                    <option value="Jumat">Jumat</option>
+                                                    <option value="Sabtu">Sabtu</option>
+                                                    <option value="Minggu">Minggu</option>
+                                                </select>
+                                            </fieldset>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <fieldset>
+                                                <label for="departure">Tanggal:</label>
+                                                <input name="deparure" type="text" class="form-control date" id="deparure" placeholder="Pilih tanggal..." required onchange='this.form.()'>
+                                            </fieldset>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <fieldset>
+                                                <label for="return">Sampai Tanggal:</label>
+                                                <input name="return" type="text" class="form-control date" id="return" placeholder="Pilih tanggal.." required onchange='this.form.()'>
+                                            </fieldset>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <fieldset>
+                                                <button type="submit" id="form-submit" class="btn">Pesan Kamar Sekarang</button>
+                                            </fieldset>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="footer-logo">
+                            <a href="#"><img src="{{ asset('/img/trisula/logo-trisula.png') }}" alt="" style="width: 120px;"></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="primary-button">
+                        <a href="#" class="scroll-top">Back To Top</a>
+                    </div>
+                </div>
+                <div class="copyright-area">
+                    <div class="container">
+                        <div class="copyright-text copyright">
+                            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                            Copyright &copy;<script>
+                                document.write(new Date().getFullYear());
+                            </script> Grand Trisula Hotel. All rights reserved</a>
+                            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                        </div>
+                        <div class="privacy-links">
+                            <a href="#">Privacy Policy</a>
+                            <a href="#">Photo Requests</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="/booking/js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
+
+    <script src="/booking/js/vendor/bootstrap.min.js"></script>
+    
+    <script src="/booking/js/datepicker.js"></script>
+    <script src="/booking/js/plugins.js"></script>
+    <script src="/booking/js/main.js"></script>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" type="text/javascript"></script>
+    <script type="text/javascript">
+    $(document).ready(function() {
+
+        
+
+        // navigation click actions 
+        $('.scroll-link').on('click', function(event){
+            event.preventDefault();
+            var sectionID = $(this).attr("data-id");
+            scrollToID('#' + sectionID, 750);
+        });
+        // scroll to top action
+        $('.scroll-top').on('click', function(event) {
+            event.preventDefault();
+            $('html, body').animate({scrollTop:0}, 'slow');         
+        });
+        // mobile nav toggle
+        $('#nav-toggle').on('click', function (event) {
+            event.preventDefault();
+            $('#main-nav').toggleClass("open");
+        });
+    });
+    // scroll function
+    function scrollToID(id, speed){
+        var offSet = 0;
+        var targetOffset = $(id).offset().top - offSet;
+        var mainNav = $('#main-nav');
+        $('html,body').animate({scrollTop:targetOffset}, speed);
+        if (mainNav.hasClass("open")) {
+            mainNav.css("height", "1px").removeClass("in").addClass("collapse");
+            mainNav.removeClass("open");
+        }
+    }
+    if (typeof console === "undefined") {
+        console = {
+            log: function() { }
+        };
+    }
+    </script>
+</body>
+</html>

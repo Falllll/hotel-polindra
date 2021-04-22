@@ -26,6 +26,7 @@ Route::get('/service', [PengunjungController::class, 'service']);
 Route::get('/news', [PengunjungController::class, 'news']);
 Route::get('/restaurant', [PengunjungController::class, 'restaurant']);
 Route::get('/contact', [PengunjungController::class, 'contact']);
+Route::get('/pesan', [PengunjungController::class, 'booking']);
 
 Route::get('/register', [AdminController::class, 'register'])->name('register');
 Route::post('/simpanregister', [AdminController::class, 'simpanregister'])->name('simpanregister');

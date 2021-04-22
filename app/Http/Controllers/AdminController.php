@@ -6,6 +6,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 use App\Models\User;
 use illuminate\Support\Str;
+use App\Http\Middleware\CekLevel;
 
 class AdminController extends Controller
 {
@@ -17,7 +18,7 @@ class AdminController extends Controller
 
     public function postlogin(Request $request)
     {
-        if (Auth::attempt($request->only('email', 'password'))) {
+        if(Auth::attempt($request->only('email', 'password'))) {
             return redirect('/admin');
         }
 
