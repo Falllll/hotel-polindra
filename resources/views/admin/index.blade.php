@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-	<title>Login Admin</title>
+	<title>Login</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<!--===============================================================================================-->
@@ -35,11 +35,11 @@
 				<form action="{{route('postlogin')}}" class="login100-form validate-form" method="POST">
 					{{ csrf_field()}}
 					<span class="login100-form-title">
-						Admin Login
+						Login
 					</span>
 
 					<div class="wrap-input100 validate-input" data-validate="Valid email is required: ex@abc.xyz">
-						<input class="input100" type="email" name="email" placeholder="Username" required>
+						<input class="input100" type="email" name="email" placeholder="Email" required>
 						<span class="focus-input100"></span>
 						<span class="symbol-input100">
 							<i class="fa fa-envelope" aria-hidden="true"></i>
@@ -66,6 +66,14 @@
 						</span>
 						<a class="txt2" href="#">
 							Username / Password?
+						</a>
+					</div>
+					<div class="text-center p-t-12">
+						<span class="txt1">
+							Don't have an
+						</span>
+						<a class="txt2" href="{{('/register')}}">
+							Account?
 						</a>
 					</div>
 

@@ -24,6 +24,7 @@
     <link rel="stylesheet" href="{{ asset('/css/magnific-popup.css')}}" type="text/css">
     <link rel="stylesheet" href="{{ asset('/css/slicknav.min.css') }}" type="text/css">
     <link rel="stylesheet" href="{{ asset('/css/style.css') }}" type="text/css">
+
 </head>
 
 <body>
@@ -37,30 +38,34 @@
         <div class="container-fluid">
             <div class="inner-header">
                 <div class="logo">
-                    <a href="./index.html"><img src="{{ asset('/img/logo.png') }}" alt=""></a>
+                    <a href="{{('/')}}"><img src="{{ asset('/img/trisula/logo-trisula.png') }}" alt="" style="width: 120px;"></a>
                 </div>
-                <div class="top-widget">
-                    <div class="top-info address">
-                        <img src="img/placeholder.png" alt="">
-                        <span>Jl.Di.Pandjaitan No.77
-                            <br />Indramayu </span>
+
+
+                <div class="top-widget mobile-menu">
+                    <div class="font-size: 20px; text-white">
+                        <a href="{{url ('/register')}}">
+                            <span>Sign up</span>
+                        </a>
+                        |
+                        <a href="{{url ('/login')}}">
+                            <span>Log in</span>
+                        </a>
                     </div>
-                    <div class="top-info phone-num">
-                        <img src="img/phone.png" alt="">
-                        <span style="margin-right: 25px;">(0234) 272 022</span>
-                    </div>
+
                 </div>
 
                 <div class="container">
                     <div class="row">
                         <div class="col-xl-12">
                             <nav class="main-menu mobile-menu">
-                                <ul>
+                                <ul style="font-size: 20px;">
                                     <li><a href="{{ url('/') }}">Home</a></li>
                                     <li><a href="{{ url('/about') }}">About</a></li>
                                     <li><a href="{{ url('/service') }}">Services</a></li>
-                                    <li><a href="{{ url('/room') }}">Rooms</a></li>
-                                    <li><a href="{{ url('/news') }}">News</a></li>
+                                    <li><a href="{{ url('/room') }}">Rooms & Suite</a></li>
+                                    <li><a href="{{ url('/news') }}">Restaurants</a></li>
+                                    <li><a href="{{ url('/news') }}">Reservation</a></li>
                                     <li><a href="{{ url('/contact') }}">Contact</a></li>
                                 </ul>
                             </nav>
@@ -68,6 +73,9 @@
                         <div id="mobile-menu-wrap"></div>
                     </div>
                 </div>
+
+                
+
     </header>
 
     @yield('container')
@@ -78,7 +86,7 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="footer-logo">
-                        <a href="#"><img src="{{ asset('/img/logo.png')}}" alt=""></a>
+                        <a href="#"><img src="{{ asset('/img/trisula/logo-trisula.png') }}" alt="" style="width: 120px;"></a>
                     </div>
                 </div>
             </div>

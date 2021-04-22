@@ -38,39 +38,21 @@
         <div class="container-fluid">
             <div class="inner-header">
                 <div class="logo">
-                    <a href="./index.html"><img src="{{ asset('/img/trisula/logo-trisula.png') }}" alt="" style="width: 120px;"></a>
+                    <a href="{{('/')}}"><img src="{{ asset('/img/trisula/logo-trisula.png') }}" alt="" style="width: 120px;"></a>
                 </div>
-<<<<<<< HEAD
-                <div class="top-widget">
-                    <!-- <div class="top-info address">
-                        <img src="img/placeholder.png" alt="">
-                        <span>Jl.Di.Pandjaitan No.77
-                            <br />Indramayu </span>
-                    </div> -->
-                    <div class="top-info address ">
 
-                        <a href="" style="color:white;">Sign In</a>
-                    </div>
-                    <div class="top-info phone-num ">
 
-                        <a href="" style="color:white;">Sign Up</a>
+                <div class="top-widget mobile-menu">
+                    <div class="font-size: 20px; text-white">
+                        <a href="{{url ('/register')}}">
+                            <span>Sign up</span>
+                        </a>
+                        |
+                        <a href="{{url ('/login')}}">
+                            <span>Log in</span>
+                        </a>
                     </div>
-                    <!-- <div class="top-info phone-num">
-                        <img src="img/phone.png" alt="">
-                        <span style="margin-right: 25px;">(0234) 272 022</span>
-                    </div> -->
-=======
-                <div class="top-widget d-inline">
-                    <div class="">
-                            <a href="{{url ('/register')}}">     
-                                <span>Sign up</span>
-                            </a>
-                                | 
-                            <a href="{{url ('/login')}}">
-                                <span>Log in</span>
-                            </a>
-                    </div>
->>>>>>> 7e510bffb51d87d461fc1a24a0423d12b7def866
+
                 </div>
 
                 <div class="container">
@@ -91,6 +73,9 @@
                         <div id="mobile-menu-wrap"></div>
                     </div>
                 </div>
+
+
+
     </header>
 
     @yield('container')
