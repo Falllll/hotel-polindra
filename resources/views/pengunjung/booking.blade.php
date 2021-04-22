@@ -64,6 +64,20 @@
                                 <h4>Cek kamar <em>hotel</em>:</h4>
                                 <form id="form-submit" action="" method="get">
                                     <div class="row">
+                                        <div class="col-md-12">
+                                            <fieldset>
+                                                <label for="room">Pilih kamar:</label>
+                                                <select required name='room' onchange='this.form.()'>
+                                                    <option value="">Select Room:</option>
+                                                    <option value="suite">Suite Room</option>
+                                                    <option value="superior">Superior Room</option>
+                                                    <option value="deluxe">Deluxe Room</option>
+                                                    <option value="Executive">Executive Room</option>
+                                                </select>
+                                            </fieldset>
+                                        </div>
+                                    </div>
+                                    <div class="row">
                                         <div class="col-md-6">
                                             <fieldset>
                                                 <label for="from">From:</label>
