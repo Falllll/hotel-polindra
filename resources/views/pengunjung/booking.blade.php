@@ -46,7 +46,7 @@
                             <h4>Social Media:</h4>
                             <ul class="social-links">
                                 <li><a href="https://web.facebook.com/grandtrisula">Find us on <em>Facebook</em><i class="fa fa-facebook"></i></a></li>
-                                <li><a href="http://youtube.com">Our <em>YouTube</em> Channel<i class="fa fa-youtube"></i></a></li>
+                                <li><a href="https://twitter.com/grandtrisula">Follow Our <em>Twitter</em><i class="fa fa-twitter"></i></a></li>
                                 <li><a href="https://www.instagram.com/grandtrisulahotel/">Follow our <em>instagram</em><i class="fa fa-instagram"></i></a></li>
                                 <li><a href="https://www.linkedin.com/company/grand-trisula-hotel-indramayu">Find us on <em>LinkedIn</em><i class="fa fa-linkedin"></i></a></li>
                             </ul>
@@ -141,7 +141,7 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="footer-logo">
-                            <a href="#"><img src="{{ asset('/img/trisula/logo-trisula.png') }}" alt="" style="width: 120px;"></a>
+                            <a href="#" class="scroll-top"><img src="{{ asset('/img/trisula/logo-trisula.png') }}" alt="" style="width: 120px;"></a>
                         </div>
                     </div>
                 </div>

@@ -78,7 +78,7 @@
                                 <span>Pool</span>
                             </div>
                         </div>
-                        <a href="#" class="primary-btn">Book Now <i class="lnr lnr-arrow-right"></i></a>
+                        <a href="{{url('/pesan')}}" class="primary-btn">Book Now <i class="lnr lnr-arrow-right"></i></a>
                     </div>
                 </div>
             </div>
@@ -137,7 +137,7 @@
                                 <span>Pool</span>
                             </div>
                         </div>
-                        <a href="#" class="primary-btn">Book Now <i class="lnr lnr-arrow-right"></i></a>
+                        <a href="{{url('/pesan')}}" class="primary-btn">Book Now <i class="lnr lnr-arrow-right"></i></a>
                     </div>
                 </div>
             </div>
@@ -196,7 +196,7 @@
                                 <span>Pool</span>
                             </div>
                         </div>
-                        <a href="#" class="primary-btn">Book Now <i class="lnr lnr-arrow-right"></i></a>
+                        <a href="{{url('/pesan')}}" class="primary-btn">Book Now <i class="lnr lnr-arrow-right"></i></a>
                     </div>
                 </div>
             </div>
@@ -258,7 +258,7 @@
                                 <span>Pool</span>
                             </div>
                         </div>
-                        <a href="#" class="primary-btn">Book Now <i class="lnr lnr-arrow-right"></i></a>
+                        <a href="{{url('/pesan')}}" class="primary-btn">Book Now <i class="lnr lnr-arrow-right"></i></a>
                     </div>
                 </div>
             </div>
