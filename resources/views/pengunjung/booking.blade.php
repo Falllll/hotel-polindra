@@ -40,7 +40,7 @@
                 <div class="col-md-5">
                     <div class="left-side">
                         <div class="logo">
-                            <img src="{{ asset('/img/trisula/logo-trisula.png') }}" class="logo" alt="Trisula">
+                            <a href="{{url ('/')}}"><img src="{{ asset('/img/trisula/logo-trisula.png') }}" class="logo" alt="Trisula"></a>
                         </div>
                         <div class="tabs-content">
                             <h4>Social Media:</h4>

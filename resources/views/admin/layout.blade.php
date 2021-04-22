@@ -85,7 +85,7 @@
                     </li>
                     <li class="dropdown"><a href="#" data-toggle="dropdown" class="nav-link dropdown-toggle nav-link-lg">
                             <i class="ion ion-android-person d-lg-none"></i>
-                            <div class="d-sm-none d-lg-inline-block">Hi, Delia Meta Putri</div>
+                            <div class="d-sm-none d-lg-inline-block">Hi, {{ auth()->user()->name }}</div>
                         </a>
                         <div class="dropdown-menu dropdown-menu-right">
                             <a href="profile.html" class="dropdown-item has-icon">
@@ -108,7 +108,7 @@
                             <img alt="image" src="dist/img/avatar/delia.jpg">
                         </div>
                         <div class="sidebar-user-details">
-                            <div class="user-name">Delia Meta Putri</div>
+                            <div class="user-name">{{ auth()->user()->name }}</div>
                             <div class="user-role">
                                 Administrator
                             </div>
