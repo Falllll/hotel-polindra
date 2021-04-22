@@ -17,11 +17,15 @@ class PengunjungController extends Controller
         return view('pengunjung.about');
     }
 
-    public function room()
+    public function rooms()
     {
         return view('pengunjung.rooms');
     }
 
+    public function restaurant()
+    {
+        return view('pengunjung.restaurant');
+    }
     public function service()
     {
         return view('pengunjung.services');

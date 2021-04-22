@@ -21,9 +21,10 @@ use App\Http\Controllers\PengunjungController;
 
 Route::get('/', [PengunjungController::class, 'home']);
 Route::get('/about', [PengunjungController::class, 'about']);
-Route::get('/room', [PengunjungController::class, 'room']);
+Route::get('/rooms', [PengunjungController::class, 'rooms']);
 Route::get('/service', [PengunjungController::class, 'service']);
 Route::get('/news', [PengunjungController::class, 'news']);
+Route::get('/restaurant', [PengunjungController::class, 'restaurant']);
 Route::get('/contact', [PengunjungController::class, 'contact']);
 
 Route::get('/register', [AdminController::class, 'register'])->name('register');
