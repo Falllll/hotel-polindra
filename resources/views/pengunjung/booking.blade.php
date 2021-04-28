@@ -46,8 +46,11 @@
 
 <body>
 
+
+ 
     
     <section class="banner" style="filter: grayscale(30%) drop-shadow(5px 5px 8px gray) contrast(120%);" id="top">
+        
         <div class="container">
             <div class="row">
                 <div class="col-md-5">
@@ -71,6 +74,11 @@
                     </div>
                 </div>
                 <div class="col-md-5 col-md-offset-1">
+                    <div class="container">
+                        <div class="right-side">
+                            <a href="{{ route('logout') }}" class="btn btn-primary "><i class="fa fa-arrow-left">  Logout</i></a>
+                        </div>
+                    </div>
                     <section id="first-tab-group" class="tabgroup">
                         <div id="tab1">
                             <div class="submit-form">
