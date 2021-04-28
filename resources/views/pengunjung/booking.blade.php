@@ -21,11 +21,24 @@
         <style>
             .logo {
                 margin: auto;
+                padding-right: 5%; 
             }
 
             .copyright{
                 color: white;
             }
+
+            .input{
+                width: 100%;
+                padding: 10px ;
+                margin: 5px -2;
+                display: inline-block;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+                box-sizing: border-box;
+                height: px;
+                }
+            
         </style>
 
         <script src="/booking/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
@@ -34,7 +47,7 @@
 <body>
 
     
-    <section class="banner" id="top">
+    <section class="banner" style="filter: grayscale(30%) drop-shadow(5px 5px 8px gray) contrast(120%);" id="top">
         <div class="container">
             <div class="row">
                 <div class="col-md-5">
@@ -63,6 +76,61 @@
                             <div class="submit-form">
                                 <h4>Cek kamar <em>hotel</em>:</h4>
                                 <form id="form-submit" action="" method="get">
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <fieldset>
+                                                <label for="nama">Nama Lengkap: </label>
+                                                <input type="text" name="nama" id="nama" autocomplete="off" placeholder="Masukkan nama.." class="input" >
+                                            </fieldset>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <fieldset>
+                                                <label for="alamat">Alamat: </label>
+                                                <input type="text" name="alamat" id="alamat" autocomplete="off" placeholder="Masukkan alamat.." class="input" >
+                                            </fieldset>
+                                        </div>
+                                    </div>
+                            
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <fieldset>
+                                                <label for="kota">Pilih kota:</label>
+                                                <select required name='kota' onchange='this.form.()'>
+                                                    <option value="">Pilih kota:</option>
+                                                    <option value="indramayu">Indramayu</option>
+                                                    <option value="Cirebon">Cirebon</option>
+                                                    <option value="subang">Subang</option>
+                                                    <option value="kuningan">Kuningan</option>
+                                                    <option value="lainnya">lainnya</option>
+                                                </select>
+                                            </fieldset>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <fieldset>
+                                                <label for="nohp">No Handphone: </label>
+                                                <input type="text" name="nohp" id="nohp" autocomplete="off" placeholder="Masukkan no handphone.." class="input" >
+                                            </fieldset>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <fieldset>
+                                                <label for="kewarganegaraan">Pilih kewarganegaraan:</label>
+                                                <select required name='kewarganegaraan' onchange='this.form.()'>
+                                                    <option value="">Select kewarganegaraan:</option>
+                                                    <option value="indonesia">Indonesia</option>
+                                                    <option value="singapura">Singapura</option>
+                                                    <option value="malaysia">Malaysia</option>
+                                                    <option value="thailand">Thailand</option>
+                                                    <option value="lainnya">lainnya</option>
+                                                </select>
+                                            </fieldset>
+                                        </div>
+                                    </div>
                                     <div class="row">
                                         <div class="col-md-12">
                                             <fieldset>
