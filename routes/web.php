@@ -47,10 +47,9 @@ Route::group(['middleware' => ['auth', 'ceklevel:admin']], function () {
     Route::get('/jadwal', [AdminController::class, 'jadwal']);
     Route::get('/menu', [AdminController::class, 'menu']);
     Route::get('/reservasi', [AdminController::class, 'reservasi']);
-    
+
 });
 
 Route::group(['middleware' => ['auth', 'ceklevel:admin,customer']], function () {
-
     Route::get('/pesan', [PengunjungController::class, 'booking'])->name('pesan');
 });
