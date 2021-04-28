@@ -18,12 +18,11 @@ class AdminController extends Controller
 
     public function postlogin(Request $request)
     {
+        
         if(Auth::attempt($request->only('email', 'password', 'level'))) {
-            if( 'level' == 'admin'){
                 return redirect('/admin');
-            }else{
-            return redirect('/pesan');
-            }
+                return redirect('/pesan');
+            
         }
 
         return redirect('/login');
