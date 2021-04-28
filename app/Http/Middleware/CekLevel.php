@@ -14,7 +14,7 @@ class CekLevel
      * @param  \Closure  $next
      * @return mixed
      */
-    public function handle(Request $request, Closure $next)
+    public function handle(Request $request, Closure $next, ...$levels)
     {
         if(in_array($request->user()->level,$levels)){
             return $next($request);

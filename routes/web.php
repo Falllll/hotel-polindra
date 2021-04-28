@@ -26,25 +26,31 @@ Route::get('/service', [PengunjungController::class, 'service']);
 Route::get('/news', [PengunjungController::class, 'news']);
 Route::get('/restaurant', [PengunjungController::class, 'restaurant']);
 Route::get('/contact', [PengunjungController::class, 'contact']);
-Route::get('/pesan', [PengunjungController::class, 'booking']);
+
 
 Route::get('/register', [AdminController::class, 'register'])->name('register');
 Route::post('/simpanregister', [AdminController::class, 'simpanregister'])->name('simpanregister');
 Route::get('/login', [AdminController::class, 'login'])->name('login');
 Route::post('/postlogin', [AdminController::class, 'postlogin'])->name('postlogin');
 Route::get('/logout', [AdminController::class, 'logout'])->name('logout');
-Route::group(['middleware' => ['auth']], function () {
+Route::group(['middleware' => ['auth', 'ceklevel:admin']], function () {
     Route::get('/admin', [AdminController::class, 'admin'])->name('admin');
+    Route::get('/newpost', [AdminController::class, 'newpost']);
+    Route::get('/post', [AdminController::class, 'post']);
+    Route::get('/kategori', [AdminController::class, 'kategori']);
+    Route::get('/slider', [AdminController::class, 'slider']);
+    Route::get('/room', [AdminController::class, 'room']);
+    Route::get('/user', [AdminController::class, 'user']);
+    Route::get('/event', [AdminController::class, 'event']);
+    Route::get('/inbox', [AdminController::class, 'inbox']);
+    Route::get('/fasilitas', [AdminController::class, 'fasilitas']);
+    Route::get('/jadwal', [AdminController::class, 'jadwal']);
+    Route::get('/menu', [AdminController::class, 'menu']);
+    Route::get('/reservasi', [AdminController::class, 'reservasi']);
+    
 });
-Route::get('/newpost', [AdminController::class, 'newpost']);
-Route::get('/post', [AdminController::class, 'post']);
-Route::get('/kategori', [AdminController::class, 'kategori']);
-Route::get('/slider', [AdminController::class, 'slider']);
-Route::get('/room', [AdminController::class, 'room']);
-Route::get('/user', [AdminController::class, 'user']);
-Route::get('/event', [AdminController::class, 'event']);
-Route::get('/inbox', [AdminController::class, 'inbox']);
-Route::get('/fasilitas', [AdminController::class, 'fasilitas']);
-Route::get('/jadwal', [AdminController::class, 'jadwal']);
-Route::get('/menu', [AdminController::class, 'menu']);
-Route::get('/reservasi', [AdminController::class, 'reservasi']);
+
+Route::group(['middleware' => ['auth', 'ceklevel:admin,customer']], function () {
+
+    Route::get('/pesan', [PengunjungController::class, 'booking'])->name('pesan');
+});
