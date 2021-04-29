@@ -1,6 +1,6 @@
 @extends('admin.form.create.layout')
 
-@section('title', 'Create | Categories')
+@section('title', 'Create | Event')
 
 @section('link')
 
@@ -15,7 +15,7 @@
 			<form class="create-form" action="" method="post">
 				@csrf
 				<span class="create-form-title">
-					Tambah Kategori
+					Tambah Event
 				</span>
 
 				<div class="wrap-input1">

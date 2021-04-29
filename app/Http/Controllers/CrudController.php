@@ -19,6 +19,8 @@ use App\Models\Categorie;
 
 class CrudController extends Controller
 {
+    // Tambah
+
     public function createcategories(){
         return view('admin/form.create.create-categories');
     }
@@ -87,5 +89,85 @@ class CrudController extends Controller
 
         Event::create($request->all());
         return redirect('/event');
+    }
+
+
+    // Edit
+
+    public function editroom($id){
+        $room = Room::find($id);
+        return view('admin.form.edit.edit-room', compact('room'));
+    }
+
+    public function updateroom(Request $request, $id){
+        $room = Room::find($id);
+        $room->update($request->all());
+        return redirect ('/room');
+    }
+
+    public function editkategori($id){
+        $kategori = Categorie::find($id);
+        return view('admin.form.edit.edit-kategori', compact('kategori'));
+    }
+
+    public function updatekategori(Request $request, $id){
+        $kategori = Categorie::find($id);
+        $kategori->update($request->all());
+        return redirect ('/kategori');
+    }
+
+    public function editevent($id){
+        $event = Event::find($id);
+        return view('admin.form.edit.edit-event', compact('event'));
+    }
+
+    public function updateevent(Request $request, $id){
+        $event = Event::find($id);
+        $event->update($request->all());
+        return redirect ('/event');
+    }
+
+    public function editfasilitas($id){
+        $fasilitas = Facilites::find($id);
+        return view('admin.form.edit.edit-fasilitas', compact('fasilitas'));
+    }
+
+    public function updatefasilitas(Request $request, $id){
+        $fasilitas = Facilites::find($id);
+        $fasilitas->update($request->all());
+        return redirect ('/fasilitas');
+    }
+
+    public function editmenu($id){
+        $menu = Menu::find($id);
+        return view('admin.form.edit.edit-menu', compact('menu'));
+    }
+
+    public function updatemenu(Request $request, $id){
+        $menu = Menu::find($id);
+        $menu->update($request->all());
+        return redirect ('/menu');
+    }
+
+    public function editjadwal($id){
+        $jadwal = Eat_time::find($id);
+        return view('admin.form.edit.edit-jadwal', compact('jadwal'));
+    }
+
+    public function updatejadwal(Request $request, $id){
+        $jadwal = Eat_time::find($id);
+        $jadwal->update($request->all());
+        return redirect ('/jadwal');
+    }
+
+    public function editslider($id){
+        $slider = Slider::find($id);
+        return view('admin.form.edit.edit-slider', compact('slider'));
+    }
+
+    public function updateslider(Request $request, $id){
+        $slider = Slider::find($id);
+        $slider->update($request->all());
+        return redirect ('/slider');
     }
 }

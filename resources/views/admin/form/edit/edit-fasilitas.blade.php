@@ -1,6 +1,6 @@
 @extends('admin.form.create.layout')
 
-@section('title', 'Create | Menu')
+@section('title', 'Create | Fasilitas')
 
 @section('link')
 
@@ -12,30 +12,23 @@
 				<img src="/form/images/img-02.jpg" alt="IMG">
 			</div>
 
-			<form class="create-form" action="" method="post">
+			<form class="create-form" action="/fasilitas/{{$fasilitas->id}}" method="post">
+				@method('PUT')
 				@csrf
 				<span class="create-form-title">
-					Tambah Menu
+					Tambah Fasilitas
 				</span>
 
 				<div class="wrap-input1">
-					<input class="input1" type="text" name="nama_makanan" placeholder="Nama Makanan">
+					<input class="input1" type="text" name="nama" value="{{$fasilitas->nama}}" placeholder="Nama Fasilitas">
 					<span class="shadow-input1"></span>
 				</div>
                 <div class="wrap-input1">
-					<input class="input1" type="text" name="gambar" placeholder="Gambar">
+					<input class="input1" type="text" name="gambar" value="{{$fasilitas->gambar}}" placeholder="Foto Fasilitas">
 					<span class="shadow-input1"></span>
 				</div>
                 <div class="wrap-input1">
-					<input class="input1" type="text" name="jam" placeholder="Jam">
-					<span class="shadow-input1"></span>
-				</div>
-                <div class="wrap-input1">
-					<input class="input1" type="text" name="desc" placeholder="Deskripsi Makanan">
-					<span class="shadow-input1"></span>
-				</div>
-                <div class="wrap-input1">
-					<input class="input1" type="text" name="harga" placeholder="Harga">
+					<input class="input1" type="text" name="desc" value="{{$fasilitas->desc}}" placeholder="Deskripsi Fasilitas">
 					<span class="shadow-input1"></span>
 				</div>
 				<div class="container-create-form-btn">

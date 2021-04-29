@@ -12,30 +12,31 @@
 				<img src="/form/images/img-02.jpg" alt="IMG">
 			</div>
 
-			<form class="create-form" action="" method="post">
+			<form class="create-form" action="/menu/{{$menu->id}}" method="post">
+				@method('PUT')
 				@csrf
 				<span class="create-form-title">
 					Tambah Menu
 				</span>
 
 				<div class="wrap-input1">
-					<input class="input1" type="text" name="nama_makanan" placeholder="Nama Makanan">
+					<input class="input1" type="text" name="nama_makanan" value="{{$menu->nama_makanan}}" placeholder="Nama Makanan">
 					<span class="shadow-input1"></span>
 				</div>
                 <div class="wrap-input1">
-					<input class="input1" type="text" name="gambar" placeholder="Gambar">
+					<input class="input1" type="text" name="gambar" value="{{$menu->gambar}}" placeholder="Gambar">
 					<span class="shadow-input1"></span>
 				</div>
                 <div class="wrap-input1">
-					<input class="input1" type="text" name="jam" placeholder="Jam">
+					<input class="input1" type="text" name="jam" value="{{$menu->jam}}" placeholder="Jam">
 					<span class="shadow-input1"></span>
 				</div>
                 <div class="wrap-input1">
-					<input class="input1" type="text" name="desc" placeholder="Deskripsi Makanan">
+					<input class="input1" type="text" name="desc" value="{{$menu->desc}}" placeholder="Deskripsi Makanan">
 					<span class="shadow-input1"></span>
 				</div>
                 <div class="wrap-input1">
-					<input class="input1" type="text" name="harga" placeholder="Harga">
+					<input class="input1" type="text" name="harga" value="{{$menu->harga}}" placeholder="Harga">
 					<span class="shadow-input1"></span>
 				</div>
 				<div class="container-create-form-btn">

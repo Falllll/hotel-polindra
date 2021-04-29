@@ -1,6 +1,6 @@
 @extends('admin.form.create.layout')
 
-@section('title', 'Create | Fasilitas')
+@section('title', 'Create | Schedule')
 
 @section('link')
 
@@ -12,22 +12,19 @@
 				<img src="/form/images/img-02.jpg" alt="IMG">
 			</div>
 
-			<form class="create-form" action="" method="post">
+			<form class="create-form" action="/jadwal/{{$jadwal->id}}" method="post">
+				@method('PUT')
 				@csrf
 				<span class="create-form-title">
-					Tambah Fasilitas
+					Tambah Jadwal Makan
 				</span>
 
 				<div class="wrap-input1">
-					<input class="input1" type="text" name="nama" placeholder="Nama Fasilitas">
+					<input class="input1" type="text" name="nama" value="{{$jadwal->nama}}" placeholder="Nama">
 					<span class="shadow-input1"></span>
 				</div>
                 <div class="wrap-input1">
-					<input class="input1" type="text" name="gambar" placeholder="Foto Fasilitas">
-					<span class="shadow-input1"></span>
-				</div>
-                <div class="wrap-input1">
-					<input class="input1" type="text" name="desc" placeholder="Deskripsi Fasilitas">
+					<input class="input1" type="text" name="jam" value="{{$jadwal->jam}}" placeholder="Waktu">
 					<span class="shadow-input1"></span>
 				</div>
 				<div class="container-create-form-btn">

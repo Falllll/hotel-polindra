@@ -66,6 +66,21 @@ Route::group(['middleware' => ['auth', 'ceklevel:admin']], function () {
     Route::get('/create/event', [CrudController::class, 'createevent']);
     Route::post('/create/event', [CrudController::class, 'addevent']);
 
+    Route::get('/room/{id}/edit', [CrudController::class, 'editroom']);
+    Route::put('/room/{id}', [CrudController::class, 'updateroom']);
+    Route::get('/kategori/{id}/edit', [CrudController::class, 'editkategori']);
+    Route::put('/kategori/{id}', [CrudController::class, 'updatekategori']);
+    Route::get('/event/{id}/edit', [CrudController::class, 'editevent']);
+    Route::put('/event/{id}', [CrudController::class, 'updateevent']);
+    Route::get('/fasilitas/{id}/edit', [CrudController::class, 'editfasilitas']);
+    Route::put('/fasilitas/{id}', [CrudController::class, 'updatefasilitas']);
+    Route::get('/menu/{id}/edit', [CrudController::class, 'editmenu']);
+    Route::put('/menu/{id}', [CrudController::class, 'updatemenu']);
+    Route::get('/jadwal/{id}/edit', [CrudController::class, 'editjadwal']);
+    Route::put('/jadwal/{id}', [CrudController::class, 'updatejadwal']);
+    Route::get('/slider/{id}/edit', [CrudController::class, 'editslider']);
+    Route::put('/slider/{id}', [CrudController::class, 'updateslider']);
+
 });
 
 Route::group(['middleware' => ['auth', 'ceklevel:admin,customer']], function () {

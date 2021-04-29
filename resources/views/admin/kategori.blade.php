@@ -39,7 +39,7 @@
                                         <td>{{$kategori->kategori_nama}}</td>
 
                                         <td>
-                                            <a href="#" class="btn btn-success btn-sm">Edit</a>
+                                            <a href="/kategori/{{$kategori->id}}/edit" class="btn btn-success btn-sm">Edit</a>
                                             <a href="#" class="btn btn-danger btn-sm">Delete</a>
                                         </td>
                                     </tr>
