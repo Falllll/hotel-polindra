@@ -20,32 +20,9 @@ use App\Models\Categorie;
 class AdminController extends Controller
 {
 
-    public function login()
-    {
-        return view('admin.index');
-    }
-
-    public function postlogin(Request $request)
-    {
-        
-        if(Auth::attempt($request->only('email', 'password', 'level'))) {
-                return redirect('/admin');
-                return redirect('/pesan'); 
-            
-        }
-
-        return redirect('/login');
-    }
-
     public function admin()
     {
         return view('admin.dashboard');
-    }
-
-    public function logout(Request $request)
-    {
-        Auth::logout();
-        return redirect('/login');
     }
 
     public function newpost()
@@ -137,23 +114,4 @@ class AdminController extends Controller
         return view('admin.reservasi', compact(['reservations','i']));
     }
 
-
-    public function register()
-    {
-        return view('admin.register');
-    }
-
-    public function simpanregister(Request $request)
-    {
-
-        User::create([
-            'name' => $request->name,
-            'level' => 'customer',
-            'email' => $request->email,
-            'password' => bcrypt($request->password),
-            'remember_token' => Str::random(60),
-        ]);
-
-        return view('pengunjung.index');
-    }
 }

@@ -4,6 +4,8 @@ use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\PengunjungController;
+use App\Http\Controllers\LoginController;
+use App\Http\Controllers\CrudController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -28,11 +30,12 @@ Route::get('/restaurant', [PengunjungController::class, 'restaurant']);
 Route::get('/contact', [PengunjungController::class, 'contact']);
 
 
-Route::get('/register', [AdminController::class, 'register'])->name('register');
-Route::post('/simpanregister', [AdminController::class, 'simpanregister'])->name('simpanregister');
-Route::get('/login', [AdminController::class, 'login'])->name('login');
-Route::post('/postlogin', [AdminController::class, 'postlogin'])->name('postlogin');
-Route::get('/logout', [AdminController::class, 'logout'])->name('logout');
+Route::get('/register', [LoginController::class, 'register'])->name('register');
+Route::post('/simpanregister', [LoginController::class, 'simpanregister'])->name('simpanregister');
+Route::get('/login', [LoginController::class, 'login'])->name('login');
+Route::post('/postlogin', [LoginController::class, 'postlogin'])->name('postlogin');
+Route::get('/logout', [LoginController::class, 'logout'])->name('logout');
+
 Route::group(['middleware' => ['auth', 'ceklevel:admin']], function () {
     Route::get('/admin', [AdminController::class, 'admin'])->name('admin');
     Route::get('/newpost', [AdminController::class, 'newpost']);
@@ -47,6 +50,21 @@ Route::group(['middleware' => ['auth', 'ceklevel:admin']], function () {
     Route::get('/jadwal', [AdminController::class, 'jadwal']);
     Route::get('/menu', [AdminController::class, 'menu']);
     Route::get('/reservasi', [AdminController::class, 'reservasi']);
+
+    Route::get('/create/categories', [CrudController::class, 'createcategories']);
+    Route::post('/create/categories', [CrudController::class, 'addcategories']);
+    Route::get('/create/slider', [CrudController::class, 'createslider']);
+    Route::post('/create/slider', [CrudController::class, 'addslider']);
+    Route::get('/create/room', [CrudController::class, 'createroom']);
+    Route::post('/create/room', [CrudController::class, 'addroom']);
+    Route::get('/create/facility', [CrudController::class, 'createfacility']);
+    Route::post('/create/facility', [CrudController::class, 'addfacility']);
+    Route::get('/create/schedule', [CrudController::class, 'createschedule']);
+    Route::post('/create/schedule', [CrudController::class, 'addschedule']);
+    Route::get('/create/menu', [CrudController::class, 'createmenu']);
+    Route::post('/create/menu', [CrudController::class, 'addmenu']);
+    Route::get('/create/event', [CrudController::class, 'createevent']);
+    Route::post('/create/event', [CrudController::class, 'addevent']);
 
 });
 

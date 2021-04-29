@@ -14,7 +14,12 @@
             <div class="row">
                 <div class="col-12 col-md-6 col-lg-12">
                     <div class="block-options p-3">
-                        <button class="btn btn-primary" id="btn-add-new"><span class="fa fa-plus"></span> Add New</button>
+                        <a href="{{url('/create/categories')}}">
+                            <button class="btn btn-primary" id="btn-add-new">
+                                <span class="fa fa-plus"></span>Add New
+                            </button>
+                        </a>
+                        
                     </div>
                     <div class="card">
 
