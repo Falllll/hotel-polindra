@@ -170,4 +170,66 @@ class CrudController extends Controller
         $slider->update($request->all());
         return redirect ('/slider');
     }
+
+
+    // DELETE
+    public function deleteuser($id){
+        $user = User::find($id);
+        $user->delete();
+        return redirect('/user');
+    }
+    
+    public function deleteevent($id){
+        $event = Event::find($id);
+        $event->delete();
+        return redirect('/event');
+    }
+
+    public function deletefasilitas($id){
+        $fasilitas = Facilites::find($id);
+        $fasilitas->delete();
+        return redirect('/fasilitas');
+    }
+
+    public function deleteinbox($id){
+        $contact = Contact::find($id);
+        $contact->delete();
+        return redirect('/inbox');
+    }
+
+    public function deletejadwal($id){
+        $jadwal = Eat_time::find($id);
+        $jadwal->delete();
+        return redirect('/jadwal');
+    }
+
+    public function deletekategori($id){
+        $kategori = Categorie::find($id);
+        $kategori->delete();
+        return redirect('/kategori');
+    }
+
+    public function deletemenu($id){
+        $menu = Menu::find($id);
+        $menu->delete();
+        return redirect('/menu');
+    }
+
+    public function deletereservasi($id){
+        $reservasi = Reservation::find($id);
+        $reservasi->delete();
+        return redirect('/reservasi');
+    }
+
+    public function deleteroom($id){
+        $room = Room::find($id);
+        $room->delete();
+        return redirect('/room');
+    }
+
+    public function deleteslider($id){
+        $slider = Slider::find($id);
+        $slider->delete();
+        return redirect('/slider');
+    }
 }

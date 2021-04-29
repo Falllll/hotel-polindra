@@ -44,7 +44,11 @@
 
                                         <td>
                                             <a href="#" class="btn btn-success btn-sm">Acc</a>
-                                            <a href="#" class="btn btn-danger btn-sm">Delete</a>
+                                            <form action="/reservasi/{{$reservasi->id}}" method="post">
+                                                @method('DELETE')
+                                                @csrf
+                                                <input type="submit" class="btn btn-danger btn-sm" value="Delete">
+                                            </form>
                                         </td>
                                     </tr>
                                     @endforeach

@@ -81,6 +81,18 @@ Route::group(['middleware' => ['auth', 'ceklevel:admin']], function () {
     Route::get('/slider/{id}/edit', [CrudController::class, 'editslider']);
     Route::put('/slider/{id}', [CrudController::class, 'updateslider']);
 
+    Route::delete('/room/{id}', [CrudController::class, 'deleteroom']);
+    Route::delete('/kategori/{id}', [CrudController::class, 'deletekategori']);
+    Route::delete('/event/{id}', [CrudController::class, 'deleteevent']);
+    Route::delete('/fasilitas/{id}', [CrudController::class, 'deletefasilitas']);
+    Route::delete('/menu/{id}', [CrudController::class, 'deletemenu']);
+    Route::delete('/jadwal/{id}', [CrudController::class, 'deletejadwal']);
+    Route::delete('/slider/{id}', [CrudController::class, 'deleteslider']);
+    Route::delete('/user/{id}', [CrudController::class, 'deleteuser']);
+    Route::delete('/reservasi/{id}', [CrudController::class, 'deletereservasi']);
+    Route::delete('/contact/{id}', [CrudController::class, 'deleteinbox']);
+
+
 });
 
 Route::group(['middleware' => ['auth', 'ceklevel:admin,customer']], function () {

@@ -38,7 +38,11 @@
 
                                         <td>
                                             <a href="/jadwal/{{$jadwal->id}}/edit" class="btn btn-success btn-sm">Edit</a>
-                                            <a href="#" class="btn btn-danger btn-sm">Delete</a>
+                                            <form action="/jadwal/{{$jadwal->id}}" method="post">
+                                                @method('DELETE')
+                                                @csrf
+                                                <input type="submit" class="btn btn-danger btn-sm" value="Delete">
+                                            </form>
                                         </td>
                                     </tr>
                                     @endforeach

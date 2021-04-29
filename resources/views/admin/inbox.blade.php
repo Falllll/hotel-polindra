@@ -40,7 +40,11 @@
                                         <td>{{$contact->message}}</td>
 
                                         <td>
-                                            <a href="#" class="btn btn-danger btn-sm">Delete</a>
+                                            <form action="/contact/{{$contact->id}}" method="post">
+                                                @method('DELETE')
+                                                @csrf
+                                                <input type="submit" class="btn btn-danger btn-sm" value="Delete">
+                                            </form>
                                         </td>
                                     </tr>
                                     @endforeach
