@@ -21,6 +21,7 @@
                         <div class="card-body">
                             <div class="table-responsive">
                                 <table class="table table-bordered ">
+                                    
                                     <tr>
                                         <th>No</th>
                                         <th>Images</th>
@@ -28,17 +29,21 @@
 
                                         <th>Aksi</th>
                                     </tr>
+                                    @foreach ($sliders as $slider)
                                     <tr>
 
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
+                                        <td>{{$i++}}</td>
+                                        <td>{{$slider->gambar}}</td>
+                                        <td>{{$slider->caption}}</td>
 
                                         <td>
                                             <a href="#" class="btn btn-success btn-sm">Edit</a>
                                             <a href="#" class="btn btn-danger btn-sm">Delete</a>
                                         </td>
                                     </tr>
+                                
+                                    @endforeach
+                                    
 
                                 </table>
                             </div>

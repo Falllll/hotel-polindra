@@ -30,18 +30,21 @@
 
                                         <th>Aksi</th>
                                     </tr>
+                                    @foreach ($facilitiess as $fasilitas)
                                     <tr>
 
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
+                                        <td>{{$i++}}</td>
+                                        <td>{{$fasilitas->gambar}}</td>
+                                        <td>{{$fasilitas->nama}}</td>
+                                        <td>{{$fasilitas->desc}}</td>
 
                                         <td>
                                             <a href="#" class="btn btn-success btn-sm">Edit</a>
                                             <a href="#" class="btn btn-danger btn-sm">Delete</a>
                                         </td>
                                     </tr>
+                                    @endforeach
+                                    
 
                                 </table>
                             </div>

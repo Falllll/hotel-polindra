@@ -33,23 +33,26 @@
 
                                         <th>Aksi</th>
                                     </tr>
+                                    @foreach ($rooms as $room)
                                     <tr>
 
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
+                                        <td>{{$i++}}</td>
+                                        <td>{{$room->images1}}</td>
+                                        <td>{{$room->images2}}</td>
+                                        <td>{{$room->images3}}</td>
+                                        <td>{{$room->images4}}</td>
+                                        <td>{{$room->room_type}}</td>
 
-                                        <td></td>
-                                        <td></td>
+                                        <td>{{$room->price}}</td>
+                                        <td>{{$room->desc}}</td>
 
                                         <td>
                                             <a href="#" class="btn btn-success btn-sm">Edit</a>
                                             <a href="#" class="btn btn-danger btn-sm">Delete</a>
                                         </td>
                                     </tr>
+                                    @endforeach
+                                    
 
                                 </table>
                             </div>

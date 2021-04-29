@@ -22,28 +22,29 @@
                             <div class="table-responsive">
                                 <table class="table table-bordered ">
                                     <tr>
-                                        <th>Photo</th>
-                                        <th>Username</th>
+                                        <th>No</th>
+                                        <th>Email</th>
                                         <th>Nama</th>
-                                        <th>Jenis Kelamin</th>
                                         <th>Password</th>
                                         <th>Level</th>
                                         <th>Aksi</th>
                                     </tr>
+                                    @foreach ($users as $user)
                                     <tr>
 
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
+                                        <td>{{$i++}}</td>
+                                        <td>{{$user->email}}</td>
+                                        <td>{{$user->name}}</td>
+                                        <td>{{$user->password}}</td>
+                                        <td>{{$user->level}}</td>
 
                                         <td>
                                             <a href="#" class="btn btn-success btn-sm">Edit</a>
                                             <a href="#" class="btn btn-danger btn-sm">Delete</a>
                                         </td>
                                     </tr>
+                                    @endforeach
+                                    
 
                                 </table>
                             </div>

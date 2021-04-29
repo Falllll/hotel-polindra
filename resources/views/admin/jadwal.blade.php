@@ -28,11 +28,12 @@
 
                                         <th>Aksi</th>
                                     </tr>
+                                    @foreach ($schedules as $jadwal)
                                     <tr>
 
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
+                                        <td>{{$i++}}</td>
+                                        <td>{{$jadwal->nama}}</td>
+                                        <td>{{$jadwal->jam}}</td>
 
 
                                         <td>
@@ -40,6 +41,8 @@
                                             <a href="#" class="btn btn-danger btn-sm">Delete</a>
                                         </td>
                                     </tr>
+                                    @endforeach
+                                    
 
                                 </table>
                             </div>

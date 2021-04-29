@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateOverviewTable extends Migration
+class CreateEatTimesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,10 @@ class CreateOverviewTable extends Migration
      */
     public function up()
     {
-        Schema::create('overview', function (Blueprint $table) {
+        Schema::create('eat_times', function (Blueprint $table) {
             $table->id();
-            $table->string('head');
-            $table->text('desc');
-            $table->text('gambar');
+            $table->string('nama');
+            $table->time('jam');
             $table->timestamps();
         });
     }
@@ -29,6 +28,6 @@ class CreateOverviewTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('overview');
+        Schema::dropIfExists('eat_times');
     }
 }

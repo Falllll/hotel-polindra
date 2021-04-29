@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateCompareTable extends Migration
+class CreateOverviewsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,15 +13,11 @@ class CreateCompareTable extends Migration
      */
     public function up()
     {
-        Schema::create('compare', function (Blueprint $table) {
+        Schema::create('overviews', function (Blueprint $table) {
             $table->id();
-            $table->string('type');
+            $table->string('head');
+            $table->text('desc');
             $table->text('gambar');
-            $table->integer('max');
-            $table->integer('bed');
-            $table->text('view');
-            $table->text('detail');
-            $table->double('rate');
             $table->timestamps();
         });
     }
@@ -33,6 +29,6 @@ class CreateCompareTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('compare');
+        Schema::dropIfExists('overviews');
     }
 }

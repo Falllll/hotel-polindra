@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateContactUsTable extends Migration
+class CreateCompareTablesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,15 @@ class CreateContactUsTable extends Migration
      */
     public function up()
     {
-        Schema::create('contact_us', function (Blueprint $table) {
+        Schema::create('compare_tables', function (Blueprint $table) {
             $table->id();
-            $table->string('nama');
-            $table->string('email');
-            $table->bigInteger('phone');
-            $table->text('message');
+            $table->string('type');
+            $table->text('gambar');
+            $table->integer('max');
+            $table->integer('bed');
+            $table->text('view');
+            $table->text('detail');
+            $table->double('rate');
             $table->timestamps();
         });
     }
@@ -30,6 +33,6 @@ class CreateContactUsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('contact_us');
+        Schema::dropIfExists('compare_tables');
     }
 }

@@ -27,10 +27,11 @@
                                         <th>Kategori</th>
                                         <th>Aksi</th>
                                     </tr>
+                                    @foreach ($categories as $kategori)
                                     <tr>
 
-                                        <td>1</td>
-                                        <td>Interior</td>
+                                        <td>{{$i++}}</td>
+                                        <td>{{$kategori->kategori_nama}}</td>
 
                                         <td>
                                             <a href="#" class="btn btn-success btn-sm">Edit</a>
@@ -38,6 +39,8 @@
                                         </td>
                                     </tr>
 
+                                    @endforeach
+                                    
                                 </table>
                             </div>
                         </div>

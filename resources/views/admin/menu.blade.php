@@ -31,13 +31,15 @@
 
                                         <th>Aksi</th>
                                     </tr>
+                                    @foreach ($menus as $menu)
                                     <tr>
 
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
+                                        <td>{{$i++}}</td>
+                                        <td>{{$menu->gambar}}</td>
+                                        <td>{{$menu->nama_makanan}}</td>
+                                        <td>{{$menu->jam}}</td>
+                                        <td>{{$menu->desc}}</td>
+                                        <td>{{$menu->harga}}</td>
 
 
                                         <td>
@@ -45,6 +47,8 @@
                                             <a href="#" class="btn btn-danger btn-sm">Delete</a>
                                         </td>
                                     </tr>
+                                    @endforeach
+                                    
 
                                 </table>
                             </div>

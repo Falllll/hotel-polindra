@@ -31,21 +31,24 @@
                                         <th>Status</th>
                                         <th>Aksi</th>
                                     </tr>
+                                    @foreach ($reservations as $reservasi)
                                     <tr>
-
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
+                                    
+                                        <td>{{$i++}}</td>
+                                        <td>{{$reservasi->pemesan}}</td>
+                                        <td>{{$reservasi->email}}</td>
+                                        <td>{{$reservasi->check_in}}</td>
+                                        <td>{{$reservasi->check_out}}</td>
+                                        <td>{{$reservasi->room_type}}</td>
+                                        <td>{{$reservasi->status}}</td>
 
                                         <td>
                                             <a href="#" class="btn btn-success btn-sm">Acc</a>
                                             <a href="#" class="btn btn-danger btn-sm">Delete</a>
                                         </td>
                                     </tr>
+                                    @endforeach
+                                    
 
                                 </table>
                             </div>

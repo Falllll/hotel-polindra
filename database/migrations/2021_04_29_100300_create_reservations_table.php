@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateFasilitasTable extends Migration
+class CreateReservationsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,14 @@ class CreateFasilitasTable extends Migration
      */
     public function up()
     {
-        Schema::create('fasilitas', function (Blueprint $table) {
+        Schema::create('reservations', function (Blueprint $table) {
             $table->id();
-            $table->string('nama');
-            $table->text('gambar');
-            $table->text('detail');
+            $table->string('pemesan');
+            $table->string('email');
+            $table->date('check_in');
+            $table->date('check_out');
+            $table->string('room_type');
+            $table->string('status');
             $table->timestamps();
         });
     }
@@ -29,6 +32,6 @@ class CreateFasilitasTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('fasilitas');
+        Schema::dropIfExists('reservations');
     }
 }
