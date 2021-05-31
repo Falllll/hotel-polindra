@@ -19,6 +19,7 @@ class PengunjungController extends Controller
 
     public function rooms()
     {
+
         return view('pengunjung.rooms');
     }
 

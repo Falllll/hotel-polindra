@@ -8,5 +8,14 @@ use Illuminate\Database\Eloquent\Model;
 class Room extends Model
 {
     use HasFactory;
-    protected $guarded = ['id'];
+    protected $table = "rooms";
+    protected $primaryKey = "id";
+    protected $fillable = [
+        'id',
+        'gambar',
+        'room_type',
+        'stok',
+        'price',
+        'desc'
+    ];
 }

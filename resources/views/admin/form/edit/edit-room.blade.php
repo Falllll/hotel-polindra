@@ -1,51 +1,62 @@
 @extends('admin.form.create.layout')
 
-@section('title', 'Edit | Kamar')
+@section('title' , 'New Post | Admin')
 
-@section('link')
+@section('container')
+<!-- Main Container -->
+<div class="main-content">
+    <section class="section">
+        <h1 class="section-header">
+            <div>Edit data kamar</div>
+        </h1>
+
+        <!-- Page Content -->
+        <div class="content">
+            <form action="{{url ('/room', $room->id)}}" method="post" enctype="multipart/form-data">
+				{{ csrf_field() }}
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="block">
+
+                            <div class="block-content">
+                                <div class="form-group">
+									<label for="tipekamar"><strong>Tipe Kamar</strong></label>
+                                    <input type="text" name="room_type" id="tipekamar" class="form-control" placeholder="Tipe Kamar" required value="{{$room->room_type}}">
+                                </div>
+								<div class="form-group">
+									<label for="stok"><strong>Stok</strong></label>
+                                    <input type="text" name="stok" id="stok" class="form-control" placeholder="Sisa kamar" required value="{{$room->stok}}">
+                                </div>
+								<div class="form-group">
+									<label for="price"><strong>Harga Kamar</strong></label>
+                                    <input type="text" name="price" id="price" class="form-control" placeholder="Harga kamar per malam" required value="{{$room->price}}">
+                                </div>
+									<label for="desc"><strong>Deskripsi kamar</strong></label>
+								<div class="form-group">
+                                    <textarea  type="text" name="desc" id="desc" cols="70%" rows="3" placeholder="Deskripsi kamar" required>{{$room->desc}}</textarea>
+                                </div>
+								<label for="gambar">Pilih Foto</label>
+								<div class="form-group">
+									
+									<input type="file" name="gambar" id="gambar" class="dropify" data-height="190" required>
+								</div>
+                                <div class="form-group">
+									<img src="{{ asset('img/room/'.$room->gambar)}}" height="10%" width="30%" alt="">
+								</div>
+								<div class="form-group">
+									<button type="submit" class="btn btn-success">Edit data</button>
+								</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
 
 
-	<div class="create">
-		
-		<div class="container-create">
-			<div class="create-pic js-tilt" data-tilt>
-				<img src="/form/images/img-02.jpg" alt="IMG">
-			</div>
 
-			<form class="create-form" action="/room/{{$room->id}}" method="post">
-				@method('PUT')
-				@csrf
-				<span class="create-form-title">
-					Edit Kamar
-				</span>
-
-                <div class="wrap-input1">
-					<input class="input1" type="text" name="room_type" value="{{$room->room_type}}" placeholder="Tipe Kamar">
-					<span class="shadow-input1"></span>
-				</div>
-				<div class="wrap-input1">
-					<input class="input1" type="text" name="stok" value="{{$room->stok}}" placeholder="Stok">
-					<span class="shadow-input1"></span>
-				</div>
-                <div class="wrap-input1">
-					<input class="input1" type="text" name="price" value="{{$room->price}}" placeholder="Harga">
-					<span class="shadow-input1"></span>
-				</div>
-                <div class="wrap-input1">
-					<input class="input1" type="text" name="desc" value="{{$room->desc}}" placeholder="Deskripsi Kamar">
-					<span class="shadow-input1"></span>
-				</div>
-				<div class="container-create-form-btn">
-					<button class="create-form-btn">
-						<span>
-							Save
-							<i class="fa fa-long-arrow-right" aria-hidden="true"></i>
-						</span>
-					</button>
-				</div>
-
-			</form>
-		</div>
-	</div>
-
+        </div>
+        <section>
+            <!-- END Page Content -->
+</div>
+<!-- END Main Container -->
 @endsection

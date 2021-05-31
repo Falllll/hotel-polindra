@@ -7,13 +7,14 @@ use Illuminate\Http\Request;
 use illuminate\Support\Str;
 use App\Http\Middleware\CekLevel;
 use App\Models\User;
+use App\Models\Pengunjung;
 use App\Models\Slider;
 use App\Models\Room;
 use App\Models\Reservation;
 use App\Models\Facilites;
-use App\Models\Eat_time;
+// use App\Models\Eat_time;
 use App\Models\Menu;
-use App\Models\Event;
+// use App\Models\Event;
 use App\Models\Contact;
 use App\Models\Categorie;
 
@@ -21,24 +22,22 @@ class CrudController extends Controller
 {
     // Tambah
 
-    public function createcategories(){
-        return view('admin/form.create.create-categories');
-    }
-
-    public function addcategories(Request $request){
-
-        Categorie::create($request->all());
-        return redirect('/kategori');
-    }
-
     public function createslider(){
         return view('admin/form.create.create-slider');
     }
 
     public function addslider(Request $request){
 
-        Slider::create($request->all());
-        return redirect('/slider');
+        $nm = $request->gambar;
+        $namafile = time().rand(100,999).".".$nm->getClientOriginalExtension();
+
+            $dtUpload = new Slider;
+            $dtUpload->caption = $request->caption;
+            $dtUpload->gambar = $namafile;
+
+            $nm->move(public_path().'/img/room-slider', $namafile);
+            $dtUpload->save();
+            return redirect('/slider');
     }
 
     public function createroom(){
@@ -47,7 +46,18 @@ class CrudController extends Controller
 
     public function addroom(Request $request){
 
-        Room::create($request->all());
+        $nm = $request->gambar;
+        $namafile = time().rand(100,999).".".$nm->getClientOriginalExtension();
+
+            $dtUpload = new Room;
+            $dtUpload->room_type = $request->room_type;
+            $dtUpload->stok = $request->stok;
+            $dtUpload->price = $request->price;
+            $dtUpload->desc = $request->desc;
+            $dtUpload->gambar = $namafile;
+
+            $nm->move(public_path().'/img/room', $namafile);
+            $dtUpload->save();
         return redirect('/room');
     }
 
@@ -57,18 +67,17 @@ class CrudController extends Controller
 
     public function addfacility(Request $request){
 
-        Facilites::create($request->all());
+        $nm = $request->gambar;
+        $namafile = time().rand(100,999).".".$nm->getClientOriginalExtension();
+
+            $dtUpload = new Facilites;
+            $dtUpload->nama = $request->nama;
+            $dtUpload->desc = $request->desc;
+            $dtUpload->gambar = $namafile;
+
+            $nm->move(public_path().'/img/fasilitas', $namafile);
+            $dtUpload->save();
         return redirect('/fasilitas');
-    }
-
-    public function createschedule(){
-        return view('admin/form.create.create-schedule');
-    }
-
-    public function addschedule(Request $request){
-
-        Eat_time::create($request->all());
-        return redirect('/jadwal');
     }
 
     public function createmenu(){
@@ -77,98 +86,125 @@ class CrudController extends Controller
 
     public function addmenu(Request $request){
 
-        Menu::create($request->all());
+        $nm = $request->gambar;
+        $namafile = time().rand(100,999).".".$nm->getClientOriginalExtension();
+
+            $dtUpload = new Menu;
+            $dtUpload->nama_makanan = $request->nama_makanan;
+            $dtUpload->harga = $request->harga;
+            $dtUpload->desc = $request->desc;
+            $dtUpload->gambar = $namafile;
+
+            $nm->move(public_path().'/img/menu', $namafile);
+            $dtUpload->save();
         return redirect('/menu');
     }
 
-    public function createevent(){
-        return view('admin/form.create.create-event');
+    public function createtamu(){
+        return view('admin/form.create.create-tamu');
     }
 
-    public function addevent(Request $request){
+    public function addtamu(Request $request){
 
-        Event::create($request->all());
-        return redirect('/event');
+        Pengunjung::create($request->all());
+        return redirect('/tamu');
     }
-
 
     // Edit
 
     public function editroom($id){
-        $room = Room::find($id);
+        $room = Room::findorfail($id);
         return view('admin.form.edit.edit-room', compact('room'));
     }
 
     public function updateroom(Request $request, $id){
-        $room = Room::find($id);
-        $room->update($request->all());
+        $ubah = Room::findorfail($id);
+        $awal = $ubah->gambar;
+
+        $room = [
+            'room_type' => $request['room_type'],
+            'gambar' => $awal,
+            'stok' => $request['stok'],
+            'price' => $request['price'],
+            'desc' => $request['desc'],
+        ];
+
+        $request->gambar->move(public_path().'/img/room', $awal);
+        $ubah->update($room);
+
         return redirect ('/room');
     }
 
-    public function editkategori($id){
-        $kategori = Categorie::find($id);
-        return view('admin.form.edit.edit-kategori', compact('kategori'));
-    }
-
-    public function updatekategori(Request $request, $id){
-        $kategori = Categorie::find($id);
-        $kategori->update($request->all());
-        return redirect ('/kategori');
-    }
-
-    public function editevent($id){
-        $event = Event::find($id);
-        return view('admin.form.edit.edit-event', compact('event'));
-    }
-
-    public function updateevent(Request $request, $id){
-        $event = Event::find($id);
-        $event->update($request->all());
-        return redirect ('/event');
-    }
-
     public function editfasilitas($id){
-        $fasilitas = Facilites::find($id);
+        $fasilitas = Facilites::findorfail($id);
         return view('admin.form.edit.edit-fasilitas', compact('fasilitas'));
     }
 
     public function updatefasilitas(Request $request, $id){
-        $fasilitas = Facilites::find($id);
-        $fasilitas->update($request->all());
+        $ubah = Facilites::findorfail($id);
+        $awal = $ubah->gambar;
+
+        $fasilitas = [
+            'nama' => $request['nama'],
+            'gambar' => $awal,
+            'desc' => $request['desc'],
+        ];
+
+        $request->gambar->move(public_path().'/img/fasilitas', $awal);
+        $ubah->update($fasilitas);
+
         return redirect ('/fasilitas');
     }
 
     public function editmenu($id){
-        $menu = Menu::find($id);
+        $menu = Menu::findorfail($id);
         return view('admin.form.edit.edit-menu', compact('menu'));
     }
 
     public function updatemenu(Request $request, $id){
-        $menu = Menu::find($id);
-        $menu->update($request->all());
+        $ubah = Menu::findorfail($id);
+        $awal = $ubah->gambar;
+
+        $menu = [
+            'nama_makanan' => $request['nama_makanan'],
+            'gambar' => $awal,
+            'harga' => $request['harga'],
+            'desc' => $request['desc'],
+        ];
+
+        $request->gambar->move(public_path().'/img/menu', $awal);
+        $ubah->update($menu);
         return redirect ('/menu');
     }
 
-    public function editjadwal($id){
-        $jadwal = Eat_time::find($id);
-        return view('admin.form.edit.edit-jadwal', compact('jadwal'));
-    }
-
-    public function updatejadwal(Request $request, $id){
-        $jadwal = Eat_time::find($id);
-        $jadwal->update($request->all());
-        return redirect ('/jadwal');
-    }
-
     public function editslider($id){
-        $slider = Slider::find($id);
+        $slider = Slider::findorfail($id);
         return view('admin.form.edit.edit-slider', compact('slider'));
     }
 
     public function updateslider(Request $request, $id){
-        $slider = Slider::find($id);
-        $slider->update($request->all());
+        $ubah = Slider::findorfail($id);
+        $awal = $ubah->gambar;
+
+        $slider = [
+            'caption' => $request['caption'],
+            'gambar' => $awal,
+        ];
+
+        $request->gambar->move(public_path().'/img/room-slider', $awal);
+        $ubah->update($slider);
         return redirect ('/slider');
+    }
+
+    public function edittamu($id){
+        $tamu = Pengunjung::find($id);
+        return view ('/admin.form.edit.edit-tamu', compact('tamu'));
+    }
+
+    public function updatetamu(Request $request, $id){
+        $tamu = Pengunjung::find($id);
+        $tamu->update($request->all());
+        return redirect('/tamu');
     }
 
 
@@ -179,11 +215,11 @@ class CrudController extends Controller
         return redirect('/user');
     }
     
-    public function deleteevent($id){
-        $event = Event::find($id);
-        $event->delete();
-        return redirect('/event');
-    }
+    // public function deleteevent($id){
+    //     $event = Event::find($id);
+    //     $event->delete();
+    //     return redirect('/event');
+    // }
 
     public function deletefasilitas($id){
         $fasilitas = Facilites::find($id);
@@ -197,11 +233,11 @@ class CrudController extends Controller
         return redirect('/inbox');
     }
 
-    public function deletejadwal($id){
-        $jadwal = Eat_time::find($id);
-        $jadwal->delete();
-        return redirect('/jadwal');
-    }
+    // public function deletejadwal($id){
+    //     $jadwal = Eat_time::find($id);
+    //     $jadwal->delete();
+    //     return redirect('/jadwal');
+    // }
 
     public function deletekategori($id){
         $kategori = Categorie::find($id);
@@ -231,5 +267,11 @@ class CrudController extends Controller
         $slider = Slider::find($id);
         $slider->delete();
         return redirect('/slider');
+    }
+
+    public function deletetamu($id){
+        $pengunjungs = Pengunjung::find($id);
+        $pengunjungs->delete();
+        return redirect('/tamu');
     }
 }

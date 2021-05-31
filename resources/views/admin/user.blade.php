@@ -22,7 +22,6 @@
                                         <th>No</th>
                                         <th>Email</th>
                                         <th>Nama</th>
-                                        <th>Password</th>
                                         <th>Level</th>
                                         <th>Aksi</th>
                                     </tr>
@@ -32,7 +31,6 @@
                                         <td>{{$i++}}</td>
                                         <td>{{$user->email}}</td>
                                         <td>{{$user->name}}</td>
-                                        <td>{{$user->password}}</td>
                                         <td>{{$user->level}}</td>
 
                                         <td>

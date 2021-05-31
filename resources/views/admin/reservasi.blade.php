@@ -13,9 +13,6 @@
         <div class="section-body">
             <div class="row">
                 <div class="col-12 col-md-6 col-lg-12">
-                    <div class="block-options p-3">
-                        <a href="#" class="btn btn-primary"><span class="fa fa-plus"></span> Add New</a>
-                    </div>
                     <div class="card">
 
                         <div class="card-body">
@@ -25,9 +22,10 @@
                                         <th>No</th>
                                         <th>Pemesan</th>
                                         <th>Email</th>
-                                        <th>Check In</th>
-                                        <th>Check Out</th>
-                                        <th>Room Type</th>
+                                        <th>Alamat</th>
+                                        <th>No HP</th>
+                                        <th>Kamar</th>
+                                        <th>No Reservasi</th>
                                         <th>Status</th>
                                         <th>Aksi</th>
                                     </tr>
@@ -43,7 +41,6 @@
                                         <td>{{$reservasi->status}}</td>
 
                                         <td>
-                                            <a href="#" class="btn btn-success btn-sm">Acc</a>
                                             <form action="/reservasi/{{$reservasi->id}}" method="post">
                                                 @method('DELETE')
                                                 @csrf

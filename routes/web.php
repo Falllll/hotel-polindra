@@ -47,50 +47,50 @@ Route::group(['middleware' => ['auth', 'ceklevel:admin']], function () {
     Route::get('/event', [AdminController::class, 'event']);
     Route::get('/inbox', [AdminController::class, 'inbox']);
     Route::get('/fasilitas', [AdminController::class, 'fasilitas']);
-    Route::get('/jadwal', [AdminController::class, 'jadwal']);
+    // Route::get('/jadwal', [AdminController::class, 'jadwal']);
     Route::get('/menu', [AdminController::class, 'menu']);
     Route::get('/reservasi', [AdminController::class, 'reservasi']);
+    Route::get('/detailreservasi', [AdminController::class, 'detail']);
+    Route::get('/tamu', [AdminController::class, 'tamu']);
+
+    // create
 
     Route::get('/create/categories', [CrudController::class, 'createcategories']);
     Route::post('/create/categories', [CrudController::class, 'addcategories']);
     Route::get('/create/slider', [CrudController::class, 'createslider']);
-    Route::post('/create/slider', [CrudController::class, 'addslider']);
+    Route::post('/create/slider', [CrudController::class, 'addslider'])->name('create/slider');
     Route::get('/create/room', [CrudController::class, 'createroom']);
-    Route::post('/create/room', [CrudController::class, 'addroom']);
+    Route::post('/create/room', [CrudController::class, 'addroom'])->name('create/room');
     Route::get('/create/facility', [CrudController::class, 'createfacility']);
-    Route::post('/create/facility', [CrudController::class, 'addfacility']);
-    Route::get('/create/schedule', [CrudController::class, 'createschedule']);
-    Route::post('/create/schedule', [CrudController::class, 'addschedule']);
+    Route::post('/create/facility', [CrudController::class, 'addfacility'])->name('create/facility');
     Route::get('/create/menu', [CrudController::class, 'createmenu']);
-    Route::post('/create/menu', [CrudController::class, 'addmenu']);
-    Route::get('/create/event', [CrudController::class, 'createevent']);
-    Route::post('/create/event', [CrudController::class, 'addevent']);
+    Route::post('/create/menu', [CrudController::class, 'addmenu'])->name('create/menu');
+    Route::get('/create/tamu', [CrudController::class, 'createtamu']);
+    Route::post('/create/tamu', [CrudController::class, 'addtamu'])->name('create/tamu');
+
+    // update
 
     Route::get('/room/{id}/edit', [CrudController::class, 'editroom']);
-    Route::put('/room/{id}', [CrudController::class, 'updateroom']);
-    Route::get('/kategori/{id}/edit', [CrudController::class, 'editkategori']);
-    Route::put('/kategori/{id}', [CrudController::class, 'updatekategori']);
-    Route::get('/event/{id}/edit', [CrudController::class, 'editevent']);
-    Route::put('/event/{id}', [CrudController::class, 'updateevent']);
+    Route::post('/room/{id}', [CrudController::class, 'updateroom'])->name('room');
     Route::get('/fasilitas/{id}/edit', [CrudController::class, 'editfasilitas']);
-    Route::put('/fasilitas/{id}', [CrudController::class, 'updatefasilitas']);
+    Route::post('/fasilitas/{id}', [CrudController::class, 'updatefasilitas'])->name('fasilitas');
     Route::get('/menu/{id}/edit', [CrudController::class, 'editmenu']);
-    Route::put('/menu/{id}', [CrudController::class, 'updatemenu']);
-    Route::get('/jadwal/{id}/edit', [CrudController::class, 'editjadwal']);
-    Route::put('/jadwal/{id}', [CrudController::class, 'updatejadwal']);
+    Route::post('/menu/{id}', [CrudController::class, 'updatemenu'])->name('menu');
     Route::get('/slider/{id}/edit', [CrudController::class, 'editslider']);
-    Route::put('/slider/{id}', [CrudController::class, 'updateslider']);
+    Route::post('/slider/{id}', [CrudController::class, 'updateslider'])->name('slider');
+    Route::get('/tamu/{id}/edit', [CrudController::class, 'edittamu']);
+    Route::put('/tamu/{id}', [CrudController:: class, 'updatetamu']);
+
+    // delete
 
     Route::delete('/room/{id}', [CrudController::class, 'deleteroom']);
-    Route::delete('/kategori/{id}', [CrudController::class, 'deletekategori']);
-    Route::delete('/event/{id}', [CrudController::class, 'deleteevent']);
     Route::delete('/fasilitas/{id}', [CrudController::class, 'deletefasilitas']);
     Route::delete('/menu/{id}', [CrudController::class, 'deletemenu']);
-    Route::delete('/jadwal/{id}', [CrudController::class, 'deletejadwal']);
     Route::delete('/slider/{id}', [CrudController::class, 'deleteslider']);
     Route::delete('/user/{id}', [CrudController::class, 'deleteuser']);
     Route::delete('/reservasi/{id}', [CrudController::class, 'deletereservasi']);
     Route::delete('/contact/{id}', [CrudController::class, 'deleteinbox']);
+    Route::delete('/tamu/{id}', [CrudController::class, 'deletetamu']);
 
 
 });

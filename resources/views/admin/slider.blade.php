@@ -33,7 +33,7 @@
                                     <tr>
 
                                         <td>{{$i++}}</td>
-                                        <td>{{$slider->gambar}}</td>
+                                        <td><img src="{{asset('img/room-slider/'. $slider->gambar)}}" height="100" width="100" alt="Foto kamar"></td>
                                         <td>{{$slider->caption}}</td>
 
                                         <td>

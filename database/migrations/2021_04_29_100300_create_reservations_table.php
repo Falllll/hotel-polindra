@@ -19,13 +19,10 @@ class CreateReservationsTable extends Migration
             $table->string('pemesan');
             $table->string('email');
             $table->string('alamat');
-            $table->string('kota');
             $table->string('no_hp');
-            $table->string('kewarganegaraan');
-            $table->string('tipe kamar');
+            $table->string('tipe_kamar');
             $table->string('lama_inap');
             $table->integer('jumlah_harga');
-            $table->string('room_type');
             $table->string('status');
             $table->timestamps();
         });

@@ -37,60 +37,11 @@
                     </div>
                 </form>
                 <ul class="navbar-nav navbar-right">
-                    <li class="dropdown dropdown-list-toggle"><a href="#" data-toggle="dropdown" class="nav-link notification-toggle nav-link-lg beep"><i class="ion ion-ios-bell-outline"></i></a>
-                        <div class="dropdown-menu dropdown-list dropdown-menu-right">
-                            <div class="dropdown-header">Notifications
-                                <div class="float-right">
-                                    <a href="#">View All</a>
-                                </div>
-                            </div>
-                            <div class="dropdown-list-content">
-                                <a href="#" class="dropdown-item dropdown-item-unread">
-                                    <img alt="image" src="dist/img/avatar/avatar-1.jpeg" class="rounded-circle dropdown-item-img">
-                                    <div class="dropdown-item-desc">
-                                        <b>Kusnaedi</b> has moved task <b>Fix bug header</b> to <b>Done</b>
-                                        <div class="time">10 Hours Ago</div>
-                                    </div>
-                                </a>
-                                <a href="#" class="dropdown-item dropdown-item-unread">
-                                    <img alt="image" src="dist/img/avatar/avatar-2.jpeg" class="rounded-circle dropdown-item-img">
-                                    <div class="dropdown-item-desc">
-                                        <b>Ujang Maman</b> has moved task <b>Fix bug footer</b> to <b>Progress</b>
-                                        <div class="time">12 Hours Ago</div>
-                                    </div>
-                                </a>
-                                <a href="#" class="dropdown-item">
-                                    <img alt="image" src="dist/img/avatar/avatar-3.jpeg" class="rounded-circle dropdown-item-img">
-                                    <div class="dropdown-item-desc">
-                                        <b>Agung Ardiansyah</b> has moved task <b>Fix bug sidebar</b> to <b>Done</b>
-                                        <div class="time">12 Hours Ago</div>
-                                    </div>
-                                </a>
-                                <a href="#" class="dropdown-item">
-                                    <img alt="image" src="dist/img/avatar/avatar-4.jpeg" class="rounded-circle dropdown-item-img">
-                                    <div class="dropdown-item-desc">
-                                        <b>Ardian Rahardiansyah</b> has moved task <b>Fix bug navbar</b> to <b>Done</b>
-                                        <div class="time">16 Hours Ago</div>
-                                    </div>
-                                </a>
-                                <a href="#" class="dropdown-item">
-                                    <img alt="image" src="dist/img/avatar/avatar-5.jpeg" class="rounded-circle dropdown-item-img">
-                                    <div class="dropdown-item-desc">
-                                        <b>Alfa Zulkarnain</b> has moved task <b>Add logo</b> to <b>Done</b>
-                                        <div class="time">Yesterday</div>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                    </li>
                     <li class="dropdown"><a href="#" data-toggle="dropdown" class="nav-link dropdown-toggle nav-link-lg">
                             <i class="ion ion-android-person d-lg-none"></i>
                             <div class="d-sm-none d-lg-inline-block">Hi, {{ auth()->user()->name }}</div>
                         </a>
                         <div class="dropdown-menu dropdown-menu-right">
-                            <a href="profile.html" class="dropdown-item has-icon">
-                                <i class="ion ion-android-person"></i> Profile
-                            </a>
                             <a href="{{ route('logout') }}" class="dropdown-item has-icon">
                                 <i class="ion ion-log-out"></i> Logout
                             </a>
@@ -101,7 +52,7 @@
             <div class="main-sidebar">
                 <aside id="sidebar-wrapper">
                     <div class="sidebar-brand">
-                        <a href="index.html">Grand Trisula</a>
+                        <a href="{{url ('/')}}">Grand Trisula</a>
                     </div>
                     <div class="sidebar-user">
                         <div class="sidebar-user-picture">
@@ -122,15 +73,6 @@
 
                         <li class="menu-header">Menu</li>
                         <li>
-                            <a href="#" class="has-dropdown"><i class="ion ion-android-create"></i><span>Post</span></a>
-                            <ul class="menu-dropdown">
-                                <li><a href="{{ url('/newpost') }}"><i class="ion ion-ios-circle-outline"></i>Add New</a></li>
-                                <li><a href="{{ url('/post') }}"><i class="ion ion-ios-circle-outline"></i>Post</a></li>
-                                <li><a href="{{ url('/kategori') }}"><i class=" ion ion-ios-circle-outline"></i>Categories</a></li>
-
-                            </ul>
-                        </li>
-                        <li>
                             <a href="{{ url('/slider') }}"><i class="ion ion-image"></i><span>Image Slider</span></a>
 
                         </li>
@@ -138,7 +80,17 @@
                             <a href="{{ url('/room') }}"><i class="fa fa-building"></i><span>Room</span></a>
                         </li>
                         <li>
-                            <a href="{{ url('/reservasi') }}"><i class="ion ion-android-clipboard "></i><span>Reservation</span></a>
+                            <a href="{{ url('/tamu') }}"><i class="ion ion-android-clipboard "></i><span>Daftar Tamu</span></a>
+                        </li>
+                        <li>
+                            <a href="{{ url('/reservasi') }}"><i class="ion ion-android-clipboard "></i><span>Reservasi</span></a>
+                            <!-- <ul class="menu-dropdown">
+                                <li><a href="{{ url('/checkin') }}"><i class="ion ion-ios-circle-outline"></i>Check in</a></li>
+                                <li><a href="{{ url('/checkout') }}"><i class="ion ion-ios-circle-outline"></i>Check Out</a></li>
+                            </ul> -->
+                        </li>
+                        <li>
+                            <a href="{{ url('/detailreservasi') }}"><i class="ion ion-android-clipboard "></i><span>Detail Reservasi</span></a>
                             <!-- <ul class="menu-dropdown">
                                 <li><a href="{{ url('/checkin') }}"><i class="ion ion-ios-circle-outline"></i>Check in</a></li>
                                 <li><a href="{{ url('/checkout') }}"><i class="ion ion-ios-circle-outline"></i>Check Out</a></li>
@@ -147,16 +99,8 @@
                         <li>
                             <a href="{{ url('/fasilitas') }}"><i class="ion-ribbon-b"></i><span>Facilities</span></a>
                         </li>
-                        <li>
-                            <a href="#" class="has-dropdown"><i class="ion ion-coffee"></i><span>Restaurant</span></a>
-                            <ul class="menu-dropdown">
-                                <li><a href="{{ url('/jadwal') }}"><i class="ion ion-ios-circle-outline"></i>Schedule</a></li>
-                                <li><a href="{{ url('/menu') }}"><i class="ion ion-ios-circle-outline"></i>Menu</a></li>
-                            </ul>
-                        </li>
-
-                        <li>
-                            <a href="{{ url('/event') }}"><i class="ion ion-ios-calendar-outline"></i><span>Event</span></a>
+                         <li>
+                            <a href="{{ url('/menu') }}"><i class="ion ion-coffee"></i>Menu</a>
                         </li>
                         <li>
                             <a href="{{ url('/inbox') }}"><i class="ion ion-android-mail"></i><span>Inbox</span></a>

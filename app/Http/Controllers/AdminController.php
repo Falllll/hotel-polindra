@@ -7,13 +7,15 @@ use Illuminate\Http\Request;
 use illuminate\Support\Str;
 use App\Http\Middleware\CekLevel;
 use App\Models\User;
+use App\Models\Pengunjung;
 use App\Models\Slider;
 use App\Models\Room;
 use App\Models\Reservation;
+use App\Models\DetailReservasi;
 use App\Models\Facilites;
-use App\Models\Eat_time;
+// use App\Models\Eat_time;
 use App\Models\Menu;
-use App\Models\Event;
+// use App\Models\Event;
 use App\Models\Contact;
 use App\Models\Categorie;
 
@@ -55,8 +57,8 @@ class AdminController extends Controller
     {
         $i = 0;
         $i++;
-        $rooms = Room::all();
-        return view('admin.room', compact(['rooms','i']));
+        $rooms = Room::latest()->get();
+        return view('admin.room', compact(['rooms', 'i']));
     }
 
     public function user()
@@ -67,13 +69,13 @@ class AdminController extends Controller
         return view('admin.user', compact(['users','i']));
     }
 
-    public function event()
-    {
-        $i = 0;
-        $i++;
-        $events = Event::all();
-        return view('admin.event', compact (['events', 'i']));
-    }
+    // public function event()
+    // {
+    //     $i = 0;
+    //     $i++;
+    //     $events = Event::all();
+    //     return view('admin.event', compact (['events', 'i']));
+    // }
 
     public function inbox()
     {
@@ -112,6 +114,20 @@ class AdminController extends Controller
         $i++;
         $reservations = Reservation::all();
         return view('admin.reservasi', compact(['reservations','i']));
+    }
+    public function detail()
+    {
+        $i = 0;
+        $i++;
+        $details = DetailReservasi::all();
+        return view('admin.detail', compact(['details','i']));
+    }
+
+    public function tamu(){
+        $i = 0;
+        $i++;
+        $pengunjungs = Pengunjung::all();
+        return view('admin.tamu', compact(['pengunjungs','i']));
     }
 
 }

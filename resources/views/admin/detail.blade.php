@@ -7,15 +7,12 @@
 <div class="main-content">
     <section class="section">
         <h1 class="section-header">
-            <div>Event</div>
+            <div>Detail Reservasi</div>
         </h1>
 
         <div class="section-body">
             <div class="row">
                 <div class="col-12 col-md-6 col-lg-12">
-                    <div class="block-options p-3">
-                        <a href="{{url('/create/event')}}" class="btn btn-primary"><span class="fa fa-plus"></span> Add New</a>
-                    </div>
                     <div class="card">
 
                         <div class="card-body">
@@ -23,28 +20,30 @@
                                 <table class="table table-bordered ">
                                     <tr>
                                         <th>No</th>
-                                        <th>Event</th>
-                                        <th>Jadwal</th>
-
+                                        <th>Nama Pemesan</th>
+                                        <th>No Reservasi</th>
+                                        <th>lama Inap</th>
+                                        <th>Tanggal dipesan</th>
+                                        <th>Jumlah Harga</th>
                                         <th>Aksi</th>
                                     </tr>
-                                    @foreach ($events as $event)
                                     <tr>
-
-                                        <td>{{$i++}}</td>
-                                        <td>{{$event->event_name}}</td>
-                                        <td>{{$event->tanggal_event}}</td>
+                                    
+                                        <td>1</td>
+                                        <td>2</td>
+                                        <td>3</td>
+                                        <td>4</td>
+                                        <td>5</td>
+                                        <td>6</td>
 
                                         <td>
-                                            <a href="/event/{{$event->id}}/edit" class="btn btn-success btn-sm">Edit</a>
-                                            <form action="/event/{{$event->id}}" method="post">
+                                            <form action="/reservasi/1" method="post">
                                                 @method('DELETE')
                                                 @csrf
                                                 <input type="submit" class="btn btn-danger btn-sm" value="Delete">
                                             </form>
                                         </td>
                                     </tr>
-                                    @endforeach
                                     
 
                                 </table>

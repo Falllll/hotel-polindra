@@ -7,7 +7,7 @@
 <div class="main-content">
     <section class="section">
         <h1 class="section-header">
-            <div>Schedule</div>
+            <div>Menu</div>
         </h1>
 
         <div class="section-body">
@@ -23,6 +23,7 @@
                                 <table class="table table-bordered ">
                                     <tr>
                                         <th>No</th>
+                                        <th>Gambar</th>
                                         <th>Name</th>
                                         <th>Time</th>
                                         <th>Description</th>
@@ -34,6 +35,9 @@
                                     <tr>
 
                                         <td>{{$i++}}</td>
+                                        <td>
+                                            <img src="{{asset('img/menu/'. $menu->gambar)}}" height="100" width="100" alt="Foto makanan">
+                                        </td>
                                         <td>{{$menu->nama_makanan}}</td>
                                         <td>{{$menu->jam}}</td>
                                         <td>{{$menu->desc}}</td>

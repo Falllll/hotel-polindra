@@ -23,7 +23,8 @@
                                 <table class="table table-bordered ">
                                     <tr>
                                         <th>No</th>
-                                        <th>Tipe Room</th>
+                                        <th>Gambar</th>
+                                        <th>Tipe kamar</th>
                                         <th>Stok</th>
                                         <th>Harga</th>
                                         <th>Deskripsi</th>
@@ -34,6 +35,8 @@
                                     <tr>
 
                                         <td>{{$i++}}</td>
+                                        <td>
+                                            <img src="{{asset('img/room/'. $room->gambar)}}" height="100" width="100" alt="Foto kamar"></td>
                                         <td>{{$room->room_type}}</td>
                                         <td>{{$room->stok}}</td>
                                         <td>{{$room->price}}</td>

@@ -80,6 +80,7 @@
                         </div>
                     </div>
                     <section id="first-tab-group" class="tabgroup">
+                        <form action="{{url('/pesan')}}/{{$room->id}}" method="POST">
                         <div id="tab1">
                             <div class="submit-form">
                                 <h4>Cek kamar <em>hotel</em>:</h4>
@@ -88,7 +89,7 @@
                                         <div class="col-md-12">
                                             <fieldset>
                                                 <label for="nama">Nama Lengkap: </label>
-                                                <input type="text" name="nama" id="nama" autocomplete="off" placeholder="Masukkan nama.." class="input" >
+                                                <input type="text" name="pemesan" id="nama" autocomplete="off" placeholder="Masukkan nama.." class="input" required>
                                             </fieldset>
                                         </div>
                                     </div>
@@ -96,7 +97,7 @@
                                         <div class="col-md-12">
                                             <fieldset>
                                                 <label for="email">Alamat email: </label>
-                                                <input type="text" name="email" id="email" autocomplete="off" placeholder="Masukkan email.." class="input" >
+                                                <input type="text" name="email" id="email" autocomplete="off" placeholder="Masukkan email.." class="input" required>
                                             </fieldset>
                                         </div>
                                     </div>
@@ -104,7 +105,7 @@
                                         <div class="col-md-12">
                                             <fieldset>
                                                 <label for="alamat">Alamat: </label>
-                                                <input type="text" name="alamat" id="alamat" autocomplete="off" placeholder="Masukkan alamat.." class="input" >
+                                                <input type="text" name="alamat" id="alamat" autocomplete="off" placeholder="Masukkan alamat lengkap.." class="input" required>
                                             </fieldset>
                                         </div>
                                     </div>
@@ -112,38 +113,24 @@
                                     <div class="row">
                                         <div class="col-md-12">
                                             <fieldset>
-                                                <label for="kota">Pilih kota:</label>
-                                                <select required name='kota' onchange='this.form.()'>
-                                                    <option value="">Pilih kota:</option>
-                                                    <option value="indramayu">Indramayu</option>
-                                                    <option value="Cirebon">Cirebon</option>
-                                                    <option value="subang">Subang</option>
-                                                    <option value="kuningan">Kuningan</option>
-                                                    <option value="lainnya">lainnya</option>
-                                                </select>
+                                                <label for="kota">Kota: </label>
+                                                <input type="text" name="kota" id="kota" autocomplete="off" placeholder="Masukkan kota anda.." class="input" required>
                                             </fieldset>
                                         </div>
                                     </div>
                                     <div class="row">
                                         <div class="col-md-12">
                                             <fieldset>
-                                                <label for="nohp">No Handphone: </label>
-                                                <input type="text" name="nohp" id="nohp" autocomplete="off" placeholder="Masukkan no handphone.." class="input" >
+                                                <label for="no_hp">No Handphone: </label>
+                                                <input type="text" name="no_hp" id="no_hp" autocomplete="off" placeholder="Masukkan no handphone.." class="input" required>
                                             </fieldset>
                                         </div>
                                     </div>
                                     <div class="row">
                                         <div class="col-md-12">
                                             <fieldset>
-                                                <label for="kewarganegaraan">Pilih kewarganegaraan:</label>
-                                                <select required name='kewarganegaraan' onchange='this.form.()'>
-                                                    <option value="">Select kewarganegaraan:</option>
-                                                    <option value="indonesia">Indonesia</option>
-                                                    <option value="singapura">Singapura</option>
-                                                    <option value="malaysia">Malaysia</option>
-                                                    <option value="thailand">Thailand</option>
-                                                    <option value="lainnya">lainnya</option>
-                                                </select>
+                                                <label for="kewarganegaraan">Kewarganegaraan: </label>
+                                                <input type="text" name="kewarganegaraan" id="kewarganegaraan" autocomplete="off" placeholder="Masukkan kewarganegaraan lengkap.." class="input" required>
                                             </fieldset>
                                         </div>
                                     </div>
@@ -151,7 +138,7 @@
                                         <div class="col-md-12">
                                             <fieldset>
                                                 <label for="room">Pilih kamar:</label>
-                                                <select required name='room' onchange='this.form.()'>
+                                                <select required name='tipe_kamar' onchange='this.form.()'>
                                                     <option value="">Select Room:</option>
                                                     <option value="suite">Suite Room</option>
                                                     <option value="superior">Superior Room</option>
@@ -168,11 +155,13 @@
                                                 <input name="date" type="text" class="form-control date" id="date" placeholder="Pilih tanggal..." required onchange='this.form.()'>
                                             </fieldset>
                                         </div>
-                                        <div class="col-md-6">
-                                            <fieldset>
-                                                <label for="datefor">Sampai Tanggal:</label>
-                                                <input name="datefor" type="text" class="form-control date" id="datefor" placeholder="Pilih tanggal.." required onchange='this.form.()'>
-                                            </fieldset>
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <fieldset>
+                                                    <label for="lama">Lama inap: </label>
+                                                    <input type="text" name="lama_inap" id="lama_inap" autocomplete="off" placeholder="Lama Inap" class="input" required>
+                                                </fieldset>
+                                            </div>
                                         </div>
                                         <div class="col-md-6">
                                             <fieldset>
@@ -183,6 +172,7 @@
                                 </form>
                             </div>
                         </div>
+                    </form>
                     </section>
                 </div>
             </div>

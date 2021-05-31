@@ -24,7 +24,7 @@
                                     <tr>
                                         <th>No</th>
                                         <th>Nama</th>
-
+                                        <th>Gambar</th>
                                         <th>Deskripsi</th>
 
                                         <th>Aksi</th>
@@ -34,6 +34,9 @@
 
                                         <td>{{$i++}}</td>
                                         <td>{{$fasilitas->nama}}</td>
+                                        <td>
+                                            <img src="{{asset('img/fasilitas/'. $fasilitas->gambar)}}" height="100" width="100" alt="">
+                                        </td>
                                         <td>{{$fasilitas->desc}}</td>
 
                                         <td>

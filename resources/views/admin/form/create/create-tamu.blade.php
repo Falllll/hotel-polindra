@@ -7,12 +7,12 @@
 <div class="main-content">
     <section class="section">
         <h1 class="section-header">
-            <div>Tambah data kamar</div>
+            <div>Tambah Pengunjung</div>
         </h1>
 
         <!-- Page Content -->
         <div class="content">
-            <form action="{{route ('create/room')}}" method="post" enctype="multipart/form-data">
+            <form action="{{route ('create/tamu')}}" method="post" enctype="multipart/form-data">
 				{{ csrf_field() }}
                 <div class="row">
                     <div class="col-md-12">
@@ -20,26 +20,21 @@
 
                             <div class="block-content">
                                 <div class="form-group">
-									<label for="tipekamar"><strong>Tipe Kamar</strong></label>
-                                    <input type="text" name="room_type" id="tipekamar" class="form-control" placeholder="Tipe Kamar" required>
+									<label for="tamu"><strong>Nama Tamu</strong></label>
+                                    <input type="text" name="nama_tamu" id="tamu" class="form-control" placeholder="Masukkan Nama Tamu" required>
                                 </div>
 								<div class="form-group">
-									<label for="stok"><strong>Stok</strong></label>
-                                    <input type="text" name="stok" id="stok" class="form-control" placeholder="Sisa kamar" required>
+									<label for="email"><strong>Email</strong></label>
+                                    <input type="text" name="email" id="email" class="form-control" placeholder="Masukkan Email" required>
                                 </div>
 								<div class="form-group">
-									<label for="price"><strong>Harga Kamar</strong></label>
-                                    <input type="text" name="price" id="price" class="form-control" placeholder="Harga kamar per malam" required>
+									<label for="alamat"><strong>Alamat</strong></label>
+                                    <input type="text" name="alamat" id="alamat" class="form-control" placeholder="Masukkan Alamat" required>
                                 </div>
-									<label for="desc"><strong>Deskripsi kamar</strong></label>
 								<div class="form-group">
-                                    <textarea  type="text" name="desc" id="desc" cols="70%" rows="3" placeholder="Deskripsi kamar" required></textarea>
+									<label for="no_hp"><strong>No Handphone</strong></label>
+                                    <input type="text" name="no_hp" id="no_hp" class="form-control" placeholder="Masukkan No Handphone" required>
                                 </div>
-								<label for="gambar">Pilih Foto</label>
-								<div class="form-group">
-									
-									<input type="file" name="gambar" id="gambar" class="dropify" data-height="190" required>
-								</div>
 								<div class="form-group">
 									<button type="submit" class="btn btn-success">Tambah data</button>
 								</div>
