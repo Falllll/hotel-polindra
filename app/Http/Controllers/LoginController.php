@@ -35,7 +35,7 @@ class LoginController extends Controller
             'remember_token' => Str::random(60),
         ]);
 
-        return view('pengunjung.index');
+        return redirect('/login');
     }
 
     public function login()
@@ -47,8 +47,8 @@ class LoginController extends Controller
     {
         
         if(Auth::attempt($request->only('email', 'password', 'level'))) {
-                return redirect('/admin');
-                return redirect('/pesan'); 
+                return redirect('/pesan');
+                return redirect('/admin'); 
             
         }
 

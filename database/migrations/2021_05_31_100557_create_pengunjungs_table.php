@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateCompareTablesTable extends Migration
+class CreatePengunjungsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,14 +13,12 @@ class CreateCompareTablesTable extends Migration
      */
     public function up()
     {
-        Schema::create('compare_tables', function (Blueprint $table) {
+        Schema::create('pengunjungs', function (Blueprint $table) {
             $table->id();
-            $table->string('type');
-            $table->integer('max');
-            $table->integer('bed');
-            $table->text('view');
-            $table->text('detail');
-            $table->double('rate');
+            $table->string('nama_tamu');
+            $table->string('email');
+            $table->text('alamat');
+            $table->string('no_hp');
             $table->timestamps();
         });
     }
@@ -32,6 +30,6 @@ class CreateCompareTablesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('compare_tables');
+        Schema::dropIfExists('pengunjungs');
     }
 }

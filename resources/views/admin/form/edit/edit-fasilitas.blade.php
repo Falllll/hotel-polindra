@@ -24,10 +24,6 @@
 					<span class="shadow-input1"></span>
 				</div>
                 <div class="wrap-input1">
-					<input class="input1" type="text" name="gambar" value="{{$fasilitas->gambar}}" placeholder="Foto Fasilitas">
-					<span class="shadow-input1"></span>
-				</div>
-                <div class="wrap-input1">
 					<input class="input1" type="text" name="desc" value="{{$fasilitas->desc}}" placeholder="Deskripsi Fasilitas">
 					<span class="shadow-input1"></span>
 				</div>

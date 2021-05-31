@@ -18,24 +18,12 @@
 					Tambah Kamar
 				</span>
 
-				<div class="wrap-input1">
-					<input class="input1" type="text" name="images1" placeholder="Gambar 1">
-					<span class="shadow-input1"></span>
-				</div>
-                <div class="wrap-input1">
-					<input class="input1" type="text" name="images2" placeholder="Gambar 2">
-					<span class="shadow-input1"></span>
-				</div>
-                <div class="wrap-input1">
-					<input class="input1" type="text" name="images3" placeholder="Gambar 3">
-					<span class="shadow-input1"></span>
-				</div>
-                <div class="wrap-input1">
-					<input class="input1" type="text" name="images4" placeholder="Gambar 4">
-					<span class="shadow-input1"></span>
-				</div>
                 <div class="wrap-input1">
 					<input class="input1" type="text" name="room_type" placeholder="Tipe Kamar">
+					<span class="shadow-input1"></span>
+				</div>
+				<div class="wrap-input1">
+					<input class="input1" type="text" name="stok" placeholder="Stok">
 					<span class="shadow-input1"></span>
 				</div>
                 <div class="wrap-input1">

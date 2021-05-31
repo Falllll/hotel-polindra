@@ -23,10 +23,6 @@
 					<span class="shadow-input1"></span>
 				</div>
                 <div class="wrap-input1">
-					<input class="input1" type="text" name="gambar" placeholder="Gambar">
-					<span class="shadow-input1"></span>
-				</div>
-                <div class="wrap-input1">
 					<input class="input1" type="text" name="jam" placeholder="Jam">
 					<span class="shadow-input1"></span>
 				</div>

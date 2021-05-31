@@ -19,10 +19,6 @@
 					Tambah Slider
 				</span>
 
-				<div class="wrap-input1">
-					<input class="input1" type="text" name="gambar" value="{{$slider->gambar}}" placeholder="Gambar">
-					<span class="shadow-input1"></span>
-				</div>
                 <div class="wrap-input1">
 					<input class="input1" type="text" name="caption" value="{{$slider->caption}}" placeholder="Caption">
 					<span class="shadow-input1"></span>

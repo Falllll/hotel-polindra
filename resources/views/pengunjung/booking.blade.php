@@ -95,6 +95,14 @@
                                     <div class="row">
                                         <div class="col-md-12">
                                             <fieldset>
+                                                <label for="email">Alamat email: </label>
+                                                <input type="text" name="email" id="email" autocomplete="off" placeholder="Masukkan email.." class="input" >
+                                            </fieldset>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <fieldset>
                                                 <label for="alamat">Alamat: </label>
                                                 <input type="text" name="alamat" id="alamat" autocomplete="off" placeholder="Masukkan alamat.." class="input" >
                                             </fieldset>
@@ -154,36 +162,6 @@
                                         </div>
                                     </div>
                                     <div class="row">
-                                        <div class="col-md-6">
-                                            <fieldset>
-                                                <label for="from">From:</label>
-                                                <select required name='day' onchange='this.form.()'>
-                                                    <option value="">Select Day:</option>
-                                                    <option value="Senin">Senin</option>
-                                                    <option value="Selasa">Selasa</option>
-                                                    <option value="Rabu">Rabu</option>
-                                                    <option value="Kamis">Kamis</option>
-                                                    <option value="Jumat">Jumat</option>
-                                                    <option value="Sabtu">Sabtu</option>
-                                                    <option value="Minggu">Minggu</option>
-                                                </select>
-                                            </fieldset>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <fieldset>
-                                                <label for="to">To:</label>
-                                                <select required name='to' onchange='this.form.()'>
-                                                    <option value="">Sampai Hari:</option>
-                                                    <option value="Senin">Senin</option>
-                                                    <option value="Selasa">Selasa</option>
-                                                    <option value="Rabu">Rabu</option>
-                                                    <option value="Kamis">Kamis</option>
-                                                    <option value="Jumat">Jumat</option>
-                                                    <option value="Sabtu">Sabtu</option>
-                                                    <option value="Minggu">Minggu</option>
-                                                </select>
-                                            </fieldset>
-                                        </div>
                                         <div class="col-md-6">
                                             <fieldset>
                                                 <label for="date">Tanggal:</label>

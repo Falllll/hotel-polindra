@@ -23,7 +23,6 @@
                                 <table class="table table-bordered ">
                                     <tr>
                                         <th>No</th>
-                                        <th>Gambar</th>
                                         <th>Nama</th>
 
                                         <th>Deskripsi</th>
@@ -34,7 +33,6 @@
                                     <tr>
 
                                         <td>{{$i++}}</td>
-                                        <td>{{$fasilitas->gambar}}</td>
                                         <td>{{$fasilitas->nama}}</td>
                                         <td>{{$fasilitas->desc}}</td>
 

@@ -23,11 +23,8 @@
                                 <table class="table table-bordered ">
                                     <tr>
                                         <th>No</th>
-                                        <th>Images 1</th>
-                                        <th>Images 2</th>
-                                        <th>Images 3</th>
-                                        <th>Images 4</th>
                                         <th>Tipe Room</th>
+                                        <th>Stok</th>
                                         <th>Harga</th>
                                         <th>Deskripsi</th>
 
@@ -37,12 +34,8 @@
                                     <tr>
 
                                         <td>{{$i++}}</td>
-                                        <td>{{$room->images1}}</td>
-                                        <td>{{$room->images2}}</td>
-                                        <td>{{$room->images3}}</td>
-                                        <td>{{$room->images4}}</td>
                                         <td>{{$room->room_type}}</td>
-
+                                        <td>{{$room->stok}}</td>
                                         <td>{{$room->price}}</td>
                                         <td>{{$room->desc}}</td>
 

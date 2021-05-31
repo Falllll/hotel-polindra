@@ -17,7 +17,6 @@ class CreateOverviewsTable extends Migration
             $table->id();
             $table->string('head');
             $table->text('desc');
-            $table->text('gambar');
             $table->timestamps();
         });
     }

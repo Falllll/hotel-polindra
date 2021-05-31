@@ -19,24 +19,12 @@
 					Edit Kamar
 				</span>
 
-				<div class="wrap-input1">
-					<input class="input1" type="text" name="images1" value="{{$room->images1}}" placeholder="Gambar 1">
-					<span class="shadow-input1"></span>
-				</div>
-                <div class="wrap-input1">
-					<input class="input1" type="text" name="images2" value="{{$room->images2}}" placeholder="Gambar 2">
-					<span class="shadow-input1"></span>
-				</div>
-                <div class="wrap-input1">
-					<input class="input1" type="text" name="images3" value="{{$room->images3}}" placeholder="Gambar 3">
-					<span class="shadow-input1"></span>
-				</div>
-                <div class="wrap-input1">
-					<input class="input1" type="text" name="images4" value="{{$room->images4}}" placeholder="Gambar 4">
-					<span class="shadow-input1"></span>
-				</div>
                 <div class="wrap-input1">
 					<input class="input1" type="text" name="room_type" value="{{$room->room_type}}" placeholder="Tipe Kamar">
+					<span class="shadow-input1"></span>
+				</div>
+				<div class="wrap-input1">
+					<input class="input1" type="text" name="stok" value="{{$room->stok}}" placeholder="Stok">
 					<span class="shadow-input1"></span>
 				</div>
                 <div class="wrap-input1">

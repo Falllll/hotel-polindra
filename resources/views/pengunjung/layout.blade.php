@@ -42,19 +42,6 @@
                 </div>
 
 
-                <div class="top-widget mobile-menu">
-                    <div class="font-size: 20px; text-white">
-                        <a href="{{url ('/register')}}">
-                            <span>Sign up</span>
-                        </a>
-                        |
-                        <a href="{{url ('/login')}}">
-                            <span>Log in</span>
-                        </a>
-                    </div>
-
-                </div>
-
                 <div class="container">
                     <div class="row">
                         <div class="col-xl-12">
