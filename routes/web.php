@@ -96,5 +96,5 @@ Route::group(['middleware' => ['auth', 'ceklevel:admin']], function () {
 });
 
 Route::group(['middleware' => ['auth', 'ceklevel:customer']], function () {
-    Route::get('/pesan', [PengunjungController::class, 'booking'])->name('pesan');
+    Route::get('/pesan/{id}', [PengunjungController::class, 'booking'])->name('pesan');
 });

@@ -20,7 +20,7 @@ class CreateReservationsTable extends Migration
             $table->string('email');
             $table->string('alamat');
             $table->string('no_hp');
-            $table->string('tipe_kamar');
+            $table->date('tanggal');
             $table->string('lama_inap');
             $table->integer('jumlah_harga');
             $table->string('status');

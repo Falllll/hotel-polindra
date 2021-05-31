@@ -12,7 +12,10 @@ class Room extends Model
     protected $primaryKey = "id";
     protected $fillable = [
         'id',
-        'gambar',
+        'gambar_1',
+        'gambar_2',
+        'gambar_3',
+        'gambar_4',
         'room_type',
         'stok',
         'price',

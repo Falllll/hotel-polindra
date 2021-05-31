@@ -2,8 +2,22 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
+use illuminate\Support\Str;
+use App\Http\Middleware\CekLevel;
+use App\Models\User;
+use App\Models\Pengunjung;
+use App\Models\Slider;
+use App\Models\Room;
+use App\Models\Reservation;
+use App\Models\DetailReservasi;
+use App\Models\Facilites;
+// use App\Models\Eat_time;
+use App\Models\Menu;
+// use App\Models\Event;
+use App\Models\Contact;
+use App\Models\Categorie;
 
 class PengunjungController extends Controller
 {
@@ -19,8 +33,10 @@ class PengunjungController extends Controller
 
     public function rooms()
     {
-
-        return view('pengunjung.rooms');
+        $i = 0;
+        $i++;
+        $rooms = Room::latest()->get();
+        return view('pengunjung.rooms', compact(['rooms', 'i']));
     }
 
     public function restaurant()

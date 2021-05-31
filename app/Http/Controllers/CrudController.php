@@ -46,17 +46,29 @@ class CrudController extends Controller
 
     public function addroom(Request $request){
 
-        $nm = $request->gambar;
-        $namafile = time().rand(100,999).".".$nm->getClientOriginalExtension();
+        $nm1 = $request->gambar_1;
+        $namafile1 = time().rand(100,999).".".$nm1->getClientOriginalExtension();
+        $nm2 = $request->gambar_2;
+        $namafile2 = time().rand(100,999).".".$nm2->getClientOriginalExtension();
+        $nm3 = $request->gambar_3;
+        $namafile3 = time().rand(100,999).".".$nm3->getClientOriginalExtension();
+        $nm4 = $request->gambar_4;
+        $namafile4 = time().rand(100,999).".".$nm4->getClientOriginalExtension();
 
             $dtUpload = new Room;
             $dtUpload->room_type = $request->room_type;
             $dtUpload->stok = $request->stok;
             $dtUpload->price = $request->price;
             $dtUpload->desc = $request->desc;
-            $dtUpload->gambar = $namafile;
+            $dtUpload->gambar_1 = $namafile1;
+            $dtUpload->gambar_2 = $namafile2;
+            $dtUpload->gambar_3 = $namafile3;
+            $dtUpload->gambar_4 = $namafile4;
 
-            $nm->move(public_path().'/img/room', $namafile);
+            $nm1->move(public_path().'/img/room', $namafile1);
+            $nm2->move(public_path().'/img/room', $namafile2);
+            $nm3->move(public_path().'/img/room', $namafile3);
+            $nm4->move(public_path().'/img/room', $namafile4);
             $dtUpload->save();
         return redirect('/room');
     }
@@ -119,17 +131,26 @@ class CrudController extends Controller
 
     public function updateroom(Request $request, $id){
         $ubah = Room::findorfail($id);
-        $awal = $ubah->gambar;
+        $awal1 = $ubah->gambar_1;
+        $awal2 = $ubah->gambar_2;
+        $awal3 = $ubah->gambar_3;
+        $awal4 = $ubah->gambar_4;
 
         $room = [
             'room_type' => $request['room_type'],
-            'gambar' => $awal,
+            'gambar_1' => $awal1,
+            'gambar_2' => $awal2,
+            'gambar_3' => $awal3,
+            'gambar_4' => $awal4,
             'stok' => $request['stok'],
             'price' => $request['price'],
             'desc' => $request['desc'],
         ];
 
-        $request->gambar->move(public_path().'/img/room', $awal);
+        $request->gambar_1->move(public_path().'/img/room', $awal1);
+        $request->gambar_2->move(public_path().'/img/room', $awal2);
+        $request->gambar_3->move(public_path().'/img/room', $awal3);
+        $request->gambar_4->move(public_path().'/img/room', $awal4);
         $ubah->update($room);
 
         return redirect ('/room');

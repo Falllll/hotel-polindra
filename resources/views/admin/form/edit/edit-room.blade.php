@@ -35,13 +35,33 @@
 								<div class="form-group">
                                     <textarea  type="text" name="desc" id="desc" cols="70%" rows="3" placeholder="Deskripsi kamar" required>{{$room->desc}}</textarea>
                                 </div>
-								<label for="gambar">Pilih Foto</label>
+								<label for="gambar1">Pilih Foto</label>
 								<div class="form-group">
-									
-									<input type="file" name="gambar" id="gambar" class="dropify" data-height="190" required>
+									<input type="file" name="gambar_1" id="gambar1" class="dropify" data-height="190" required>
+								</div>
+                                <label for="gambar2">Pilih Foto</label>
+								<div class="form-group">
+									<input type="file" name="gambar_2" id="gambar2" class="dropify" data-height="190" required>
+								</div>
+                                <label for="gambar3">Pilih Foto</label>
+								<div class="form-group">
+									<input type="file" name="gambar_3" id="gambar3" class="dropify" data-height="190" required>
+								</div>
+                                <label for="gambar4">Pilih Foto</label>
+								<div class="form-group">
+									<input type="file" name="gambar_4" id="gambar4" class="dropify" data-height="190" required>
 								</div>
                                 <div class="form-group">
-									<img src="{{ asset('img/room/'.$room->gambar)}}" height="10%" width="30%" alt="">
+									<img src="{{ asset('img/room/'.$room->gambar_1)}}" height="10%" width="30%" alt="">
+								</div>
+                                <div class="form-group">
+									<img src="{{ asset('img/room/'.$room->gambar_2)}}" height="10%" width="30%" alt="">
+								</div>
+                                <div class="form-group">
+									<img src="{{ asset('img/room/'.$room->gambar_3)}}" height="10%" width="30%" alt="">
+								</div>
+                                <div class="form-group">
+									<img src="{{ asset('img/room/'.$room->gambar_4)}}" height="10%" width="30%" alt="">
 								</div>
 								<div class="form-group">
 									<button type="submit" class="btn btn-success">Edit data</button>

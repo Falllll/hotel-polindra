@@ -25,20 +25,35 @@
                                 </div>
 								<div class="form-group">
 									<label for="stok"><strong>Stok</strong></label>
-                                    <input type="text" name="stok" id="stok" class="form-control" placeholder="Sisa kamar" required>
+                                    <input type="number" name="stok" id="stok" class="form-control" placeholder="Sisa kamar" required>
                                 </div>
 								<div class="form-group">
 									<label for="price"><strong>Harga Kamar</strong></label>
-                                    <input type="text" name="price" id="price" class="form-control" placeholder="Harga kamar per malam" required>
+                                    <input type="number" name="price" id="price" class="form-control" placeholder="Harga kamar per malam" required value="str">
                                 </div>
 									<label for="desc"><strong>Deskripsi kamar</strong></label>
 								<div class="form-group">
                                     <textarea  type="text" name="desc" id="desc" cols="70%" rows="3" placeholder="Deskripsi kamar" required></textarea>
                                 </div>
-								<label for="gambar">Pilih Foto</label>
+								<label for="gambar1">Pilih Foto</label>
 								<div class="form-group">
 									
-									<input type="file" name="gambar" id="gambar" class="dropify" data-height="190" required>
+									<input type="file" name="gambar_1" id="gambar1" class="dropify" data-height="190" required>
+								</div>
+                                <label for="gambar2">Pilih Foto</label>
+								<div class="form-group">
+									
+									<input type="file" name="gambar_2" id="gambar2" class="dropify" data-height="190" required>
+								</div>
+                                <label for="gambar3">Pilih Foto</label>
+								<div class="form-group">
+									
+									<input type="file" name="gambar_3" id="gambar3" class="dropify" data-height="190" required>
+								</div>
+                                <label for="gambar4">Pilih Foto</label>
+								<div class="form-group">
+									
+									<input type="file" name="gambar_4" id="gambar4" class="dropify" data-height="190" required>
 								</div>
 								<div class="form-group">
 									<button type="submit" class="btn btn-success">Tambah data</button>

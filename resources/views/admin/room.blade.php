@@ -23,7 +23,10 @@
                                 <table class="table table-bordered ">
                                     <tr>
                                         <th>No</th>
-                                        <th>Gambar</th>
+                                        <th>Gambar 1</th>
+                                        <th>Gambar 2</th>
+                                        <th>Gambar 3</th>
+                                        <th>Gambar 4</th>
                                         <th>Tipe kamar</th>
                                         <th>Stok</th>
                                         <th>Harga</th>
@@ -36,10 +39,20 @@
 
                                         <td>{{$i++}}</td>
                                         <td>
-                                            <img src="{{asset('img/room/'. $room->gambar)}}" height="100" width="100" alt="Foto kamar"></td>
+                                            <img src="{{asset('img/room/'. $room->gambar_1)}}" height="100" width="100" alt="Foto kamar">
+                                        </td>
+                                        <td>
+                                            <img src="{{asset('img/room/'. $room->gambar_2)}}" height="100" width="100" alt="Foto kamar">
+                                        </td>
+                                        <td>
+                                            <img src="{{asset('img/room/'. $room->gambar_3)}}" height="100" width="100" alt="Foto kamar">
+                                        </td>
+                                        <td>
+                                            <img src="{{asset('img/room/'. $room->gambar_4)}}" height="100" width="100" alt="Foto kamar">
+                                        </td>
                                         <td>{{$room->room_type}}</td>
                                         <td>{{$room->stok}}</td>
-                                        <td>{{$room->price}}</td>
+                                        <td>Rp. {{number_format($room->price)}}</td>
                                         <td>{{$room->desc}}</td>
 
                                         <td>
