@@ -17,6 +17,7 @@ use App\Models\Menu;
 // use App\Models\Event;
 use App\Models\Contact;
 use App\Models\Categorie;
+use Alert;
 
 class LoginController extends Controller
 {
@@ -35,7 +36,8 @@ class LoginController extends Controller
             'password' => bcrypt($request->password),
             'remember_token' => Str::random(60),
         ]);
-
+        
+        alert()->success('Akun anda berhasil dibuat', 'Success');
         return redirect('/login');
     }
 
@@ -52,13 +54,14 @@ class LoginController extends Controller
                 return redirect('/admin'); 
             
         }
-
+        alert()->error('Email/Password salah silahkan ulangi', 'Gagal');
         return redirect('/login');
     }
 
     public function logout(Request $request)
     {
         Auth::logout();
+        alert()->success('Anda telah logout, sampai bertemu kembali', 'Logout');
         return redirect('/login');
     }
 }

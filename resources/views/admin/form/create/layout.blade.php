@@ -226,6 +226,8 @@
             <script src="js/codebase.js"></script>
             <script src="js/dropify.min.js"></script>
             <script src="js/ckeditor.js"></script> -->
+            <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+            @include('sweet::alert')
 
 </body>
 

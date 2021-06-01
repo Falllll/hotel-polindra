@@ -18,6 +18,7 @@ use App\Models\Menu;
 // use App\Models\Event;
 use App\Models\Contact;
 use App\Models\Categorie;
+use Alert;
 
 class PengunjungController extends Controller
 {
@@ -97,6 +98,7 @@ class PengunjungController extends Controller
         $detail->jumlah_harga = $rooms->price*$request->lama_inap;
         $detail->save();
 
+        alert()->success('Permintaan anda sedang diproses, silahkan cek Email/SMS untuk konfirmasi pesanan', 'Harap tunggu');
         return redirect ('/rooms');
     }
 }

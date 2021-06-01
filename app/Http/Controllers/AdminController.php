@@ -18,6 +18,7 @@ use App\Models\Menu;
 // use App\Models\Event;
 use App\Models\Contact;
 use App\Models\Categorie;
+use Alert;
 
 class AdminController extends Controller
 {

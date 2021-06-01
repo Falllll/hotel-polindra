@@ -17,6 +17,7 @@ use App\Models\Menu;
 // use App\Models\Event;
 use App\Models\Contact;
 use App\Models\Categorie;
+use Alert;
 
 class CrudController extends Controller
 {
@@ -37,6 +38,7 @@ class CrudController extends Controller
 
             $nm->move(public_path().'/img/room-slider', $namafile);
             $dtUpload->save();
+            alert()->success('Berhasil', 'Data berhasil ditambahkan');
             return redirect('/slider');
     }
 
@@ -70,7 +72,8 @@ class CrudController extends Controller
             $nm3->move(public_path().'/img/room', $namafile3);
             $nm4->move(public_path().'/img/room', $namafile4);
             $dtUpload->save();
-        return redirect('/room');
+            alert()->success('Berhasil', 'Data berhasil ditambahkan');
+            return redirect('/room');
     }
 
     public function createfacility(){
@@ -89,7 +92,9 @@ class CrudController extends Controller
 
             $nm->move(public_path().'/img/fasilitas', $namafile);
             $dtUpload->save();
-        return redirect('/fasilitas');
+
+            alert()->success('Berhasil', 'Data berhasil ditambahkan');
+            return redirect('/fasilitas');
     }
 
     public function createmenu(){
@@ -109,7 +114,8 @@ class CrudController extends Controller
 
             $nm->move(public_path().'/img/menu', $namafile);
             $dtUpload->save();
-        return redirect('/menu');
+            alert()->success('Berhasil', 'Data berhasil ditambahkan');
+            return redirect('/menu');
     }
 
     public function createtamu(){
@@ -119,6 +125,7 @@ class CrudController extends Controller
     public function addtamu(Request $request){
 
         Pengunjung::create($request->all());
+        alert()->success('Berhasil', 'Data berhasil ditambahkan');
         return redirect('/tamu');
     }
 
@@ -153,6 +160,7 @@ class CrudController extends Controller
         $request->gambar_4->move(public_path().'/img/room', $awal4);
         $ubah->update($room);
 
+        alert()->success('Berhasil', 'Data berhasil diubah');
         return redirect ('/room');
     }
 
@@ -174,6 +182,7 @@ class CrudController extends Controller
         $request->gambar->move(public_path().'/img/fasilitas', $awal);
         $ubah->update($fasilitas);
 
+        alert()->success('Berhasil', 'Data berhasil diubah');
         return redirect ('/fasilitas');
     }
 
@@ -195,6 +204,7 @@ class CrudController extends Controller
 
         $request->gambar->move(public_path().'/img/menu', $awal);
         $ubah->update($menu);
+        alert()->success('Berhasil', 'Data berhasil diubah');
         return redirect ('/menu');
     }
 
@@ -214,6 +224,7 @@ class CrudController extends Controller
 
         $request->gambar->move(public_path().'/img/room-slider', $awal);
         $ubah->update($slider);
+        alert()->success('Berhasil', 'Data berhasil diubah');
         return redirect ('/slider');
     }
 
@@ -225,6 +236,7 @@ class CrudController extends Controller
     public function updatetamu(Request $request, $id){
         $tamu = Pengunjung::find($id);
         $tamu->update($request->all());
+        alert()->success('Berhasil', 'Data berhasil diubah');
         return redirect('/tamu');
     }
 
@@ -236,6 +248,7 @@ class CrudController extends Controller
     public function updatereservasi(Request $request, $id){
         $reservasi = Reservation::find($id);
         $reservasi->update($request->all());
+        alert()->success('Berhasil', 'Data berhasil diubah');
         return redirect('/reservasi');
     }
 
@@ -244,6 +257,7 @@ class CrudController extends Controller
     public function deleteuser($id){
         $user = User::find($id);
         $user->delete();
+        alert()->success('Berhasil', 'Data berhasil dihapus');
         return redirect('/user');
     }
     
@@ -256,12 +270,14 @@ class CrudController extends Controller
     public function deletefasilitas($id){
         $fasilitas = Facilites::find($id);
         $fasilitas->delete();
+        alert()->success('Berhasil', 'Data berhasil dihapus');
         return redirect('/fasilitas');
     }
 
     public function deleteinbox($id){
         $contact = Contact::find($id);
         $contact->delete();
+        alert()->success('Berhasil', 'Data berhasil dihapus');
         return redirect('/inbox');
     }
 
@@ -274,36 +290,42 @@ class CrudController extends Controller
     public function deletekategori($id){
         $kategori = Categorie::find($id);
         $kategori->delete();
+        alert()->success('Berhasil', 'Data berhasil dihapus');
         return redirect('/kategori');
     }
 
     public function deletemenu($id){
         $menu = Menu::find($id);
         $menu->delete();
+        alert()->success('Berhasil', 'Data berhasil dihapus');
         return redirect('/menu');
     }
 
     public function deletereservasi($id){
         $reservasi = Reservation::find($id);
         $reservasi->delete();
+        alert()->success('Berhasil', 'Data berhasil dihapus');
         return redirect('/reservasi');
     }
 
     public function deleteroom($id){
         $room = Room::find($id);
         $room->delete();
+        alert()->success('Berhasil', 'Data berhasil dihapus');
         return redirect('/room');
     }
 
     public function deleteslider($id){
         $slider = Slider::find($id);
         $slider->delete();
+        alert()->success('Berhasil', 'Data berhasil dihapus');
         return redirect('/slider');
     }
 
     public function deletetamu($id){
         $pengunjungs = Pengunjung::find($id);
         $pengunjungs->delete();
+        alert()->success('Berhasil', 'Data berhasil dihapus');
         return redirect('/tamu');
     }
 }
