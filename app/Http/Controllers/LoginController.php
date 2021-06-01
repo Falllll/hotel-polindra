@@ -50,6 +50,7 @@ class LoginController extends Controller
     {
         
         if(Auth::attempt($request->only('email', 'password', 'level'))) {
+                alert()->success('Login berhasil', 'Success');
                 return redirect('/');
                 return redirect('/admin'); 
             
