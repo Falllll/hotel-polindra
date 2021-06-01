@@ -105,7 +105,7 @@ class PengunjungController extends Controller
         $detail->jumlah_harga = $rooms->price*$request->lama_inap;
         $detail->save();
 
-        alert()->success('Jare sopo booking kamer jancok ', 'Kadieu sia anying');
+        alert()->success('Harap tunggu', 'Pesanan kamar anda sedang di proses, silahkan cek email/sms hp anda untuk informasi lebih lanjut');
         return redirect ('/rooms');
     }
 }
