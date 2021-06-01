@@ -60,6 +60,13 @@ class PengunjungController extends Controller
         return view('pengunjung.contact');
     }
 
+    public function kirim(Request $request){
+
+        Contact::create($request->all());
+        alert()->success('Pesan berhasil dikirim', 'Terimakasih');
+        return redirect('/contact');
+    }
+
     public function booking($id){
 
         $rooms = Room::where('id', $id)->first();

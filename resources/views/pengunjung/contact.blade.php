@@ -49,24 +49,25 @@
             <div class="col-lg-6">
                 <div class="contact-form">
                     <h5>Write us ...</h5>
-                    <form action="#">
+                    <form action="{{route ('contact')}}" method="post">
+                        {{ csrf_field() }}
                         <div class="row">
                             <div class="col-lg-12">
                                 <p>From</p>
                                 <div class="input-group">
-                                    <input type="text" placeholder="Full Name">
+                                    <input type="text" name="nama" placeholder="Full Name">
                                     <img src="img/edit.png" alt="">
                                 </div>
                             </div>
                             <div class="col-lg-6">
                                 <div class="input-group">
-                                    <input type="email" placeholder="Email">
+                                    <input type="email" name="email" placeholder="Email">
                                     <img src="img/envelop-copy.png" alt="">
                                 </div>
                             </div>
                             <div class="col-lg-6">
                                 <div class="input-group phone-num">
-                                    <input type="text" placeholder="Phone">
+                                    <input type="text" name="phone" placeholder="Phone">
                                     <img src="img/phone-copy.png" alt="">
                                 </div>
                             </div>
@@ -74,7 +75,7 @@
                                 <div class="message">
                                     <p>Message</p>
                                     <div class="textarea">
-                                        <textarea placeholder="Hi ..."></textarea>
+                                        <textarea placeholder="Hi ..." name="message"></textarea>
                                         <img src="img/speech-copy.png" alt="">
                                     </div>
                                 </div>

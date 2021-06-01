@@ -28,6 +28,7 @@ Route::get('/service', [PengunjungController::class, 'service']);
 Route::get('/news', [PengunjungController::class, 'news']);
 Route::get('/restaurant', [PengunjungController::class, 'restaurant']);
 Route::get('/contact', [PengunjungController::class, 'contact']);
+Route::post('/contact', [PengunjungController::class, 'kirim'])->name('contact');
 
 
 Route::get('/register', [LoginController::class, 'register'])->name('register');
