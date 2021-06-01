@@ -44,7 +44,7 @@
                                             <form action="/fasilitas/{{$fasilitas->id}}" method="post">
                                                 @method('DELETE')
                                                 @csrf
-                                                <input type="submit" class="btn btn-danger btn-sm" value="Delete">
+                                                <input type="submit" class="btn btn-danger btn-sm" value="Delete" onclick="return confirm('anda yakin ingin menghapus data?');">
                                             </form>
                                         </td>
                                     </tr>

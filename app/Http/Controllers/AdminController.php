@@ -25,7 +25,13 @@ class AdminController extends Controller
 
     public function admin()
     {
-        return view('admin.dashboard');
+        $admin = User::count();
+        $reservasi = Reservation::count();
+        $kamar = Room::all()->count();
+        $tamu = Pengunjung::all()->count();
+        $inbox = Pengunjung::all()->count();
+        return view('admin.dashboard', compact('admin','reservasi','kamar', 'tamu','inbox'));
+
     }
 
     public function newpost()
