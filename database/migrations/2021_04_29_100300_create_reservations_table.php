@@ -21,6 +21,7 @@ class CreateReservationsTable extends Migration
             $table->string('alamat');
             $table->string('no_hp');
             $table->date('tanggal');
+            $table->string('room_type');
             $table->string('lama_inap');
             $table->integer('jumlah_harga');
             $table->string('status');

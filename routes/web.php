@@ -50,7 +50,6 @@ Route::group(['middleware' => ['auth', 'ceklevel:admin']], function () {
     // Route::get('/jadwal', [AdminController::class, 'jadwal']);
     Route::get('/menu', [AdminController::class, 'menu']);
     Route::get('/reservasi', [AdminController::class, 'reservasi']);
-    Route::get('/detailreservasi', [AdminController::class, 'detail']);
     Route::get('/tamu', [AdminController::class, 'tamu']);
 
     // create
@@ -80,6 +79,8 @@ Route::group(['middleware' => ['auth', 'ceklevel:admin']], function () {
     Route::post('/slider/{id}', [CrudController::class, 'updateslider'])->name('slider');
     Route::get('/tamu/{id}/edit', [CrudController::class, 'edittamu']);
     Route::put('/tamu/{id}', [CrudController:: class, 'updatetamu']);
+    Route::get('/reservasi/{id}/edit', [CrudController::class, 'editreservasi']);
+    Route::put('/reservasi/{id}', [CrudController:: class, 'updatereservasi']);
 
     // delete
 
@@ -96,5 +97,6 @@ Route::group(['middleware' => ['auth', 'ceklevel:admin']], function () {
 });
 
 Route::group(['middleware' => ['auth', 'ceklevel:customer']], function () {
-    Route::get('/pesan/{id}', [PengunjungController::class, 'booking'])->name('pesan');
+    Route::get('/pesan/{id}', [PengunjungController::class, 'booking']);
+    Route::post('/pesan/{id}', [PengunjungController::class, 'pesan']);
 });

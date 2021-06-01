@@ -90,13 +90,6 @@
                             </ul> -->
                         </li>
                         <li>
-                            <a href="{{ url('/detailreservasi') }}"><i class="ion ion-android-clipboard "></i><span>Detail Reservasi</span></a>
-                            <!-- <ul class="menu-dropdown">
-                                <li><a href="{{ url('/checkin') }}"><i class="ion ion-ios-circle-outline"></i>Check in</a></li>
-                                <li><a href="{{ url('/checkout') }}"><i class="ion ion-ios-circle-outline"></i>Check Out</a></li>
-                            </ul> -->
-                        </li>
-                        <li>
                             <a href="{{ url('/fasilitas') }}"><i class="ion-ribbon-b"></i><span>Facilities</span></a>
                         </li>
                          <li>

@@ -22,10 +22,11 @@
                                         <th>No</th>
                                         <th>Pemesan</th>
                                         <th>Email</th>
-                                        <th>Alamat</th>
                                         <th>No HP</th>
-                                        <th>Kamar</th>
-                                        <th>No Reservasi</th>
+                                        <th>Tanggal Inap</th>
+                                        <th>Tipe kamar</th>
+                                        <th>Lama Inap</th>
+                                        <th>Biaya</th>
                                         <th>Status</th>
                                         <th>Aksi</th>
                                     </tr>
@@ -35,12 +36,14 @@
                                         <td>{{$i++}}</td>
                                         <td>{{$reservasi->pemesan}}</td>
                                         <td>{{$reservasi->email}}</td>
-                                        <td>{{$reservasi->check_in}}</td>
-                                        <td>{{$reservasi->check_out}}</td>
+                                        <td>{{$reservasi->no_hp}}</td>
+                                        <td>{{$reservasi->tanggal}}</td>
                                         <td>{{$reservasi->room_type}}</td>
+                                        <td>{{$reservasi->lama_inap}} Hari</td>
+                                        <td>{{$reservasi->jumlah_harga}}</td>
                                         <td>{{$reservasi->status}}</td>
-
                                         <td>
+                                            <a href="/reservasi/{{$reservasi->id}}/edit" class="btn btn-success btn-sm">Edit</a>
                                             <form action="/reservasi/{{$reservasi->id}}" method="post">
                                                 @method('DELETE')
                                                 @csrf
@@ -48,8 +51,8 @@
                                             </form>
                                         </td>
                                     </tr>
-                                    @endforeach
                                     
+                                    @endforeach
 
                                 </table>
                             </div>

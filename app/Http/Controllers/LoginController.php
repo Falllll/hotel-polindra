@@ -48,7 +48,7 @@ class LoginController extends Controller
     {
         
         if(Auth::attempt($request->only('email', 'password', 'level'))) {
-                return redirect('/pesan/{id}');
+                return redirect('/');
                 return redirect('/admin'); 
             
         }

@@ -228,6 +228,17 @@ class CrudController extends Controller
         return redirect('/tamu');
     }
 
+    public function editreservasi($id){
+        $reservasi = Reservation::find($id);
+        return view ('/admin.form.edit.edit-reservasi', compact('reservasi'));
+    }
+
+    public function updatereservasi(Request $request, $id){
+        $reservasi = Reservation::find($id);
+        $reservasi->update($request->all());
+        return redirect('/reservasi');
+    }
+
 
     // DELETE
     public function deleteuser($id){

@@ -21,7 +21,7 @@ class CreateRoomsTable extends Migration
             $table->string('gambar_4', 100);
             $table->string('room_type');
             $table->integer('stok');
-            $table->BigInteger('price');
+            $table->integer('price');
             $table->text('desc');
             $table->timestamps();
         });

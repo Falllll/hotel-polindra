@@ -19,6 +19,10 @@ class Room extends Model
         'room_type',
         'stok',
         'price',
-        'desc'
+        'desc',
     ];
+
+    public function detail_reservasi (){
+        return $this->hasMany('App\Models\DetailReservasi','kamar_id','id');
+    }
 }

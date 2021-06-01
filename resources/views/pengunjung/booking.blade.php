@@ -80,10 +80,11 @@
                         </div>
                     </div>
                     <section id="first-tab-group" class="tabgroup">
-                        <form action="{{url('/pesan')}}" method="POST">
+                        <form action="{{url('/pesan')}}/{{$rooms->id}}" method="POST">
+                            @csrf
                         <div id="tab1">
                             <div class="submit-form">
-                                <h4>Cek kamar <em>hotel</em>:</h4>
+                                <h4>Pesan kamar {{$rooms->room_type}} </h4>
                                 <form id="form-submit" action="" method="get">
                                     <div class="row">
                                         <div class="col-md-12">
@@ -122,7 +123,7 @@
                                         <div class="col-md-6">
                                             <fieldset>
                                                 <label for="date">Tanggal:</label>
-                                                <input name="date" type="date" class="form-control date" id="date" placeholder="Pilih tanggal..." required onchange='this.form.()'>
+                                                <input name="date" type="date" class="form-control datepicker" id="date" placeholder="Pilih tanggal..." required onchange='this.form.()' value="">
                                             </fieldset>
                                         </div>
                                         <div class="row">
@@ -191,6 +192,14 @@
     <script src="/booking/js/datepicker.js"></script>
     <script src="/booking/js/plugins.js"></script>
     <script src="/booking/js/main.js"></script>
+
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script>
+        $( function(){
+            $(".datepicker").datepicker();
+        });
+    </script>
 
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" type="text/javascript"></script>
     <script type="text/javascript">

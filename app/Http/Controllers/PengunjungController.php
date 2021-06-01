@@ -33,10 +33,11 @@ class PengunjungController extends Controller
 
     public function rooms()
     {
-        $i = 0;
-        $i++;
-        $rooms = Room::latest()->get();
-        return view('pengunjung.rooms', compact(['rooms', 'i']));
+        $rooms = Room::paginate(4);
+
+
+
+        return view ('pengunjung.rooms', compact('rooms'));
     }
 
     public function restaurant()
@@ -58,7 +59,44 @@ class PengunjungController extends Controller
         return view('pengunjung.contact');
     }
 
-    public function booking(){
-        return view('pengunjung.booking');
+    public function booking($id){
+
+        $rooms = Room::where('id', $id)->first();
+
+        return view('pengunjung.booking', compact('rooms'));
+    }
+
+    public function pesan(Request $request, $id){
+        $rooms = Room::where('id',$id)->first();
+
+        $date =  date('y-m-d', strtotime($request->date));
+
+        // Simpan data ke tabel reservasi
+        $reservasi = new Reservation;
+        $reservasi->user_id = Auth::user()->id;
+        $reservasi->pemesan = $request->pemesan;
+        $reservasi->email = $request->email;
+        $reservasi->alamat = $request->alamat;
+        $reservasi->no_hp = $request->no_hp;
+        $reservasi->tanggal = $date;
+        $reservasi->room_type = $rooms->room_type;
+        $reservasi->lama_inap = $request->lama_inap;
+        $reservasi->jumlah_harga = $rooms->price*$request->lama_inap;
+        $reservasi->status = 0;
+        $reservasi->save();
+
+        // Simpan data ke tabel detail_reservasi
+        $reservasi_baru = Reservation::where('user_id', Auth::user()->id)->where('status', 0)->first();
+
+        $detail = new DetailReservasi;
+        $detail->kamar_id = $rooms->id;
+        $detail->reservasi_id = $reservasi_baru->id;
+        $detail->nama_tamu = $request->pemesan;
+        $detail->lama_inap = $request->lama_inap;
+        $detail->tanggal = $date;
+        $detail->jumlah_harga = $rooms->price*$request->lama_inap;
+        $detail->save();
+
+        return redirect ('/rooms');
     }
 }

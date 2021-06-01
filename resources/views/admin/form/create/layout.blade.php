@@ -82,9 +82,6 @@
                             <a href="{{ url('/reservasi') }}"><i class="ion ion-android-clipboard "></i><span>Reservation</span></a>
                         </li>
                         <li>
-                            <a href="{{ url('/detailreservasi') }}"><i class="ion ion-android-clipboard "></i><span>Detail Reservasi</span></a>
-                        </li>
-                        <li>
                             <a href="{{ url('/fasilitas') }}"><i class="ion-ribbon-b"></i><span>Facilities</span></a>
                         </li>
                         <li>
