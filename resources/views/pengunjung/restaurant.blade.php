@@ -19,6 +19,38 @@
         </div>
     </div>
 </section>
+
+<div class="facilities-section spad">
+    <div class="container">
+        <div class="facilities-content">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section-title">
+                        <h1 style="font-size: 60px;">Restaurants</h1>
+                    </div>
+                </div>
+
+                <div class="col-md-3 p-0 ">
+                    <div class="card" style="width: 18rem;">
+                        <img src="img/trisula/gallery29a.jpg" class=" card-img-top" alt="...">
+                        <div class="card-body">
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 p-0">
+                    <div class="card" style="width: 18rem;">
+                        <img src="img/trisula/gallery29a.jpg" class=" card-img-top" alt="...">
+                        <div class="card-body">
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
 <!-- Hero Section End -->
 <!-- RESTAURANTS -->
 
