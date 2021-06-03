@@ -48,9 +48,9 @@
                         <div class="room-title">
                             <h3>{{$room->room_type}}</h2>
                             <div class="room-price">
-                                <span>Harga</span>
-                                <h3>Rp. {{number_format($room->price)}}</h2>
-                                <sub>/malam</sub>
+                                <span>Harga  </span>
+                                <h3>Rp. {{number_format($room->price)}}</h3>
+                                <sub>  /malam</sub>
                             </div>
                         </div>
                         <div class="room-desc">

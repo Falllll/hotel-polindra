@@ -25,7 +25,7 @@
                                 </div>
 								<div class="form-group">
 									<label for="harga"><strong>Harga</strong></label>
-                                    <input type="text" name="harga" id="harga" class="form-control" placeholder="Masukkan Harga" required>
+                                    <input type="number" name="harga" id="harga" class="form-control" placeholder="Masukkan Harga" required>
                                 </div>
 								<label for="desc"><strong>Deskripsi Makanan</strong></label>
 								<div class="form-group">

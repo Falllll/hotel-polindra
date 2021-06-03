@@ -14,7 +14,7 @@
             </div>
             <div class="page-nav">
                 <a href="{{ url('/rooms') }}" class="left-nav"><i class="lnr lnr-arrow-left"></i> Rooms</a>
-                <a href="{{ url('/news') }}" class="right-nav">Facilities <i class="lnr lnr-arrow-right"></i></a>
+                <a href="{{ url('/contact') }}" class="right-nav">Contact <i class="lnr lnr-arrow-right"></i></a>
             </div>
         </div>
     </div>

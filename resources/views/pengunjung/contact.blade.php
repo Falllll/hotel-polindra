@@ -13,7 +13,7 @@
                 </div>
             </div>
             <div class="page-nav">
-                <a href="{{ url('/news') }}" class="left-nav"><i class="lnr lnr-arrow-left"></i> News</a>
+                <a href="{{ url('/restaurant') }}" class="left-nav"><i class="lnr lnr-arrow-left"></i> Restaurant</a>
             </div>
         </div>
     </div>

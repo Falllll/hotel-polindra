@@ -49,10 +49,10 @@
                                 <ul style="font-size: 20px;">
                                     <li><a href="{{ url('/') }}">Home</a></li>
                                     <li><a href="{{ url('/about') }}">About</a></li>
-                                    <li><a href="{{ url('/service') }}">Services</a></li>
+                                    <li><a href="{{ url('/service') }}">Facilities</a></li>
                                     <li><a href="{{ url('/rooms') }}">Rooms</a></li>
                                     <li><a href="{{ url('/restaurant') }}">Restaurants</a></li>
-                                    <li><a href="{{ url('/news') }}">News</a></li>
+                                
                                     <li><a href="{{ url('/contact') }}">Contact</a></li>
                                 </ul>
                             </nav>

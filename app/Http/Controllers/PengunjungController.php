@@ -47,7 +47,8 @@ class PengunjungController extends Controller
     }
     public function service()
     {
-        return view('pengunjung.services');
+        $services = Facilites::paginate(2);
+        return view('pengunjung.services', compact('services'));
     }
 
     public function news()

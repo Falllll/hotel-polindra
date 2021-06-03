@@ -219,7 +219,7 @@
                                     pedoman konferensi, dsb.
                                     tim kami siap untuk memastikan
                                     keberhasilan pada pertemuan bisnis anda.</p>
-                                <a href="#" class="primary-btn fac-btn">Visit Center <i class="lnr lnr-arrow-right"></i></a>
+                                <a href="{{ url('/service') }}" class="primary-btn fac-btn">Visit Center <i class="lnr lnr-arrow-right"></i></a>
                             </div>
                         </div>
                     </div>
@@ -232,7 +232,7 @@
                                     Hidangan kami yang lezat
                                     dan menyehatkankan akan
                                     terpadukan citra rasa yang sesasional.</p>
-                                <a href="#" class="primary-btn fac-btn">Visit Center <i class="lnr lnr-arrow-right"></i></a>
+                                <a href="{{ url('/service') }}" class="primary-btn fac-btn">Visit Center <i class="lnr lnr-arrow-right"></i></a>
                             </div>
                         </div>
                     </div>

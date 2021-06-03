@@ -29,7 +29,7 @@ class AdminController extends Controller
         $reservasi = Reservation::count();
         $kamar = Room::all()->count();
         $tamu = Pengunjung::all()->count();
-        $inbox = Pengunjung::all()->count();
+        $inbox = Contact::all()->count();
         return view('admin.dashboard', compact('admin','reservasi','kamar', 'tamu','inbox'));
 
     }

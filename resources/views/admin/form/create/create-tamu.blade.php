@@ -33,7 +33,7 @@
                                 </div>
 								<div class="form-group">
 									<label for="no_hp"><strong>No Handphone</strong></label>
-                                    <input type="text" name="no_hp" id="no_hp" class="form-control" placeholder="Masukkan No Handphone" required>
+                                    <input type="number" name="no_hp" id="no_hp" class="form-control" placeholder="Masukkan No Handphone" required>
                                 </div>
 								<div class="form-group">
 									<button type="submit" class="btn btn-success">Tambah data</button>

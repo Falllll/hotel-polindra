@@ -31,15 +31,15 @@
                         <li><a href="#" data-toggle="sidebar" class="nav-link nav-link-lg"><i class="ion ion-navicon-round"></i></a></li>
                         <li><a href="#" data-toggle="search" class="nav-link nav-link-lg d-sm-none"><i class="ion ion-search"></i></a></li>
                     </ul>
-                    <div class="search-element">
+                    {{-- <div class="search-element">
                         <input class="form-control" type="search" placeholder="Search" aria-label="Search">
                         <button class="btn" type="submit"><i class="ion ion-search"></i></button>
-                    </div>
+                    </div> --}}
                 </form>
-                <ul class="navbar-nav navbar-right">
+                <ul class="navbar-nav navbar-right ml-3">
                     <li class="dropdown"><a href="#" data-toggle="dropdown" class="nav-link dropdown-toggle nav-link-lg">
                             <i class="ion ion-android-person d-lg-none"></i>
-                            <div class="d-sm-none d-lg-inline-block">Hi, {{ auth()->user()->name }}</div>
+                            <div class="d-sm-none d-lg-inline-block ">Hi, {{ auth()->user()->name }}</div>
                         </a>
                         <div class="dropdown-menu dropdown-menu-right">
                             <a href="{{ route('logout') }}" class="dropdown-item has-icon">
@@ -55,9 +55,9 @@
                         <a href="{{url ('/')}}">Grand Trisula</a>
                     </div>
                     <div class="sidebar-user">
-                        <div class="sidebar-user-picture">
+                        {{-- <div class="sidebar-user-picture">
                             <img alt="image" src="dist/img/avatar/delia.jpg">
-                        </div>
+                        </div> --}}
                         <div class="sidebar-user-details">
                             <div class="user-name">{{ auth()->user()->name }}</div>
                             <div class="user-role">

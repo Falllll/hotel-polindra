@@ -50,7 +50,7 @@
 <!-- About Room Section End -->
 
 <!-- Video Tour Section Begin -->
-<section class="video-tour set-bg" data-setbg="img/video-bg.jpg">
+{{-- <section class="video-tour set-bg" data-setbg="img/video-bg.jpg">
     <div class="container">
         <div class="video-text">
             <div class="row">
@@ -63,7 +63,7 @@
             </div>
         </div>
     </div>
-</section>
+</section> --}}
 <!-- Video Tour Section End -->
 
 <!-- Gallery Section Begin -->
@@ -76,7 +76,7 @@
                     <p>Hotel Grand Trisula Indramayu merupakan sebuah resort city hotel, yang terletak di lokasi strategis di jantung kota Indramayu – Jawa Barat,
                         Hotel Grand Trisula menawarkan 50 kamar dengan sentuhan interior alami nyaman dengan masing-masing kamar mempunyai pemandangan taman yang asri, dan dilengkapi dengan wireless internet access (hotspot). Hotel Grand Trisula Indramayu juga merupakan sebuah tempat alternatif yang cocok untuk tujuan bisnis maupun waktu senggang.
                     </p>
-                    <a href="#" class="primary-btn">View Gallery <i class="lnr lnr-arrow-right"></i></a>
+                    {{-- <a href="#" class="primary-btn">View Gallery <i class="lnr lnr-arrow-right"></i></a> --}}
                 </div>
             </div>
             <div class="col-lg-6">
