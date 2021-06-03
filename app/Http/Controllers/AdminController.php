@@ -30,8 +30,7 @@ class AdminController extends Controller
         $kamar = Room::all()->count();
         $tamu = Pengunjung::all()->count();
         $inbox = Contact::all()->count();
-        return view('admin.dashboard', compact('admin','reservasi','kamar', 'tamu','inbox'));
-
+        return view('admin.dashboard', compact('admin', 'reservasi', 'kamar', 'tamu', 'inbox'));
     }
 
     public function newpost()
@@ -49,7 +48,7 @@ class AdminController extends Controller
         $i = 0;
         $i++;
         $categories = Categorie::all();
-        return view('admin.kategori', compact(['categories','i']));
+        return view('admin.kategori', compact(['categories', 'i']));
     }
 
     public function slider()
@@ -57,7 +56,7 @@ class AdminController extends Controller
         $i = 0;
         $i++;
         $sliders = Slider::all();
-        return view('admin.slider', compact(['sliders','i']));
+        return view('admin.slider', compact(['sliders', 'i']));
     }
 
     public function room()
@@ -73,7 +72,7 @@ class AdminController extends Controller
         $i = 0;
         $i++;
         $users = User::all();
-        return view('admin.user', compact(['users','i']));
+        return view('admin.user', compact(['users', 'i']));
     }
 
     // public function event()
@@ -89,7 +88,7 @@ class AdminController extends Controller
         $i = 0;
         $i++;
         $contacts = Contact::all();
-        return view('admin.inbox', compact(['contacts','i']));
+        return view('admin.inbox', compact(['contacts', 'i']));
     }
 
     public function fasilitas()
@@ -100,41 +99,41 @@ class AdminController extends Controller
         return view('admin.fasilitas', compact(['facilitiess', 'i']));
     }
 
-    public function jadwal()
-    {
-        $i = 0;
-        $i++;
-        $schedules = Eat_time::all();
-        return view('admin.jadwal', compact(['schedules', 'i']));
-    }
+    // public function jadwal()
+    // {
+    //     $i = 0;
+    //     $i++;
+    //     $schedules = Eat_time::all();
+    //     return view('admin.jadwal', compact(['schedules', 'i']));
+    // }
 
     public function menu()
     {
         $i = 0;
         $i++;
         $menus = Menu::all();
-        return view('admin.menu', compact(['menus','i']));
+        return view('admin.menu', compact(['menus', 'i']));
     }
     public function reservasi()
     {
         $i = 0;
         $i++;
         $reservations = Reservation::all();
-        return view('admin.reservasi', compact(['reservations','i']));
+        return view('admin.reservasi', compact(['reservations', 'i']));
     }
     public function detail()
     {
         $i = 0;
         $i++;
         $details = DetailReservasi::all();
-        return view('admin.detail', compact(['details','i']));
+        return view('admin.detail', compact(['details', 'i']));
     }
 
-    public function tamu(){
+    public function tamu()
+    {
         $i = 0;
         $i++;
         $pengunjungs = Pengunjung::all();
-        return view('admin.tamu', compact(['pengunjungs','i']));
+        return view('admin.tamu', compact(['pengunjungs', 'i']));
     }
-
 }

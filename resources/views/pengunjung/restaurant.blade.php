@@ -30,23 +30,19 @@
                     </div>
                 </div>
 
+                @foreach ($restaurants as $restaurant)
                 <div class="col-md-3 p-0 ">
                     <div class="card" style="width: 18rem;">
-                        <img src="img/trisula/gallery29a.jpg" class=" card-img-top" alt="...">
+                        <img src="{{ asset('img/menu/'.$restaurant->gambar)}}" class=" card-img-top" alt="...">
                         <div class="card-body">
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3 p-0">
-                    <div class="card" style="width: 18rem;">
-                        <img src="img/trisula/gallery29a.jpg" class=" card-img-top" alt="...">
-                        <div class="card-body">
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <h2>{{$restaurant->nama_makanan}}</h2>
+                            <p class="card-text">{{$restaurant->desc}}</p>
+
                         </div>
                     </div>
                 </div>
 
+                @endforeach
             </div>
         </div>
     </div>

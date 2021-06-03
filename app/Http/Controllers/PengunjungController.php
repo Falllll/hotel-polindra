@@ -38,12 +38,13 @@ class PengunjungController extends Controller
 
 
 
-        return view ('pengunjung.rooms', compact('rooms'));
+        return view('pengunjung.rooms', compact('rooms'));
     }
 
     public function restaurant()
     {
-        return view('pengunjung.restaurant');
+        $restaurants = Menu::paginate(2);
+        return view('pengunjung.restaurant', compact('restaurants'));
     }
     public function service()
     {
@@ -61,22 +62,25 @@ class PengunjungController extends Controller
         return view('pengunjung.contact');
     }
 
-    public function kirim(Request $request){
+    public function kirim(Request $request)
+    {
 
         Contact::create($request->all());
         alert()->success('Pesan berhasil dikirim', 'Terimakasih');
         return redirect('/contact');
     }
 
-    public function booking($id){
+    public function booking($id)
+    {
 
         $rooms = Room::where('id', $id)->first();
 
         return view('pengunjung.booking', compact('rooms'));
     }
 
-    public function pesan(Request $request, $id){
-        $rooms = Room::where('id',$id)->first();
+    public function pesan(Request $request, $id)
+    {
+        $rooms = Room::where('id', $id)->first();
 
         $date =  date('y-m-d', strtotime($request->date));
 
@@ -90,7 +94,7 @@ class PengunjungController extends Controller
         $reservasi->tanggal = $date;
         $reservasi->room_type = $rooms->room_type;
         $reservasi->lama_inap = $request->lama_inap;
-        $reservasi->jumlah_harga = $rooms->price*$request->lama_inap;
+        $reservasi->jumlah_harga = $rooms->price * $request->lama_inap;
         $reservasi->status = 0;
         $reservasi->save();
 
@@ -103,10 +107,10 @@ class PengunjungController extends Controller
         $detail->nama_tamu = $request->pemesan;
         $detail->lama_inap = $request->lama_inap;
         $detail->tanggal = $date;
-        $detail->jumlah_harga = $rooms->price*$request->lama_inap;
+        $detail->jumlah_harga = $rooms->price * $request->lama_inap;
         $detail->save();
 
         alert()->success('Harap tunggu', 'Pesanan kamar anda sedang di proses, silahkan cek email/sms hp anda untuk informasi lebih lanjut');
-        return redirect ('/rooms');
+        return redirect('/rooms');
     }
 }

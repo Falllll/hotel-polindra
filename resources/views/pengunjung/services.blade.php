@@ -20,8 +20,8 @@
     </div>
 </section>
 <!-- Hero Section End -->
-  <!-- Facilities Section Begin -->
-  <div class="facilities-section spad">
+<!-- Facilities Section Begin -->
+<div class="facilities-section spad">
     <div class="container">
         <div class="facilities-content">
             <div class="row">
@@ -30,12 +30,13 @@
                         <h1 style="font-size: 60px;">Facilities</h1>
                     </div>
                 </div>
+
                 @foreach ($services as $service)
                 <div class="col-lg-6 p-0">
                     <div class="facilities-img set-bg" data-setbg="{{ asset('img/fasilitas/'.$service->gambar)}}"></div>
                 </div>
 
-                <div class="col-lg-6 p-0 order-lg-1 order-2">
+                <div class="col-lg-6 p-0 ">
                     <div class="facilities-text-warp">
                         <div class="facilities-text">
                             <h2>{{$service->nama}}</h2>
@@ -46,10 +47,10 @@
                 </div>
                 @endforeach
 
-                <div class="col-lg-6 p-0 order-lg-2 order-1">
+                <!-- <div class="col-lg-6 p-0 order-lg-2 order-1">
                     <div class="facilities-img set-bg" data-setbg="img/trisula/gallery36a.jpg"></div>
 
-                </div>
+                </div> -->
             </div>
         </div>
     </div>
