@@ -1,56 +1,56 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    	<title>Pesan Kamar Hotel</title>
-    
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="apple-touch-icon" href="apple-touch-icon.png">
 
-        <link rel="stylesheet" href="/booking/css/bootstrap.min.css">
-        <link rel="stylesheet" href="/booking/css/bootstrap-theme.min.css">
-        <link rel="stylesheet" href="/booking/css/fontAwesome.css">
-        <link rel="stylesheet" href="/booking/css/hero-slider.css">
-        <link rel="stylesheet" href="/booking/css/owl-carousel.css">
-        <link rel="stylesheet" href="/booking/css/datepicker.css">
-        <link rel="stylesheet" href="/booking/css/tooplate-style.css">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Pesan Kamar Hotel</title>
 
-        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
-        <style>
-            .logo {
-                margin: auto;
-                padding-right: 5%; 
-            }
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
 
-            .copyright{
-                color: white;
-            }
+    <link rel="stylesheet" href="/booking/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/booking/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="/booking/css/fontAwesome.css">
+    <link rel="stylesheet" href="/booking/css/hero-slider.css">
+    <link rel="stylesheet" href="/booking/css/owl-carousel.css">
+    <link rel="stylesheet" href="/booking/css/datepicker.css">
+    <link rel="stylesheet" href="/booking/css/tooplate-style.css">
 
-            .input{
-                width: 100%;
-                padding: 10px ;
-                margin: 5px -2;
-                display: inline-block;
-                border: 1px solid #ccc;
-                border-radius: 4px;
-                box-sizing: border-box;
-                height: px;
-                }
-            
-        </style>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
+    <style>
+        .logo {
+            margin: auto;
+            padding-right: 5%;
+        }
 
-        <script src="/booking/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
-    </head>
+        .copyright {
+            color: white;
+        }
+
+        .input {
+            width: 100%;
+            padding: 10px;
+            margin: 5px -2;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            height: px;
+        }
+    </style>
+
+    <script src="/booking/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+</head>
 
 <body>
 
 
- 
-    
+
+
     <section class="banner" style="filter: grayscale(30%) drop-shadow(5px 5px 8px gray) contrast(120%);" id="top">
-        
+
         <div class="container">
             <div class="row">
                 <div class="col-md-5">
@@ -76,55 +76,56 @@
                 <div class="col-md-5 col-md-offset-1">
                     <div class="container">
                         <div class="right-side">
-                            <a href="{{ route('logout') }}" class="btn btn-primary "><i class="fa fa-arrow-left">  Logout</i></a>
+                            <a href="{{ route('logout') }}" class="btn btn-primary "><i class="fa fa-arrow-left"> Logout</i></a>
                         </div>
                     </div>
                     <section id="first-tab-group" class="tabgroup">
                         <form action="{{url('/pesan')}}/{{$rooms->id}}" method="POST">
                             @csrf
-                        <div id="tab1">
-                            <div class="submit-form">
-                                <h4>Pesan kamar {{$rooms->room_type}} </h4>
-                                <form id="form-submit" action="" method="get">
-                                    <div class="row">
-                                        <div class="col-md-12">
-                                            <fieldset>
-                                                <label for="nama">Nama Lengkap: </label>
-                                                <input type="text" name="pemesan" id="nama" autocomplete="off" placeholder="Masukkan nama.." class="input" required>
-                                            </fieldset>
+                            <div id="tab1">
+                                <div class="submit-form">
+                                    <h4>Pesan kamar {{$rooms->room_type}} </h4>
+                                    <form id="form-submit" action="" method="get">
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <fieldset>
+                                                    <label for="nama">Nama Lengkap: </label>
+                                                    <input type="text" name="pemesan" id="nama" autocomplete="off" placeholder="Masukkan nama.." class="input" required>
+                                                </fieldset>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-md-12">
-                                            <fieldset>
-                                                <label for="email">Alamat email: </label>
-                                                <input type="email" name="email" id="email" autocomplete="off" placeholder="Masukkan email.." class="input" required>
-                                            </fieldset>
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <fieldset>
+                                                    <label for="email">Alamat email: </label>
+                                                    <input type="email" name="email" id="email" autocomplete="off" placeholder="Masukkan email.." class="input" required>
+                                                </fieldset>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-md-12">
-                                            <fieldset>
-                                                <label for="alamat">Alamat: </label>
-                                                <input type="text" name="alamat" id="alamat" autocomplete="off" placeholder="Masukkan alamat lengkap.." class="input" required>
-                                            </fieldset>
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <fieldset>
+                                                    <label for="alamat">Alamat: </label>
+                                                    <input type="text" name="alamat" id="alamat" autocomplete="off" placeholder="Masukkan alamat lengkap.." class="input" required>
+                                                </fieldset>
+                                            </div>
                                         </div>
-                                    </div>
-                            
-                                    <div class="row">
-                                        <div class="col-md-12">
-                                            <fieldset>
-                                                <label for="no_hp">No Handphone: </label>
-                                                <input type="number" name="no_hp" id="no_hp" autocomplete="off" placeholder="Masukkan no handphone.." class="input" required>
-                                            </fieldset>
+
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <fieldset>
+                                                    <label for="no_hp">No Handphone: </label>
+                                                    <input type="number" name="no_hp" id="no_hp" autocomplete="off" placeholder="Masukkan no handphone.." class="input" required>
+                                                </fieldset>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-md-6">
-                                            <fieldset>
-                                                <label for="date">Tanggal:</label>
-                                                <input name="date" type="date" class="form-control datepicker" id="date" placeholder="Pilih tanggal..." required onchange='this.form.()' value="">
-                                            </fieldset>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <fieldset>
+                                                    <label for="date">Tanggal Check in:</label>
+                                                    <input name="date" type="date" class="form-control datepicker" id="date" placeholder="Pilih tanggal..." value="">
+                                                </fieldset>
+                                            </div>
                                         </div>
                                         <div class="row">
                                             <div class="col-md-12">
@@ -134,16 +135,17 @@
                                                 </fieldset>
                                             </div>
                                         </div>
-                                        <div class="col-md-6">
-                                            <fieldset>
-                                                <button type="submit" id="form-submit" class="btn">Pesan Kamar Sekarang</button>
-                                            </fieldset>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <fieldset>
+                                                    <button type="submit" id="form-submit" class="btn">Pesan Kamar Sekarang</button>
+                                                </fieldset>
+                                            </div>
                                         </div>
-                                    </div>
-                                </form>
+                                    </form>
+                                </div>
                             </div>
-                        </div>
-                    </form>
+                        </form>
                     </section>
                 </div>
             </div>
@@ -185,10 +187,12 @@
     </footer>
 
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-    <script>window.jQuery || document.write('<script src="/booking/js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
+    <script>
+        window.jQuery || document.write('<script src="/booking/js/vendor/jquery-1.11.2.min.js"><\/script>')
+    </script>
 
     <script src="/booking/js/vendor/bootstrap.min.js"></script>
-    
+
     <script src="/booking/js/datepicker.js"></script>
     <script src="/booking/js/plugins.js"></script>
     <script src="/booking/js/main.js"></script>
@@ -196,52 +200,57 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script>
-        $( function(){
+        $(function() {
             $(".datepicker").datepicker();
         });
     </script>
 
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" type="text/javascript"></script>
     <script type="text/javascript">
-    $(document).ready(function() {
+        $(document).ready(function() {
 
-        
 
-        // navigation click actions 
-        $('.scroll-link').on('click', function(event){
-            event.preventDefault();
-            var sectionID = $(this).attr("data-id");
-            scrollToID('#' + sectionID, 750);
+
+            // navigation click actions 
+            $('.scroll-link').on('click', function(event) {
+                event.preventDefault();
+                var sectionID = $(this).attr("data-id");
+                scrollToID('#' + sectionID, 750);
+            });
+            // scroll to top action
+            $('.scroll-top').on('click', function(event) {
+                event.preventDefault();
+                $('html, body').animate({
+                    scrollTop: 0
+                }, 'slow');
+            });
+            // mobile nav toggle
+            $('#nav-toggle').on('click', function(event) {
+                event.preventDefault();
+                $('#main-nav').toggleClass("open");
+            });
         });
-        // scroll to top action
-        $('.scroll-top').on('click', function(event) {
-            event.preventDefault();
-            $('html, body').animate({scrollTop:0}, 'slow');         
-        });
-        // mobile nav toggle
-        $('#nav-toggle').on('click', function (event) {
-            event.preventDefault();
-            $('#main-nav').toggleClass("open");
-        });
-    });
-    // scroll function
-    function scrollToID(id, speed){
-        var offSet = 0;
-        var targetOffset = $(id).offset().top - offSet;
-        var mainNav = $('#main-nav');
-        $('html,body').animate({scrollTop:targetOffset}, speed);
-        if (mainNav.hasClass("open")) {
-            mainNav.css("height", "1px").removeClass("in").addClass("collapse");
-            mainNav.removeClass("open");
+        // scroll function
+        function scrollToID(id, speed) {
+            var offSet = 0;
+            var targetOffset = $(id).offset().top - offSet;
+            var mainNav = $('#main-nav');
+            $('html,body').animate({
+                scrollTop: targetOffset
+            }, speed);
+            if (mainNav.hasClass("open")) {
+                mainNav.css("height", "1px").removeClass("in").addClass("collapse");
+                mainNav.removeClass("open");
+            }
         }
-    }
-    if (typeof console === "undefined") {
-        console = {
-            log: function() { }
-        };
-    }
+        if (typeof console === "undefined") {
+            console = {
+                log: function() {}
+            };
+        }
     </script>
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     @include('sweet::alert')
 </body>
+
 </html>

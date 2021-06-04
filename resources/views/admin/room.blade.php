@@ -37,35 +37,36 @@
                                     @foreach ($rooms as $room)
                                     <tr>
 
-                                        <td>{{$i++}}</td>
-                                        <td>
-                                            <img src="{{asset('img/room/'. $room->gambar_1)}}" height="100" width="100" alt="Foto kamar">
+                                        <td style="vertical-align: middle;">{{$i++}}</td>
+                                        <td style="vertical-align: middle;">
+                                            <img src="{{asset('img/room/'. $room->gambar_1)}}" width="100" alt="Foto kamar">
                                         </td>
-                                        <td>
-                                            <img src="{{asset('img/room/'. $room->gambar_2)}}" height="100" width="100" alt="Foto kamar">
+                                        <td style="vertical-align: middle;">
+                                            <img src="{{asset('img/room/'. $room->gambar_2)}}" width="100" alt="Foto kamar">
                                         </td>
-                                        <td>
-                                            <img src="{{asset('img/room/'. $room->gambar_3)}}" height="100" width="100" alt="Foto kamar">
+                                        <td style="vertical-align: middle;">
+                                            <img src="{{asset('img/room/'. $room->gambar_3)}}" width="100" alt="Foto kamar">
                                         </td>
-                                        <td>
-                                            <img src="{{asset('img/room/'. $room->gambar_4)}}" height="100" width="100" alt="Foto kamar">
+                                        <td style="vertical-align: middle;">
+                                            <img src="{{asset('img/room/'. $room->gambar_4)}}" width="100" alt="Foto kamar">
                                         </td>
-                                        <td>{{$room->room_type}}</td>
-                                        <td>{{$room->stok}}</td>
-                                        <td>Rp. {{number_format($room->price)}}</td>
-                                        <td>{{$room->desc}}</td>
+                                        <td style="vertical-align: middle;">{{$room->room_type}}</td>
+                                        <td style="vertical-align: middle;">{{$room->stok}}</td>
+                                        <td style="vertical-align: middle;">Rp. {{number_format($room->price)}}</td>
+                                        <td style="vertical-align: middle;">{{$room->desc}}</td>
 
-                                        <td>
-                                            <a href="/room/{{$room->id}}/edit" class="btn btn-success btn-sm">Edit</a>
+                                        <td style="width: 120px;text-align: center;vertical-align: middle; ">
+                                            <a href="/room/{{$room->id}}/edit" class="btn btn-sm btn-primary btn-circle " style="float:left"><i class="far fa-edit"></i></a>
                                             <form action="/room/{{$room->id}}" method="post">
                                                 @method('DELETE')
                                                 @csrf
-                                                <input type="submit" class="btn btn-danger btn-sm" value="Delete" onclick="return confirm('anda yakin ingin menghapus data?');">
+                                                <button type="submit" class="btn btn-sm btn-primary btn-circle" style="float:right" onclick="return confirm('anda yakin ingin menghapus data?');"><span class="far fa-trash-alt"></span></button>
+                                                <!-- <input type="submit" class="btn btn-danger btn-sm" value="Delete" onclick="return confirm('anda yakin ingin menghapus data?');"> -->
                                             </form>
                                         </td>
                                     </tr>
                                     @endforeach
-                                    
+
 
                                 </table>
                             </div>

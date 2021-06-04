@@ -32,16 +32,21 @@
                 </div>
 
                 @foreach ($services as $service)
-                <div class="col-lg-6 p-0">
-                    <div class="facilities-img set-bg" data-setbg="{{ asset('img/fasilitas/'.$service->gambar)}}"></div>
-                </div>
+                <div class="container">
+                    <div class="row ">
+                        <div class="col-lg-6 p-0">
+                            <div class="facilities-img set-bg" data-setbg="{{ asset('img/fasilitas/'.$service->gambar)}}"></div>
+                        </div>
 
-                <div class="col-lg-6 p-0 ">
-                    <div class="facilities-text-warp">
-                        <div class="facilities-text">
-                            <h2>{{$service->nama}}</h2>
-                            <p>{{$service->desc}}</p>
-                            {{-- <a href="#" class="primary-btn fac-btn">Visit Center <i class="lnr lnr-arrow-right"></i></a> --}}
+                        <div class="col-lg-6 p-0 ">
+                            <div class="facilities-text-warp">
+                                <div class="facilities-text">
+                                    <h2>{{$service->nama}}</h2>
+                                    <p>{{$service->desc}}</p>
+                                    <a href="{{ url('/contact') }}" class="primary-btn fac-btn">Contact Us <i class="lnr lnr-arrow-right"></i></a>
+                                    {{-- <a href="#" class="primary-btn fac-btn">Visit Center <i class="lnr lnr-arrow-right"></i></a> --}}
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>

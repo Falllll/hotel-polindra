@@ -28,22 +28,23 @@
                                     @foreach ($users as $user)
                                     <tr>
 
-                                        <td>{{$i++}}</td>
-                                        <td>{{$user->email}}</td>
-                                        <td>{{$user->name}}</td>
-                                        <td>{{$user->level}}</td>
+                                        <td style="vertical-align: middle;">{{$i++}}</td>
+                                        <td style="vertical-align: middle;">{{$user->email}}</td>
+                                        <td style="vertical-align: middle;">{{$user->name}}</td>
+                                        <td style="vertical-align: middle;">{{$user->level}}</td>
 
-                                        <td>
-                                            <form action="/user/{{$user->id}}" method="post">
+                                        <td style="width: 120px;text-align: center;vertical-align: middle; ">
+                                            <form action=" /user/{{$user->id}}" method="post">
                                                 @method('DELETE')
                                                 @csrf
-                                                <input type="submit" class="btn btn-danger btn-sm" value="Delete" onclick="return confirm('anda yakin ingin menghapus data?');">
+                                                <button type="submit" class="btn btn-sm btn-primary btn-circle" onclick="return confirm('anda yakin ingin menghapus data?');"><span class="far fa-trash-alt"></span></button>
+                                                <!-- <input type="submit" class="btn btn-danger btn-sm" value="Delete" onclick="return confirm('anda yakin ingin menghapus data?');"> -->
                                             </form>
-                                            
+
                                         </td>
                                     </tr>
                                     @endforeach
-                                    
+
 
                                 </table>
                             </div>

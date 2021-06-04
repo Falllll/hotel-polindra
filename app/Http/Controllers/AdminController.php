@@ -30,7 +30,10 @@ class AdminController extends Controller
         $kamar = Room::all()->count();
         $tamu = Pengunjung::all()->count();
         $inbox = Contact::all()->count();
-        return view('admin.dashboard', compact('admin', 'reservasi', 'kamar', 'tamu', 'inbox'));
+        $fasilitas = Facilites::all()->count();
+        $menu = Menu::all()->count();
+        $slider = Slider::all()->count();
+        return view('admin.dashboard', compact('admin', 'reservasi', 'kamar', 'tamu', 'inbox', 'fasilitas', 'menu', 'slider'));
     }
 
     public function newpost()
@@ -95,8 +98,8 @@ class AdminController extends Controller
     {
         $i = 0;
         $i++;
-        $facilitiess = Facilites::all();
-        return view('admin.fasilitas', compact(['facilitiess', 'i']));
+        $facilities = Facilites::all();
+        return view('admin.fasilitas', compact(['facilities', 'i']));
     }
 
     // public function jadwal()

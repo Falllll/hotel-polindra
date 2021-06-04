@@ -35,8 +35,11 @@
                     <div class="card" style="width: 18rem;">
                         <img src="{{ asset('img/menu/'.$restaurant->gambar)}}" class=" card-img-top" alt="...">
                         <div class="card-body">
-                            <h2>{{$restaurant->nama_makanan}}</h2>
-                            <p class="card-text">{{$restaurant->desc}}</p>
+                            <h3>{{$restaurant->nama_makanan}}</h3>
+
+                            <p class="card-text ">{{$restaurant->desc}}</p>
+
+                            <h3>Rp.{{$restaurant->harga}}</h3>
 
                         </div>
                     </div>

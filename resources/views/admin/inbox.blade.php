@@ -13,9 +13,6 @@
         <div class="section-body">
             <div class="row">
                 <div class="col-12 col-md-6 col-lg-12">
-                    <div class="block-options p-3">
-                        <!-- <a href="#" class="btn btn-primary"><span class="fa fa-plus"></span> Add New</a> -->
-                    </div>
                     <div class="card">
 
                         <div class="card-body">
@@ -24,7 +21,7 @@
                                     <tr>
                                         <th>No</th>
                                         <th>Tanggal</th>
-                                        <th>Name</th>
+                                        <th>Nama</th>
                                         <th>Email</th>
                                         <th>Subject</th>
 
@@ -33,22 +30,23 @@
                                     @foreach ($contacts as $contact)
                                     <tr>
 
-                                        <td>{{$i++}}</td>
-                                        <td>{{$contact->created_at}}</td>
-                                        <td>{{$contact->nama}}</td>
-                                        <td>{{$contact->email}}</td>
-                                        <td>{{$contact->message}}</td>
+                                        <td style="vertical-align: middle;">{{$i++}}</td>
+                                        <td style="vertical-align: middle;">{{$contact->created_at}}</td>
+                                        <td style="vertical-align: middle;">{{$contact->nama}}</td>
+                                        <td style="vertical-align: middle;">{{$contact->email}}</td>
+                                        <td style="vertical-align: middle;">{{$contact->message}}</td>
 
-                                        <td>
+                                        <td style="width: 120px;text-align: center;vertical-align: middle; ">
                                             <form action="/contact/{{$contact->id}}" method="post">
                                                 @method('DELETE')
                                                 @csrf
-                                                <input type="submit" class="btn btn-danger btn-sm" value="Delete" onclick="return confirm('anda yakin ingin menghapus data?');">
+                                                <button type="submit" class="btn btn-sm btn-primary btn-circle" onclick="return confirm('anda yakin ingin menghapus data?');"><span class="far fa-trash-alt"></span></button>
+                                                <!-- <input type="submit" class="btn btn-danger btn-sm" value="Delete" onclick="return confirm('anda yakin ingin menghapus data?');"> -->
                                             </form>
                                         </td>
                                     </tr>
                                     @endforeach
-                                    
+
 
                                 </table>
                             </div>

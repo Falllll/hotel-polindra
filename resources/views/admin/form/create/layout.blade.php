@@ -52,7 +52,7 @@
                     </div>
                     <div class="sidebar-user">
                         <div class="sidebar-user-picture">
-                            <img alt="image" src="/dist/img/avatar/delia.jpg">
+                            <!-- <img alt="image" src="/dist/img/avatar/delia.jpg"> -->
                         </div>
                         <div class="sidebar-user-details">
                             <div class="user-name">{{ auth()->user()->name }}</div>
@@ -76,7 +76,7 @@
                             <a href="{{ url('/room') }}"><i class="fa fa-building"></i><span>Room</span></a>
                         </li>
                         <li>
-                            <a href="{{ url('/tamu') }}"><i class="ion ion-android-clipboard "></i><span>Daftar Tamu</span></a>
+                            <a href="{{ url('/tamu') }}"><i class="fas fa-users"></i><span>Daftar Tamu</span></a>
                         </li>
                         <li>
                             <a href="{{ url('/reservasi') }}"><i class="ion ion-android-clipboard "></i><span>Reservation</span></a>

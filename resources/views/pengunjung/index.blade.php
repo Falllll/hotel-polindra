@@ -198,7 +198,7 @@
     <!-- Room Availability Section End -->
 
     <!-- Facilities Section Begin -->
-    <div class="facilities-section spad">
+    <!-- <div class="facilities-section spad">
         <div class="container">
             <div class="facilities-content">
                 <div class="row">
@@ -240,6 +240,38 @@
                         <div class="facilities-img set-bg" data-setbg="img/trisula/gallery36a.jpg"></div>
 
                     </div>
+                </div>
+            </div>
+        </div>
+    </div> -->
+    <div class="facilities-section spad">
+        <div class="container">
+            <div class="facilities-content">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="section-title">
+                            <h1 style="font-size: 60px;">Facilities</h1>
+                        </div>
+                    </div>
+
+                    @foreach ($services as $service)
+                    <div class="col-lg-6 p-0">
+                        <div class="facilities-img set-bg" data-setbg="{{ asset('img/fasilitas/'.$service->gambar)}}"></div>
+                    </div>
+
+                    <div class="col-lg-6 p-0 ">
+                        <div class="facilities-text-warp">
+                            <div class="facilities-text">
+                                <h2>{{$service->nama}}</h2>
+                                <p>{{$service->desc}}</p>
+                                <a href="{{ url('/service') }}" class="primary-btn fac-btn">Visit Center <i class="lnr lnr-arrow-right"></i></a>
+                                {{-- <a href="#" class="primary-btn fac-btn">Visit Center <i class="lnr lnr-arrow-right"></i></a> --}}
+                            </div>
+                        </div>
+                    </div>
+                    @endforeach
+
+
                 </div>
             </div>
         </div>

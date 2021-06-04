@@ -80,7 +80,7 @@
                             <a href="{{ url('/room') }}"><i class="fa fa-building"></i><span>Room</span></a>
                         </li>
                         <li>
-                            <a href="{{ url('/tamu') }}"><i class="ion ion-android-clipboard "></i><span>Daftar Tamu</span></a>
+                            <a href="{{ url('/tamu') }}"><i class="fas fa-users"></i><span>Daftar Tamu</span></a>
                         </li>
                         <li>
                             <a href="{{ url('/reservasi') }}"><i class="ion ion-android-clipboard "></i><span>Reservasi</span></a>
@@ -90,9 +90,9 @@
                             </ul> -->
                         </li>
                         <li>
-                            <a href="{{ url('/fasilitas') }}"><i class="ion-ribbon-b"></i><span>Facilities</span></a>
+                            <a href="{{ url('/fasilitas') }}"><i class="ion-ribbon-b"></i><span>Fasilitas</span></a>
                         </li>
-                         <li>
+                        <li>
                             <a href="{{ url('/menu') }}"><i class="ion ion-coffee"></i>Menu</a>
                         </li>
                         <li>

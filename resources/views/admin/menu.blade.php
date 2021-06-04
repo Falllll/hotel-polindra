@@ -25,36 +25,38 @@
                                         <th>No</th>
                                         <th>Gambar</th>
                                         <th>Name</th>
-                                        <th>Time</th>
-                                        <th>Description</th>
-                                        <th>Price</th>
+                                        <!-- <th>Time</th> -->
+                                        <th>Deskripsi</th>
+                                        <th>Harga</th>
 
                                         <th>Aksi</th>
                                     </tr>
                                     @foreach ($menus as $menu)
                                     <tr>
 
-                                        <td>{{$i++}}</td>
-                                        <td>
-                                            <img src="{{asset('img/menu/'. $menu->gambar)}}" height="100" width="100" alt="Foto makanan">
+                                        <td style="vertical-align: middle;">{{$i++}}</td>
+                                        <td style="vertical-align: middle;">
+                                            <img src="{{asset('img/menu/'. $menu->gambar)}}" width="120" alt="Foto makanan">
                                         </td>
-                                        <td>{{$menu->nama_makanan}}</td>
-                                        <td>{{$menu->jam}}</td>
-                                        <td>{{$menu->desc}}</td>
-                                        <td>{{$menu->harga}}</td>
+                                        <td style="vertical-align: middle;">{{$menu->nama_makanan}}</td>
+                                        <!-- <td>{{$menu->jam}}</td> -->
+                                        <td style="vertical-align: middle;">{{$menu->desc}}</td>
+                                        <td style="vertical-align: middle;">Rp.{{$menu->harga}}</td>
 
 
-                                        <td>
-                                            <a href="/menu/{{$menu->id}}/edit" class="btn btn-success btn-sm">Edit</a>
+                                        <td style="width: 120px;text-align: center;vertical-align: middle; ">
+
+                                            <a href="/menu/{{$menu->id}}/edit" class="btn btn-sm btn-primary btn-circle " style="float:left"><i class="far fa-edit"></i></a>
                                             <form action="/menu/{{$menu->id}}" method="post">
                                                 @method('DELETE')
                                                 @csrf
-                                                <input type="submit" class="btn btn-danger btn-sm" value="Delete" onclick="return confirm('anda yakin ingin menghapus data?');">
+                                                <button type="submit" class="btn btn-sm btn-primary btn-circle" style="float:right" onclick="return confirm('anda yakin ingin menghapus data?');"><span class="far fa-trash-alt"></span></button>
+                                                <!-- <input type="submit" class="btn btn-danger btn-sm" value="Delete" onclick="return confirm('anda yakin ingin menghapus data?');"> -->
                                             </form>
                                         </td>
                                     </tr>
                                     @endforeach
-                                    
+
 
                                 </table>
                             </div>

@@ -18,7 +18,7 @@
           </div>
           <div class="card-wrap">
             <div class="card-header">
-              <h4>Total Pengguna</h4>
+              <h4>Pengguna</h4>
             </div>
             <div class="card-body">
               {{$admin}}
@@ -29,11 +29,11 @@
       <div class="col-lg-3 col-md-6 col-12">
         <div class="card card-sm-3">
           <div class="card-icon bg-success">
-            <i class="ion ion-ios-paper-outline"></i>
+            <i class="ion ion-android-clipboard "></i>
           </div>
           <div class="card-wrap">
             <div class="card-header">
-              <h4>Total Reservasi</h4>
+              <h4>Reservasi</h4>
             </div>
             <div class="card-body">
               {{$reservasi}}
@@ -48,7 +48,7 @@
           </div>
           <div class="card-wrap">
             <div class="card-header">
-              <h4>Tipe Kamar</h4>
+              <h4>Room</h4>
             </div>
             <div class="card-body">
               {{$kamar}}
@@ -59,11 +59,11 @@
       <div class="col-lg-3 col-md-6 col-12">
         <div class="card card-sm-3">
           <div class="card-icon bg-info">
-            <i class="ion ion-person"></i>
+            <i class="fas fa-users"></i>
           </div>
           <div class="card-wrap">
             <div class="card-header">
-              <h4>Total Tamu</h4>
+              <h4>Tamu</h4>
             </div>
             <div class="card-body">
               {{$tamu}}
@@ -82,6 +82,53 @@
             </div>
             <div class="card-body">
               {{$inbox}}
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6 col-12">
+        <div class="card card-sm-3">
+          <div class="card-icon bg-warning">
+            <i class="ion-ribbon-b"></i>
+          </div>
+          <div class="card-wrap">
+            <div class="card-header">
+              <h4>Fasilitas</h4>
+            </div>
+            <div class="card-body">
+              {{$fasilitas}}
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-6 col-12">
+        <div class="card card-sm-3">
+          <div class="card-icon bg-primary">
+            <i class="ion ion-coffee"></i>
+          </div>
+          <div class="card-wrap">
+            <div class="card-header">
+              <h4>Menu</h4>
+            </div>
+            <div class="card-body">
+              {{$menu}}
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-6 col-12">
+        <div class="card card-sm-3">
+          <div class="card-icon bg-danger">
+            <i class="ion ion-image"></i>
+          </div>
+          <div class="card-wrap">
+            <div class="card-header">
+              <h4>Image Slider</h4>
+            </div>
+            <div class="card-body">
+              {{$slider}}
             </div>
           </div>
         </div>

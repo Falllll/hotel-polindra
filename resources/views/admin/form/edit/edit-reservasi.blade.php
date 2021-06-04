@@ -14,7 +14,7 @@
         <div class="content">
             <form action="/reservasi/{{$reservasi->id}}" method="post" enctype="multipart/form-data">
                 @method('PUT')
-				@csrf
+                @csrf
                 <div class="row">
                     <div class="col-md-12">
                         <div class="block">
@@ -30,12 +30,12 @@
                             <div class="form-group">
                                 <select name="status" class="form-control" required>
                                     <option value="">Pilih status</option>
-                                    <option value="0">0</option>
-                                    <option value="1">1</option>
+                                    <option value="Pesan">Pesan</option>
+                                    <option value="Di Pesan">Di pesan</option>
                                 </select>
                             </div>
                             <div class="form-group">
-                                <button type="submit" class="btn btn-success">Edit data</button>
+                                <button type="submit" class="btn btn-sm btn-primary btn-circle " style="float:left"><span class="far fa-edit"> </span> Ubah Status</button>
                             </div>
                         </div>
                     </div>

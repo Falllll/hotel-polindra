@@ -24,7 +24,8 @@ class PengunjungController extends Controller
 {
     public function home()
     {
-        return view('pengunjung.index');
+        $services = Facilites::paginate(2);
+        return view('pengunjung.index', compact('services'));
     }
 
     public function about()
@@ -35,20 +36,17 @@ class PengunjungController extends Controller
     public function rooms()
     {
         $rooms = Room::paginate(4);
-
-
-
         return view('pengunjung.rooms', compact('rooms'));
     }
 
     public function restaurant()
     {
-        $restaurants = Menu::paginate(2);
+        $restaurants = Menu::all();
         return view('pengunjung.restaurant', compact('restaurants'));
     }
     public function service()
     {
-        $services = Facilites::paginate(2);
+        $services = Facilites::all();
         return view('pengunjung.services', compact('services'));
     }
 
@@ -95,7 +93,7 @@ class PengunjungController extends Controller
         $reservasi->room_type = $rooms->room_type;
         $reservasi->lama_inap = $request->lama_inap;
         $reservasi->jumlah_harga = $rooms->price * $request->lama_inap;
-        $reservasi->status = 0;
+        $reservasi->status = "Pesan";
         $reservasi->save();
 
         // Simpan data ke tabel detail_reservasi

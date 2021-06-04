@@ -21,7 +21,7 @@
                         <div class="card-body">
                             <div class="table-responsive">
                                 <table class="table table-bordered ">
-                                    
+
                                     <tr>
                                         <th>No</th>
                                         <th>Images</th>
@@ -32,22 +32,23 @@
                                     @foreach ($sliders as $slider)
                                     <tr>
 
-                                        <td>{{$i++}}</td>
-                                        <td><img src="{{asset('img/room-slider/'. $slider->gambar)}}" height="100" width="100" alt="Foto kamar"></td>
-                                        <td>{{$slider->caption}}</td>
+                                        <td style="vertical-align: middle;">{{$i++}}</td>
+                                        <td style="vertical-align: middle;"><img src="{{asset('img/room-slider/'. $slider->gambar)}}" width="120" alt="Foto kamar"></td>
+                                        <td style="vertical-align: middle;">{{$slider->caption}}</td>
 
-                                        <td>
-                                            <a href="/slider/{{$slider->id}}/edit" class="btn btn-success btn-sm">Edit</a>
+                                        <td style="width: 120px;text-align: center;vertical-align: middle; ">
+                                            <a href="/slider/{{$slider->id}}/edit" class="btn btn-sm btn-primary btn-circle " style="float:left"><i class="far fa-edit"></i></a>
                                             <form action="/slider/{{$slider->id}}" method="post">
                                                 @method('DELETE')
                                                 @csrf
-                                                <input type="submit" class="btn btn-danger btn-sm" value="Delete" onclick="return confirm('anda yakin ingin menghapus data?');">
+                                                <button type="submit" class="btn btn-sm btn-primary btn-circle" style="float:right" onclick="return confirm('anda yakin ingin menghapus data?');"><span class="far fa-trash-alt"></span></button>
+                                                <!-- <input type="submit" class="btn btn-primary btn-sm mt-2 " value="Delete" onclick="return confirm('anda yakin ingin menghapus data?');"> -->
                                             </form>
                                         </td>
                                     </tr>
-                                
+
                                     @endforeach
-                                    
+
 
                                 </table>
                             </div>
