@@ -32,14 +32,14 @@
 
                 @foreach ($restaurants as $restaurant)
                 <div class="col-md-3 p-0 ">
-                    <div class="card" style="width: 18rem;">
-                        <img src="{{ asset('img/menu/'.$restaurant->gambar)}}" class=" card-img-top" alt="...">
+                    <div class="card" style="width: 18rem; height: 22rem; ">
+                        <img height="210" src="{{ asset('img/menu/'.$restaurant->gambar)}}" class=" card-img-top" alt="...">
                         <div class="card-body">
-                            <h3>{{$restaurant->nama_makanan}}</h3>
+                            <h4 class="mt-2 text-center">{{$restaurant->nama_makanan}}</h4>
 
-                            <p class="card-text ">{{$restaurant->desc}}</p>
+                            <!-- <p class="card-text "><small class="text-muted">{{$restaurant->desc}}</small></p> -->
 
-                            <h3>Rp.{{$restaurant->harga}}</h3>
+                            <h4 class="text-center text-danger pt-3" style="font-size: 20px;">Rp.{{$restaurant->harga}}</h4>
 
                         </div>
                     </div>
@@ -48,8 +48,14 @@
                 @endforeach
             </div>
         </div>
+
+        <div class="pull-left mt-5">
+            {{ $restaurants->links() }}
+        </div>
     </div>
+
 </div>
+
 <!-- Hero Section End -->
 <!-- RESTAURANTS -->
 

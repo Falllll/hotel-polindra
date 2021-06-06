@@ -47,11 +47,11 @@
                     <div class="room-text">
                         <div class="room-title">
                             <h3>{{$room->room_type}}</h2>
-                            <div class="room-price">
-                                <span>Harga  </span>
-                                <h3>Rp. {{number_format($room->price)}}</h3>
-                                <sub>  /malam</sub>
-                            </div>
+                                <div class="room-price">
+                                    <span>Harga </span>
+                                    <h3>Rp. {{number_format($room->price)}}</h3>
+                                    <sub> /malam</sub>
+                                </div>
                         </div>
                         <div class="room-desc">
                             <p>{{$room->desc}}</p>
@@ -78,16 +78,24 @@
                                 <span>Pool</span>
                             </div>
                         </div>
+                        @if ($room->stok <= 0)
+                            
+                        <a href="#" class="primary-btn">Sold Out<i class="lnr lnr-arrow-right"></i></a>
+                        @else
+                            
                         <a href="{{url('pesan')}}/{{$room->id}}" class="primary-btn">Book Now <i class="lnr lnr-arrow-right"></i></a>
-                        <span>Sisa kamar : </span>
-                        <span>{{$room->stok}}</span>
+                        @endif
+                            
+                           
+                            <span>Sisa kamar : </span>
+                            <span>{{$room->stok}}</span>
                     </div>
                 </div>
             </div>
         </div>
     </div>
     @endforeach
-    
+
 </section>
 <!-- Rooms Section End -->
 

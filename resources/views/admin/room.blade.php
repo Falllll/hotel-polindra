@@ -23,10 +23,9 @@
                                 <table class="table table-bordered ">
                                     <tr>
                                         <th>No</th>
-                                        <th>Gambar 1</th>
-                                        <th>Gambar 2</th>
-                                        <th>Gambar 3</th>
-                                        <th>Gambar 4</th>
+                                        <th colspan="2">Gambar </th>
+
+
                                         <th>Tipe kamar</th>
                                         <th>Stok</th>
                                         <th>Harga</th>
@@ -39,9 +38,15 @@
 
                                         <td style="vertical-align: middle;">{{$i++}}</td>
                                         <td style="vertical-align: middle;">
-                                            <img src="{{asset('img/room/'. $room->gambar_1)}}" width="100" alt="Foto kamar">
+                                            <img style="margin-bottom: 5px;" src="{{asset('img/room/'. $room->gambar_1)}}" width="100" alt="Foto kamar">
+                                            <img src="{{asset('img/room/'. $room->gambar_2)}}" width="100" alt="Foto kamar">
+
                                         </td>
                                         <td style="vertical-align: middle;">
+                                            <img style="margin-bottom: 5px;" src="{{asset('img/room/'. $room->gambar_3)}}" width="100" alt="Foto kamar">
+                                            <img src="{{asset('img/room/'. $room->gambar_4)}}" width="100" alt="Foto kamar">
+                                        </td>
+                                        <!-- <td style="vertical-align: middle;">
                                             <img src="{{asset('img/room/'. $room->gambar_2)}}" width="100" alt="Foto kamar">
                                         </td>
                                         <td style="vertical-align: middle;">
@@ -49,10 +54,10 @@
                                         </td>
                                         <td style="vertical-align: middle;">
                                             <img src="{{asset('img/room/'. $room->gambar_4)}}" width="100" alt="Foto kamar">
-                                        </td>
+                                        </td> -->
                                         <td style="vertical-align: middle;">{{$room->room_type}}</td>
                                         <td style="vertical-align: middle;">{{$room->stok}}</td>
-                                        <td style="vertical-align: middle;">Rp. {{number_format($room->price)}}</td>
+                                        <td style="vertical-align: middle;">{{number_format($room->price)}}</td>
                                         <td style="vertical-align: middle;">{{$room->desc}}</td>
 
                                         <td style="width: 120px;text-align: center;vertical-align: middle; ">

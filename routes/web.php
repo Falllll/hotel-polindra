@@ -79,9 +79,12 @@ Route::group(['middleware' => ['auth', 'ceklevel:admin']], function () {
     Route::get('/slider/{id}/edit', [CrudController::class, 'editslider']);
     Route::post('/slider/{id}', [CrudController::class, 'updateslider'])->name('slider');
     Route::get('/tamu/{id}/edit', [CrudController::class, 'edittamu']);
-    Route::put('/tamu/{id}', [CrudController:: class, 'updatetamu']);
-    Route::get('/reservasi/{id}/edit', [CrudController::class, 'editreservasi']);
-    Route::put('/reservasi/{id}', [CrudController:: class, 'updatereservasi']);
+    Route::put('/tamu/{id}', [CrudController::class, 'updatetamu']);
+    Route::get('/reservasi/{id}/edit', [CrudController::class, 'updatereservasi']);
+    Route::get('/reservasi/{id}/cancel', [CrudController::class, 'cancel']);
+
+    Route::get('/reservasi/{id}/checkout', [CrudController::class, 'checkout']);
+    Route::put('/reservasi/{id}', [CrudController::class, 'updatereservasi']);
 
     // delete
 
@@ -93,8 +96,6 @@ Route::group(['middleware' => ['auth', 'ceklevel:admin']], function () {
     Route::delete('/reservasi/{id}', [CrudController::class, 'deletereservasi']);
     Route::delete('/contact/{id}', [CrudController::class, 'deleteinbox']);
     Route::delete('/tamu/{id}', [CrudController::class, 'deletetamu']);
-
-
 });
 
 Route::group(['middleware' => ['auth', 'ceklevel:customer']], function () {

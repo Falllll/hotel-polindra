@@ -40,8 +40,8 @@
                                         </td>
                                         <td style="vertical-align: middle;">{{$menu->nama_makanan}}</td>
                                         <!-- <td>{{$menu->jam}}</td> -->
-                                        <td style="vertical-align: middle;">{{$menu->desc}}</td>
-                                        <td style="vertical-align: middle;">Rp.{{$menu->harga}}</td>
+                                        <td style="width: 350px;vertical-align: middle;">{{$menu->desc}}</td>
+                                        <td style="vertical-align: middle;">Rp.{{number_format($menu->harga)}}</td>
 
 
                                         <td style="width: 120px;text-align: center;vertical-align: middle; ">

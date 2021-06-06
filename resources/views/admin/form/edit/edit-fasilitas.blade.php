@@ -29,7 +29,7 @@
                                 </div>
                                 <label for="gambar">Pilih Foto</label>
                                 <div class="form-group">
-                                    <input type="file" name="gambar" id="gambar" class="dropify" data-height="190" required>
+                                    <input type="file" name="gambar" id="gambar" class="dropify" data-height="190" value="{{ asset('img/fasilitas/'.$fasilitas->gambar)}}" >
                                 </div>
                                 <div class="form-group">
                                     <img src="{{ asset('img/fasilitas/'.$fasilitas->gambar)}}" height="10%" width="30%" alt="">

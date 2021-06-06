@@ -29,7 +29,7 @@
                                 </div>
                                 <label for="desc"><strong>Deskripsi Makanan</strong></label>
                                 <div class="form-group">
-                                    <textarea type="text" name="desc" id="desc" cols="70%" rows="3" placeholder="Deskripsi Fasilitas" required></textarea>
+                                    <textarea type="text" name="desc" id="desc" cols="70%" rows="3" placeholder="Deskripsi Makanan" required></textarea>
                                 </div>
                                 <label for="gambar">Pilih Foto</label>
                                 <div class="form-group">

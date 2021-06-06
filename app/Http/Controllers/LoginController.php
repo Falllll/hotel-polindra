@@ -36,7 +36,7 @@ class LoginController extends Controller
             'password' => bcrypt($request->password),
             'remember_token' => Str::random(60),
         ]);
-        
+
         alert()->success('Akun anda berhasil dibuat', 'Success');
         return redirect('/login');
     }
@@ -48,13 +48,12 @@ class LoginController extends Controller
 
     public function postlogin(Request $request)
     {
-        
-        if(Auth::attempt($request->only('email', 'password', 'level'))) {
-                alert()->success('Login berhasil', 'Success');
-                
-                return redirect('/admin'); 
-                return redirect('/');
-            
+
+        if (Auth::attempt($request->only('email', 'password', 'level'))) {
+            alert()->success('Login berhasil', 'Success');
+            return redirect('/');
+            return redirect('/admin');
+        } else {
         }
         alert()->error('Email/Password salah silahkan ulangi', 'Gagal');
         return redirect('/login');

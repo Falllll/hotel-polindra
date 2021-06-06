@@ -29,7 +29,7 @@
 
                                         <th>Aksi</th>
                                     </tr>
-                                    @foreach ($facilitiess as $fasilitas)
+                                    @foreach ($facilities as $fasilitas)
                                     <tr>
 
                                         <td style="vertical-align: middle;">{{$i++}}</td>

@@ -37,19 +37,19 @@
                                 </div>
                                 <label for="gambar1">Pilih Foto</label>
                                 <div class="form-group">
-                                    <input type="file" name="gambar_1" id="gambar1" class="dropify" data-height="190" required>
+                                    <input type="file" name="gambar_1" id="gambar1" class="dropify" data-height="190" >
                                 </div>
                                 <label for="gambar2">Pilih Foto</label>
                                 <div class="form-group">
-                                    <input type="file" name="gambar_2" id="gambar2" class="dropify" data-height="190" required>
+                                    <input type="file" name="gambar_2" id="gambar2" class="dropify" data-height="190" >
                                 </div>
                                 <label for="gambar3">Pilih Foto</label>
                                 <div class="form-group">
-                                    <input type="file" name="gambar_3" id="gambar3" class="dropify" data-height="190" required>
+                                    <input type="file" name="gambar_3" id="gambar3" class="dropify" data-height="190" >
                                 </div>
                                 <label for="gambar4">Pilih Foto</label>
                                 <div class="form-group">
-                                    <input type="file" name="gambar_4" id="gambar4" class="dropify" data-height="190" required>
+                                    <input type="file" name="gambar_4" id="gambar4" class="dropify" data-height="190" >
                                 </div>
                                 <div class="form-group">
                                     <img src="{{ asset('img/room/'.$room->gambar_1)}}" height="10%" width="30%" alt="">

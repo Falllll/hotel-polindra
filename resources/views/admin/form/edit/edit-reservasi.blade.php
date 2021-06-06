@@ -30,8 +30,9 @@
                             <div class="form-group">
                                 <select name="status" class="form-control" required>
                                     <option value="">Pilih status</option>
-                                    <option value="Pesan">Pesan</option>
+                                    @if ($reservasi->status == "Pesan")
                                     <option value="Di Pesan">Di pesan</option>
+                                    @endif
                                 </select>
                             </div>
                             <div class="form-group">
