@@ -18,6 +18,7 @@ use App\Models\Menu;
 use App\Models\Contact;
 use App\Models\Categorie;
 use Alert;
+use App\Models\Staffs;
 use Illuminate\Support\Facades\DB;
 
 class CrudController extends Controller
@@ -138,6 +139,19 @@ class CrudController extends Controller
         Pengunjung::create($request->all());
         alert()->success('Berhasil', 'Data berhasil ditambahkan');
         return redirect('/tamu');
+    }
+
+    public function createstaff()
+    {
+        return view('admin/form.create.create-staff');
+    }
+
+    public function addstaff(Request $request)
+    {
+
+        Staffs::create($request->all());
+        alert()->success('Berhasil', 'Data berhasil ditambahkan');
+        return redirect('/staff');
     }
 
     // Edit
@@ -351,6 +365,20 @@ class CrudController extends Controller
         return redirect('/reservasi');
     }
 
+    public function editstaff($id)
+    {
+        $staff = Staffs::find($id);
+        return view('/admin.form.edit.edit-staff', compact('staff'));
+    }
+
+    public function updatestaff(Request $request, $id)
+    {
+        $staff = Staffs::find($id);
+        $staff->update($request->all());
+        alert()->success('Berhasil', 'Data berhasil diubah');
+        return redirect('/staff');
+    }
+
 
     // DELETE
     public function deleteuser($id)
@@ -435,5 +463,13 @@ class CrudController extends Controller
         $pengunjungs->delete();
         alert()->success('Berhasil', 'Data berhasil dihapus');
         return redirect('/tamu');
+    }
+
+    public function deletestaff($id)
+    {
+        $staff = Staffs::find($id);
+        $staff->delete();
+        alert()->success('Berhasil', 'Data berhasil dihapus');
+        return redirect('/staff');
     }
 }

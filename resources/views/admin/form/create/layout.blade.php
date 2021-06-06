@@ -76,6 +76,9 @@
                             <a href="{{ url('/room') }}"><i class="fa fa-building"></i><span>Room</span></a>
                         </li>
                         <li>
+                            <a href="{{ url('/staff') }}"><i class="fa fa-id-badge"></i><span>Staff</span></a>
+                        </li>
+                        <li>
                             <a href="{{ url('/tamu') }}"><i class="fas fa-users"></i><span>Daftar Tamu</span></a>
                         </li>
                         <li>

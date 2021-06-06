@@ -17,6 +17,7 @@ use App\Models\Menu;
 // use App\Models\Event;
 use App\Models\Contact;
 use App\Models\Categorie;
+use App\Models\Staffs;
 use Alert;
 
 class LoginController extends Controller

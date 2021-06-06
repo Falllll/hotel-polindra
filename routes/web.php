@@ -52,6 +52,7 @@ Route::group(['middleware' => ['auth', 'ceklevel:admin']], function () {
     Route::get('/menu', [AdminController::class, 'menu']);
     Route::get('/reservasi', [AdminController::class, 'reservasi']);
     Route::get('/tamu', [AdminController::class, 'tamu']);
+    Route::get('/staff', [AdminController::class, 'staff']);
 
     // create
 
@@ -67,6 +68,8 @@ Route::group(['middleware' => ['auth', 'ceklevel:admin']], function () {
     Route::post('/create/menu', [CrudController::class, 'addmenu'])->name('create/menu');
     Route::get('/create/tamu', [CrudController::class, 'createtamu']);
     Route::post('/create/tamu', [CrudController::class, 'addtamu'])->name('create/tamu');
+    Route::get('/create/staff', [CrudController::class, 'createstaff']);
+    Route::post('/create/staff', [CrudController::class, 'addstaff'])->name('create/staff');
 
     // update
 
@@ -82,6 +85,8 @@ Route::group(['middleware' => ['auth', 'ceklevel:admin']], function () {
     Route::put('/tamu/{id}', [CrudController::class, 'updatetamu']);
     Route::get('/reservasi/{id}/edit', [CrudController::class, 'updatereservasi']);
     Route::get('/reservasi/{id}/cancel', [CrudController::class, 'cancel']);
+    Route::get('/staff/{id}/edit', [CrudController::class, 'editstaff']);
+    Route::put('/staff/{id}', [CrudController::class, 'updatestaff']);
 
     Route::get('/reservasi/{id}/checkout', [CrudController::class, 'checkout']);
     Route::put('/reservasi/{id}', [CrudController::class, 'updatereservasi']);
@@ -96,6 +101,7 @@ Route::group(['middleware' => ['auth', 'ceklevel:admin']], function () {
     Route::delete('/reservasi/{id}', [CrudController::class, 'deletereservasi']);
     Route::delete('/contact/{id}', [CrudController::class, 'deleteinbox']);
     Route::delete('/tamu/{id}', [CrudController::class, 'deletetamu']);
+    Route::delete('/staff/{id}', [CrudController::class, 'deletestaff']);
 });
 
 Route::group(['middleware' => ['auth', 'ceklevel:customer']], function () {

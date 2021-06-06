@@ -18,6 +18,7 @@ use App\Models\Menu;
 // use App\Models\Event;
 use App\Models\Contact;
 use App\Models\Categorie;
+use App\Models\Staffs;
 use Alert;
 
 class AdminController extends Controller
@@ -138,5 +139,13 @@ class AdminController extends Controller
         $i++;
         $pengunjungs = Pengunjung::all();
         return view('admin.tamu', compact(['pengunjungs', 'i']));
+    }
+
+    public function staff()
+    {
+        $i = 0;
+        $i++;
+        $staffs = Staffs::all();
+        return view ('admin.staff', compact(['staffs','i']));
     }
 }
