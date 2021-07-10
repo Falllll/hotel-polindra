@@ -6,6 +6,7 @@ use App\Http\Controllers\AdminController;
 use App\Http\Controllers\PengunjungController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\CrudController;
+use App\Http\Controllers\TestController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -108,3 +109,7 @@ Route::group(['middleware' => ['auth', 'ceklevel:customer']], function () {
     Route::get('/pesan/{id}', [PengunjungController::class, 'booking']);
     Route::post('/pesan/{id}', [PengunjungController::class, 'pesan']);
 });
+
+
+
+Route::get('/index', [TestController::class, 'index']);
